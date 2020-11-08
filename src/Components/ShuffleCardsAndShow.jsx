@@ -26,13 +26,17 @@ class ShuffleCardsAndShow extends Component {
    animationAndDisplay = (maxNumber) => {
 
        this.numberSelected = this.generateRandomNumber(maxNumber);        
-       this.setState( {value:"?"});       
-       this.refToDiv.current.className = "cardsAnimation";              
+       this.setState( {value:"?"});    
+       if (this.refToDiv.current != undefined)   {
+        this.refToDiv.current.className = "cardsAnimation";              
+       }
    }
    animationEnded = () => {
         this.setState( {value:this.props.elementsForCard[this.numberSelected]});
-        this.refToDiv.current.className = null;    
-        this.props.callbackFunction(this.props.elementsForCard[this.numberSelected]);        
+        this.refToDiv.current.className = null;   
+        if (this.props.callbackFunction != undefined) {
+            this.props.callbackFunction(this.props.elementsForCard[this.numberSelected]);        
+        }
    }
 
 

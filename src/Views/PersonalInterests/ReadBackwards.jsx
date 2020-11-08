@@ -44,7 +44,7 @@ class  ReadBackwards extends Component {
       };
       var revStyleDesc = {        
         transform: "scale(-1, 1)",
-        fontFamily:"Times New Roman",            
+        fontFamily:"Arial",            
         fontSize: "40px",       
       };
       var revStyleOrig = {                

@@ -1,0 +1,118 @@
+/*@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap:regular,bold,italic&subset=latin,latin-ext');*/
+
+
+
+ .TopMarginToDealWithNavBar{
+    margin-top:8vh;
+}
+.MainSectionContainer{                    
+    font-family: 'Arima Madurai', cursive;      
+    display:flex;
+    flex-direction: row;    
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+    margin:5vw;
+    padding:2vw;
+    border-radius: 0%;
+}
+
+.MainSectionContainer > div{    
+    color: var(--main-MainText-color);  
+    width:300px;
+    height: 300px;      
+    border-radius: 15%;
+    border-width: 5px;
+    border-style: solid;
+    border-color:var(--main-MainText-color); 
+    margin:10px;
+}
+.MainSectionContainer > div > .CardTextLink{    
+    color: var(--main-MainText-color);     
+}
+.MainSectionContainer > div:hover {
+    background-color:var(--main-CardBGHover-color);
+    color: var(--main-MainTextHover-color);    
+    
+}
+.MainSectionContainer > div:hover > .CardTextLink{
+    background-color:var(--main-CardBGHover-color);
+    color: var(--main-MainTextHover-color);    
+}
+
+.MainSectionHeaderText{
+    font-size: 5vh;    
+    
+}
+.DescriptionSectionText{    
+    font-size: 5vh;     
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;  
+}
+/*.MainSectionItem{
+    background-color:var( --main-CardBG-color);    
+    color: var(--main-MainText-color);  
+    width:350px;
+    height: 350px;    
+    padding-top: 15%;          
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-left:4vw;
+    margin-right:4vw; 
+    border-radius: 25%;       
+    position:absolute;
+    padding-top: 45px;
+}*/
+
+.CardTextLink {    
+    font-size: 1.8vw;         
+    text-decoration: none;  
+    
+}
+.CardTextLink:hover{     
+    text-decoration: none;        
+}
+.MainSectionItemImage{
+    width:80%;
+    height:80%;    
+}
+.MainSectionItemImagePng{
+    width:100%;
+    height:100%;    
+    border-radius: 15%;
+}
+.MainSectionItemImagePng:Hover{    
+    border-radius: 30%;    
+}
+
+.MainSectionContainerActivities{    
+    background:  radial-gradient(var(--main-MainSectionActivities-color), white);
+}
+.MainSectionContainerLanguage{    
+    background: radial-gradient(var(--main-MainSectionLanguage-color), white);
+}
+.MainSectionContainerMath{       
+    background:radial-gradient(var(--main-MainSectionMath-color), white);    
+}
+.MainSectionContainerSoftwareDev{
+    background:var(--main-MainSectionSoftwareDev-color);
+}
+.MainSectionContainerPersonalInterests{
+    background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);    
+}
+.MainSectionContainerBooks{
+    background:radial-gradient(var(--main-MainSectionBooks-color), white);    
+
+    display:flex;
+    flex-direction: row;    
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+    
+    margin:5vw;
+    padding:2vw;
+}

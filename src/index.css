@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap:regular,bold,italic&subset=latin,latin-ext');
+
+:root {    
+  /*--main-MainSectionLanguage-color:#fff6d5df;*/
+  --main-MainSectionLanguage-color:yellow;
+  --main-MainSectionBooks-color:yellow;
+  --main-MainSectionMath-color:navy;        
+  --main-MainSectionSoftwareDev-color:#343a40 ;
+  --main-MainSectionPersonalInterests-color: deeppink ;
+  --main-MainSectionActivities-color: aqua ;
+
+  --main-text-color:navy;      
+  /*--main-CardBG-color:lightskyblue;*/
+  --main-CardBG-color:white;
+  --main-CardBGHover-color:navy;
+  --main-ButtonColor-color:#1697f9ff;
+  --main-ButtonTextColor-color:#1697f9ff;
+  --main-ButtonBKColor-color:#343a40;
+  --main-blueText-color:#1697f9ff
+}
+
+.fragmentContainer{  
+  color: var(--main-text-color);
+  font-family: 'Arima Madurai', cursive;  
+  font-size: large;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.TopMarginToDealWithNavBarAll{
+  margin-top:15vh;
+}
+.CenterMe{      
+    text-align: center;    
+}
+.CenterMyBorder{
+  border: solid 2px navy ;
+  margin-left:10vw;
+  margin-right:10vw;
+  padding:10px;
+}
+.myContentsAreFlex{
+  display:flex;
+  flex-direction: row;    
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;   
+  margin-left:10vw;
+  margin-right:10vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+.myContentsAreGrid1{
+  display:grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+  margin-left:10vw;
+  margin-right:10vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+.inputText{
+  margin:4px;
+  width:20vw;
+  padding: 15px; 
+  border-width: 1px;
+  border-radius: 30px;
+}
+.buttonGeneral{
+  background-color: var(--main-ButtonBKColor-color);
+  border-color: var(--main-ButtonColor-color); 
+  color: var(--main-ButtonColor-color);  
+  width:175px;
+  font-size: 18px;
+  padding: 15px;  
+  border-width: 0px;
+  border-radius: 30px;
+  margin:2px;
+}
+.buttonGeneral:focus{
+  outline:none;
+}
+
+.buttonPrintable{
+  background-color: deeppink;
+  border-color: navy; 
+  color:white;    
+  font-size: 18px;
+  padding: 15px;  
+  border-width: 0px;
+  border-radius: 30px;
+  margin:2px;
+}
+.buttonPrintable:hover{
+  color:white;
+  text-decoration: none;
+}
+.buttonPrintable:visited{
+  color:white;
+  text-decoration: none;
+}
+.buttonPrintable:active{
+  color:white;
+  text-decoration: none;
+}
+.buttonGeneral:focus{
+  outline:none;
+}
+
+.CodeContainer{
+  border:3px solid gray;  
+  background-color:lightcyan;
+  padding:2px;
+  margin:5px;
+}
+

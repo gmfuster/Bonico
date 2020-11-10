@@ -5,10 +5,10 @@ class ThreeLetterWordSounds extends Component {
     
   constructor(){
         super();            
-        this.state = { letter1:"", letter2:"", letter3:""}  ;
+        this.state = { letter0:"", letter1:"", letter2:""}  ;
+        this.letter0Index=0;  
         this.letter1Index=0;  
-        this.letter2Index=0;  
-        this.letter3Index=0;        
+        this.letter2Index=0;        
 
         this.arrayOfWordsAsLettersInterChange =  [ ["B","E","D"], ["B", "A", "N"] , ["B","E","G"], ["B","E","T"], ["B","O","X"], ["C","A","P"], ["D","I","D"],  
         ["F","A","N"], ["F","O","R"], ["F","U","N"], ["G","U","M"], ["H","A","M"], ["H","I","M"], ["H","O","P"], ["J","O","G"], ["L","E","T"], ["L","O","G"], 
@@ -26,39 +26,84 @@ class ThreeLetterWordSounds extends Component {
         ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];
   }        
 
+    getLetter0 = () => {
+        this.getLetter(0);
+    }
     getLetter1 = () => {
         this.getLetter(1);
     }
     getLetter2 = () => {
         this.getLetter(2);
     }
-    getLetter3 = () => {
-        this.getLetter(3);
+
+    getNextDifferentLetter = (letterPositionInWord) => {
+                
+        let currentLetter = "";     
+        let newLetter = "";  
+        let newIndex = 0; 
+        let foundDifferentLetter =  false;        
+        let currentRowIndex = null;
+        
+        switch(letterPositionInWord){
+            case 0:
+                currentRowIndex = this.letter0Index;
+                break;
+            case 1:
+                currentRowIndex = this.letter1Index;
+                break;
+            case 2:                
+                currentRowIndex = this.letter2Index;
+                break;
+        }
+
+        currentLetter =  this.arrayOfWordsAsLettersInterChange[currentRowIndex][letterPositionInWord];
+        while (!foundDifferentLetter){
+            (currentRowIndex == this.arrayOfWordsAsLettersInterChange.length -1 )? newIndex =0 : newIndex = currentRowIndex++; 
+            newLetter =  this.arrayOfWordsAsLettersInterChange[newIndex][letterPositionInWord];
+            if (newLetter != currentLetter){
+                foundDifferentLetter = true;
+            }
+        }  
+
+        switch(letterPositionInWord){
+            case 0:
+                this.letter0Index = newIndex;
+                break;
+            case 1:
+                this.letter1Index = newIndex;
+                break;
+            case 2:                
+                this.letter2Index = newIndex;
+                break;
+        }        
+        
+        return newLetter;
     }
+
     getLetter = (letterNumber) => {                                        
 
-        //change TODO: instead of just the next one, find the next one that is not the same as the one we already have.
+        let nextLetter = "";        
         switch(letterNumber){
+            case 0:
+                {      
+                    nextLetter = this.getNextDifferentLetter(0);
+                    this.setState({letter0:nextLetter });                                             ;                                      
+                    break;
+                }
             case 1:
-                {                    
-                    this.setState({letter1:this.arrayOfWordsAsLettersInterChange[this.letter1Index][0] });                                             ;
-                    (this.letter1Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter1Index=0 : this.letter1Index++;                    
+                {                   
+                    nextLetter = this.getNextDifferentLetter(1);
+                    this.setState({letter1:nextLetter });                                             ;                                      
                     break;
                 }
             case 2:
                 {                   
-                   this.setState({letter2:this.arrayOfWordsAsLettersInterChange[this.letter2Index][1] });
-                   (this.letter2Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter2Index=0 : this.letter2Index++;
-                   break;
-                }
-            case 3:
-                {                   
-                   this.setState({letter3:this.arrayOfWordsAsLettersInterChange[this.letter3Index][2] });
-                   (this.letter3Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter3Index=0 : this.letter3Index++;
-                   break;
+                    nextLetter = this.getNextDifferentLetter(2);
+                    this.setState({letter2:nextLetter });                                             ;                                      
+                    break;
                 }
         }
-        
+                
     }
 
     render() {
@@ -102,14 +147,14 @@ class ThreeLetterWordSounds extends Component {
                 first one.  Just read the word, even if the word is not a real word.<br/><br/>
 
                 <div style={cardStyles}>                
-                    <div style={{  background:"lightpink", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter1}>
+                    <div style={{  background:"lightpink", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter0}>
+                    <span style={{ fontSize:"10vw" }}>{this.state.letter0}</span>                 
+                    </div>   
+                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter1}>
                     <span style={{ fontSize:"10vw" }}>{this.state.letter1}</span>                 
                     </div>   
                     <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter2}>
                     <span style={{ fontSize:"10vw" }}>{this.state.letter2}</span>                 
-                    </div>   
-                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter3}>
-                    <span style={{ fontSize:"10vw" }}>{this.state.letter3}</span>                 
                     </div>                              
                    
                 </div>   

@@ -198,8 +198,8 @@ class CanvasTrace extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
-            Use your finger.  Resizing will clear the contents. (Canvas has no scrolling) <br/> 
-            <TextFieldWithButton textForInput = "Enter you text" textForButton="Let me Trace it!" functionToCall= {this.updateCanvas}/>
+            Use your finger.  Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
+            <TextFieldWithButton textForInput = "Enter you text" textForButton="Move to canvas!" functionToCall= {this.updateCanvas}/>
             <button className="buttonPrintable" onClick={this.printTheText}>Printable</button>
             
             <canvas className ="traceLetterCanvas"  

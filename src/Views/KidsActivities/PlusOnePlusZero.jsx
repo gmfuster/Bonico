@@ -59,7 +59,7 @@ class PlusOnePlusZero extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe"> 
-            Choose  whether you want to add only 1 or 0 to a number or any numbers 1-10 (No choice means 0 or 1).<br/>
+            Choose  whether you want to add only 1 or 0 to a number or any numbers 1-10 (Default is 0 or 1).<br/>
             Click the button to get your numbers.<br/>
             Guess the result and click on the last square to see if you were right.<br/><br/>
             {/*todo set the default so it doesn't go back to it after first round*/}

@@ -15,10 +15,9 @@ function ThreeLetterRhymes () {
 
                 <div className="CenterMyBorder">
                     <br/>
-                    This page is just a PDF with some cards with rhyming words.  Print it, laminate it if possible, cut the cards, and play.
+                    Open the PDF and print it, laminate it if possible, cut the cards, and play.
                     <br/>
-                    To play, give a few cards to each player and have them ask the others for something that rhymes with their card.  Or have some of the cards
-                    up and take turns taking a card from a stack, see how many cards they can rhyme.  Or do your own thing :-)                                   
+                    You choose how to play.  We give some cards to each player and then uncover one from a stack and see who has a card that rhymes with it.  
                     <br/>    <br/>                      
                 </div>
                 <br/>

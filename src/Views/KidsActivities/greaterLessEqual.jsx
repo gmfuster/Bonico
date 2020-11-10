@@ -36,7 +36,7 @@ class GreaterLessEqual extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
-            <button className= "buttonGeneral" onClick={this.getNewResults}> Get and Win</button>   <br/><br/>
+            <button className= "buttonGeneral" onClick={this.getNewResults}>Show Numbers</button>   <br/><br/>
             Player 1 and Player 2 get a number, whoever has the number that satisfies what the center card says wins.  If the center card says 
             equal, both players win if they both have the same number.  
             <br/><br/>

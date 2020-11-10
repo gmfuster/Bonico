@@ -140,11 +140,8 @@ class ThreeLetterWordSounds extends Component {
       <React.Fragment>
          <div className="TopMarginToDealWithNavBarAll">
             <div className="CenterMe">
-                Scroll down to read some words or copy paste them to print.<br/><br/>
-                Uncover the letters one at a time.  Make the sound for the word with 2 letters 
-                (first 2 or last 2), then uncover the remaining letter and make the sound for 
-                the whole word.  It is recommended to start with the last 2 first, then add the 
-                first one.  Just read the word, even if the word is not a real word.<br/><br/>
+                Scroll down to to see a list of words you can copy paste print.<br/><br/>
+                Click on a square to uncover a new letter.  It is recommended to try to make the sounds of the last 2 letters first, then add the first sound to it.<br/><br/>
 
                 <div style={cardStyles}>                
                     <div style={{  background:"lightpink", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter0}>
@@ -160,8 +157,7 @@ class ThreeLetterWordSounds extends Component {
                 </div>   
 
                 <br/><br/>
-                Read the words putting the sounds of their letters together.  Read the 2 letters first, then add the third one.  Also, ask the kid
-                to identify the beginning and end sounds of the 3 letter word.<br/><br/>                                                             
+                <br/><br/>                                                             
                 
                 {/*use map, not foreach, map gets a new object that we show}*/}
                 {arrayOfWordsAsLetters.map( (item, index) =>

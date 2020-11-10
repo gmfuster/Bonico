@@ -15,7 +15,7 @@ function BeginEndSounds () {
 
                 <div className="CenterMyBorder">
                     <br/>
-                    This page is just a PDF to work on beginning and end sounds.  Open it to see the instructions.                  
+                    This page is just a PDF to work on beginning and end sounds.  Open it to see the instructions.  You can go to the READ activity to try to read some words from the letter sounds.                
                     <br/>    <br/>                      
                 </div>
                 <br/>

@@ -1,10 +1,65 @@
 import React, {Component} from "react";
+import ShuffleCardsAndShow from "../../Components/ShuffleCardsAndShow";
 
 class ThreeLetterWordSounds extends Component {
     
   constructor(){
-    super();      
-    }          
+        super();            
+        this.state = { letter1:"", letter2:"", letter3:""}  ;
+        this.letter1Index=0;  
+        this.letter2Index=0;  
+        this.letter3Index=0;        
+
+        this.arrayOfWordsAsLettersInterChange =  [ ["B","E","D"], ["B", "A", "N"] , ["B","E","G"], ["B","E","T"], ["B","O","X"], ["C","A","P"], ["D","I","D"],  
+        ["F","A","N"], ["F","O","R"], ["F","U","N"], ["G","U","M"], ["H","A","M"], ["H","I","M"], ["H","O","P"], ["J","O","G"], ["L","E","T"], ["L","O","G"], 
+        ["M","A","C"], ["M","A","N"], ["M","E","N"], ["N","A","P"], ["P","A","D"], ["P","A","N"], ["P","E","N"], ["P","E","T"], ["P","I","C"], ["P","I","N"], 
+        ["P","O","P"], ["R","O","T"], ["R","U","N"], ["S","A","G"], ["S","A","T"], ["S","I","P"], ["S","I","T"], ["S","U","N"], ["T","A","N"], ["Y","E","S"] , 
+        ["Y","E","T"], ["W","I","G"], ["W","E","T"], ["W","E","B"], ["W","A","S"], ["V","E","T"], ["T","U","B"], ["T","O","P"], ["T","A","X"], ["T","A","P"], 
+        ["T","A","G"], ["S","O","N"], ["S","I","X"], ["S","E","T"], ["S","E","C"], ["S","A","D"], ["R","E","D"], ["R","A","T"], ["R","A","M"], 
+        ["P","O","T"], ["P","O","D"], ["P","A","T"], ["P","A","L"], ["N","E","T"], ["M","I","X"], ["M","E","T"], ["M","E","D"], ["M","A","T"], 
+        ["M","A","P"], ["M","A","D"], ["L","O","T"], ["L","I","P"], ["K","I","D"], ["J","O","B"], ["H","O","T"], ["H","I","P"], ["H","A","S"], ["G","O","D"], 
+        ["F","O","X"], ["F","I","X"], ["F","A","R"], ["D","O","C"], ["C","A","R"],  ["B","A","D"],  
+        ["B","A","G"], ["B","A","T"], ["B","I","G"], ["B","O","B"], ["B","U","T"], ["C","A","B"], ["B","I","T"], 
+        ["C","A","N"], ["C","A","T"], ["C","O","D"], ["C","U","B"], ["C","U","P"], ["D","A","D"], ["D","O","G"], ["D","I","G"], ["D","O","T"], 
+        ["F","A","T"], ["F","E","D"], ["F","O","G"], ["G","A","S"], ["G","O", "T"], ["H","A","D"], ["H","A","T"], ["H","E","N"], ["H","I","D"], 
+        ["H","I","S"], ["H","U","G"], ["J","A","R"], ["J","E","T"], ["L","I","D"], ["L","O","W"], ["M","A","X"], ["M","O","M"], ["N","O","D"],  ["N","O","T"], 
+        ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];
+  }        
+
+    getLetter1 = () => {
+        this.getLetter(1);
+    }
+    getLetter2 = () => {
+        this.getLetter(2);
+    }
+    getLetter3 = () => {
+        this.getLetter(3);
+    }
+    getLetter = (letterNumber) => {                                        
+
+        //change TODO: instead of just the next one, find the next one that is not the same as the one we already have.
+        switch(letterNumber){
+            case 1:
+                {                    
+                    this.setState({letter1:this.arrayOfWordsAsLettersInterChange[this.letter1Index][0] });                                             ;
+                    (this.letter1Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter1Index=0 : this.letter1Index++;                    
+                    break;
+                }
+            case 2:
+                {                   
+                   this.setState({letter2:this.arrayOfWordsAsLettersInterChange[this.letter2Index][1] });
+                   (this.letter2Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter2Index=0 : this.letter2Index++;
+                   break;
+                }
+            case 3:
+                {                   
+                   this.setState({letter3:this.arrayOfWordsAsLettersInterChange[this.letter3Index][2] });
+                   (this.letter3Index === this.arrayOfWordsAsLettersInterChange.length -1 )? this.letter3Index=0 : this.letter3Index++;
+                   break;
+                }
+        }
+        
+    }
 
     render() {
 
@@ -21,8 +76,17 @@ class ThreeLetterWordSounds extends Component {
         ["C","A","N"], ["C","A","T"], ["C","O","D"], ["C","O","W"], ["C","U","B"], ["C","U","P"], ["D","A","D"], ["D","O","G"], ["D","I","G"], ["D","O","T"], 
         ["E","N","D"], ["F","A","T"], ["F","E","D"], ["F","O","G"], ["G","A","S"], ["G","O", "T"], ["H","A","D"], ["H","A","T"], ["H","E","N"], ["H","I","D"], 
         ["H","I","S"], ["H","U","G"], ["J","A","R"], ["J","E","T"], ["L","I","D"], ["L","O","W"], ["M","A","X"], ["M","O","M"], ["N","O","D"],  ["N","O","T"], 
-        ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];
-        
+        ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];                                
+
+        var cardStyles = {
+            width:"100%",            
+            textAlign: "center",
+            display:"flex",
+            flexDirection:"row",
+            justifyContent:"center",
+            fontSize:"3vw",            
+            alignItems:"flex-start",            
+        }
 
       return(
   
@@ -31,6 +95,26 @@ class ThreeLetterWordSounds extends Component {
       <React.Fragment>
          <div className="TopMarginToDealWithNavBarAll">
             <div className="CenterMe">
+                Scroll down to read some words or copy paste them to print.<br/><br/>
+                Uncover the letters one at a time.  Make the sound for the word with 2 letters 
+                (first 2 or last 2), then uncover the remaining letter and make the sound for 
+                the whole word.  It is recommended to start with the last 2 first, then add the 
+                first one.  Just read the word, even if the word is not a real word.<br/><br/>
+
+                <div style={cardStyles}>                
+                    <div style={{  background:"lightpink", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter1}>
+                    <span style={{ fontSize:"10vw" }}>{this.state.letter1}</span>                 
+                    </div>   
+                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter2}>
+                    <span style={{ fontSize:"10vw" }}>{this.state.letter2}</span>                 
+                    </div>   
+                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter3}>
+                    <span style={{ fontSize:"10vw" }}>{this.state.letter3}</span>                 
+                    </div>                              
+                   
+                </div>   
+
+                <br/><br/>
                 Read the words putting the sounds of their letters together.  Read the 2 letters first, then add the third one.  Also, ask the kid
                 to identify the beginning and end sounds of the 3 letter word.<br/><br/>                                                             
                 

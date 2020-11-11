@@ -3,7 +3,7 @@ import ShuffleCardsAndShow from "../../Components/ShuffleCardsAndShow";
 
 class ThreeLetterWordSounds extends Component {
     
-  constructor(){
+    constructor(){
         super();            
         this.state = { letter0:"", letter1:"", letter2:""}  ;
         this.letter0Index=0;  
@@ -23,9 +23,13 @@ class ThreeLetterWordSounds extends Component {
         ["C","A","N"], ["C","A","T"], ["C","O","D"], ["C","U","B"], ["C","U","P"], ["D","A","D"], ["D","O","G"], ["D","I","G"], ["D","O","T"], 
         ["F","A","T"], ["F","E","D"], ["F","O","G"], ["G","A","S"], ["G","O", "T"], ["H","A","D"], ["H","A","T"], ["H","E","N"], ["H","I","D"], 
         ["H","I","S"], ["H","U","G"], ["J","A","R"], ["J","E","T"], ["L","I","D"], ["L","O","W"], ["M","A","X"], ["M","O","M"], ["N","O","D"],  ["N","O","T"], 
-        ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];
-  }        
+        ["P","I","G"], ["P","U","P"], ["R","U","B"], ["S","U","M"], ["T","O","N"], ["V","A","N"], ["W","I","N"], ["W","O","N"] ];       
+    }        
 
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
+    
     getLetter0 = () => {
         this.getLetter(0);
     }

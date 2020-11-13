@@ -49,7 +49,8 @@
     font-size: 5vh;     
     text-align: center;
     margin-top: 2vh;
-    margin-bottom: 2vh;  
+    margin-bottom: 2vh; 
+    padding:2vw; 
 }
 /*.MainSectionItem{
     background-color:var( --main-CardBG-color);    

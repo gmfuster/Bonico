@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400mm"
+   height="400mm"
+   viewBox="0 0 400 400"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="GreaterLessEqual.svg">
+  <defs
+     id="defs2">
+    <rect
+       id="rect1017"
+       height="56.696429"
+       width="185.20833"
+       y="8.9821426"
+       x="3.02382" />
+    <rect
+       id="rect1011"
+       height="24.946429"
+       width="114.90476"
+       y="305.31548"
+       x="98.27382" />
+    <rect
+       id="rect867"
+       height="318.25595"
+       width="326.57143"
+       y="23.345238"
+       x="-142.87499" />
+    <rect
+       x="-133.80356"
+       y="5.2023807"
+       width="322.79167"
+       height="71.815476"
+       id="rect848" />
+    <rect
+       x="3.0238199"
+       y="8.9821424"
+       width="185.20833"
+       height="56.69643"
+       id="rect1017-0" />
+    <rect
+       x="3.0238199"
+       y="8.9821424"
+       width="185.20833"
+       height="56.69643"
+       id="rect1030" />
+    <rect
+       id="rect1017-0-8"
+       height="56.69643"
+       width="185.20833"
+       y="8.9821424"
+       x="3.0238199" />
+    <rect
+       id="rect1059"
+       height="56.69643"
+       width="185.20833"
+       y="8.9821424"
+       x="3.0238199" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="584.28568"
+     inkscape:cy="888.95388"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(171.60118,15.964286)">
+    <rect
+       style="fill:none;fill-opacity:0.87437188;stroke:none;stroke-width:0.96499997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815"
+       width="400"
+       height="400"
+       x="-171.60118"
+       y="-15.964286"
+       ry="1.8463206" />
+    <text
+       transform="matrix(16.541421,0,0,10.818482,2206.8737,-281.42031)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect867);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text865"
+       xml:space="preserve"><tspan
+         x="-142.875"
+         y="33.001168"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#11ed1c;fill-opacity:1">&gt;
+</tspan></tspan><tspan
+         x="-142.875"
+         y="46.230294"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#11ed1c;fill-opacity:1"> </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#236aea;fill-opacity:1">&lt;</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#11ed1c;fill-opacity:1"> 
+</tspan></tspan><tspan
+         x="-142.875"
+         y="59.45942"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#11ed1c;fill-opacity:1">    </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#de079f;fill-opacity:1">=</tspan></tspan></text>
+    <text
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.58333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1011);"
+       id="text1009"
+       xml:space="preserve" />
+    <text
+       transform="matrix(2.3144115,-1.1637948,2.9338848,5.8345479,-113.20053,31.464229)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1017);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text1015"
+       xml:space="preserve"><tspan
+         x="3.0234375"
+         y="18.637887"><tspan
+           style="fill:#11ed1c;fill-opacity:1">Greater Than</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1015-4"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1017-0);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(2.415251,0.93673968,-2.361487,6.0887608,90.23431,64.899215)"><tspan
+         x="3.0234375"
+         y="18.637887"><tspan
+           style="fill:#236aea;fill-opacity:1">Less Than</tspan></tspan></text>
+    <text
+       transform="matrix(2.5905441,0,0,6.5306683,-34.622604,223.69361)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1017-0-8);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text1015-4-6"
+       xml:space="preserve"><tspan
+         x="3.0234375"
+         y="18.637887"><tspan
+           style="fill:#de079f;fill-opacity:1">Equal</tspan></tspan></text>
+  </g>
+</svg>

@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import LetterCircleList from "../../Components/LetterCircleList.component";
-import LanguagePagesCSS from '../KidsActivities/KidsPages.css'
 
 class mnwCircles extends Component {
     

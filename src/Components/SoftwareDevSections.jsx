@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 //import Container from 'react-bootstrap/Container';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
-import MainSections from "./MainSections.css";
 
 class SoftwareDevSections extends Component {
     render() {

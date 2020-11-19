@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 
 import './index.css';
-import './Views/KidsActivities/KidsPages.css';
 
-import LandingPage from "./Views/LandingPage/LandingPage";
+import LandingPage from "./LandingPage";
 import NavBar from "./Components/NavBar.js";
 
 
@@ -33,28 +32,28 @@ const routing = (
     <React.Fragment>   
         <div className="fragmentContainer"> {/*use for some styling only*/}
         
-        <NavBar/>           
-        
+        <NavBar/>                           
+
          <Router>
             <div>
                 <Switch>
-                    <Route exact path = "/" component={LandingPage}/>
-                    <Route exact path = "/bdpq" component={bdpq}/>
-                    <Route exact path = "/bdpqCircles" component={bdpqCircles}/>
-                    <Route exact path = "/mnwCircles" component={mnwCircles}/> 
-                    <Route exact path = "/CanvasTrace" component={CanvasTrace}/>                      
-                    <Route exact path = "/GreaterLessEqual" component={GreaterLessEqual}/>  
-                    <Route exact path = "/threeLetterWordSounds" component={ThreeLetterWordSounds}/>  
-                    <Route exact path = "/threeLetterRhymes" component={ThreeLetterRhymes}/>  
-                    <Route exact path = "/BeginEndSounds" component={BeginEndSounds}/>  
-                    <Route exact path = "/PlusOnePlusZero" component={PlusOnePlusZero}/>  
-                    <Route exact path = "/MinorPrintables" component={MinorPrintables}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpq"} component={bdpq}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpqCircles"} component={bdpqCircles}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/mnwCircles"} component={mnwCircles}/> 
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CanvasTrace"} component={CanvasTrace}/>                      
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/GreaterLessEqual"} component={GreaterLessEqual}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterWordSounds"} component={ThreeLetterWordSounds}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterRhymes"} component={ThreeLetterRhymes}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/BeginEndSounds"} component={BeginEndSounds}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOnePlusZero"} component={PlusOnePlusZero}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 
-                    <Route exact path = "/CSSAnimations" component={CSSAnimations}/>  
-                    <Route exact path = "/CSSPositioning" component={CSSPositioning}/>  
-                    <Route exact path = "/ReactNotes1" component={ReactNotes1}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSPositioning"} component={CSSPositioning}/>  
+                    <Route exact path ={process.env.REACT_APP_FOR_PATH + "/ReactNotes1"} component={ReactNotes1}/>  
                     
-                    <Route exact path = "/ReadBackwards" component={ReadBackwards}/>                      
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ReadBackwards"} component={ReadBackwards}/>                      
                     
                 </Switch>              
             </div>

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import MainSections from "./MainSections.css";
 
 class DescriptionSections extends Component {
     render() {

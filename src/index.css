@@ -117,3 +117,258 @@ code {
   margin:5px;
 }
 
+
+.traceLetterCanvas {           
+  width: 80vw;
+  height:70vh;
+  border: solid 2px navy;    
+  padding:15px;    
+}
+.LabelBDPQ{
+  font-size : 40vh;    
+}
+.correctLetterLabel{
+  font-size : 40vh;
+  color:green;
+}
+.pbdqImages{
+  width: 75px;
+  height:150px;
+  margin:2px;    
+}
+.pbdqButton{        
+  margin:5px;  
+  background-color: var(--main-ButtonBKColor-color);
+  border-color: var(--main-ButtonColor-color); 
+  border-radius: 10px;
+
+  width: 110px;
+  height:110px;
+  margin:5px;    
+  font-size: 75px;
+  color: var(--main-ButtonTextColor-color);
+
+  
+}
+.pbdqButton:Hover{
+  background-color: deeppink;
+}
+.pbdqButton:focus{
+  outline: none;
+}
+.radio-toolbar {
+  margin: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color:var(--main-ButtonBKColor-color);
+    padding: 5px 25px;      
+    font-size: 2.5vw;
+    border: 2px solid var(--main-ButtonColor-color);
+    border-radius: 25px;
+    color:var(--main-ButtonTextColor-color);
+    margin:5px;
+}
+
+
+.radio-toolbar label:hover {
+  background-color: deeppink;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+    border: 2px solid yellow;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: aqua;
+    border-color:var(--main-ButtonColor-color);
+}
+
+
+.circleWhite {            
+  background-color: white;
+  padding: 5px 25px;
+  border: 1px solid navy;
+  margin:5px;
+  font-size: 3vw;
+  border: 2px solid var(--main-ButtonColor-color);
+  border-radius: 25px;    
+}
+.circleGreen  {                 
+  background-color: green;
+  padding: 5px 25px;
+  border: 1px solid navy;
+  margin:5px;
+  font-size: 3vw;
+  border: 2px solid var(--main-ButtonColor-color);
+  border-radius: 25px;
+}
+.circleRed{            
+  background-color: red;
+  padding: 5px 25px;
+  border: 1px solid navy;
+  margin:5px;
+  font-size: 3vw;
+  border: 2px solid var(--main-ButtonColor-color);
+  border-radius: 25px;
+}
+
+.letterCardsForReadingWorkds{
+  background-color: lightblue;
+  color:navy;
+  font-size: 15vh;
+  border:5px solid navy;
+  border-radius: 10px;;
+  padding:15px;
+  margin:5px;
+  width:20vw;
+  height:18vh;
+}
+
+.cardsAnimation { animation-name: animation1; animation-duration: 1s; animation-iteration-count: 2} 
+
+@keyframes animation1 { 
+  0%  {   color: black;  } 
+  25% { color:white} 
+  50% {  color: navy; } 
+  100% { color:deeppink }
+}
+header.picture {
+  background-position: center;
+  /*background-image: url("images/beach_main_part.jpg");    */
+  background-image: url("/Images/boyplaybeach.png");
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+  
+}
+
+.TopMarginToDealWithNavBarImg{
+  margin-top:5vh;
+}
+/*@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap:regular,bold,italic&subset=latin,latin-ext');*/
+
+
+
+.TopMarginToDealWithNavBar{
+  margin-top:8vh;
+}
+.MainSectionContainer{                    
+  font-family: 'Arima Madurai', cursive;      
+  display:flex;
+  flex-direction: row;    
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;    
+  margin:5vw;
+  padding:2vw;
+  border-radius: 0%;
+}
+
+.MainSectionContainer > div{    
+  color: var(--main-MainText-color);  
+  width:300px;
+  height: 300px;      
+  border-radius: 15%;
+  border-width: 5px;
+  border-style: solid;
+  border-color:var(--main-MainText-color); 
+  margin:10px;
+}
+.MainSectionContainer > div > .CardTextLink{    
+  color: var(--main-MainText-color);     
+}
+.MainSectionContainer > div:hover {
+  background-color:var(--main-CardBGHover-color);
+  color: var(--main-MainTextHover-color);    
+  
+}
+.MainSectionContainer > div:hover > .CardTextLink{
+  background-color:var(--main-CardBGHover-color);
+  color: var(--main-MainTextHover-color);    
+}
+
+.MainSectionHeaderText{
+  font-size: 5vh;    
+  
+}
+.DescriptionSectionText{    
+  font-size: 5vh;     
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh; 
+  padding:2vw; 
+}
+/*.MainSectionItem{
+  background-color:var( --main-CardBG-color);    
+  color: var(--main-MainText-color);  
+  width:350px;
+  height: 350px;    
+  padding-top: 15%;          
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  margin-left:4vw;
+  margin-right:4vw; 
+  border-radius: 25%;       
+  position:absolute;
+  padding-top: 45px;
+}*/
+
+.CardTextLink {    
+  font-size: 1.8vw;         
+  text-decoration: none;  
+  
+}
+.CardTextLink:hover{     
+  text-decoration: none;        
+}
+.MainSectionItemImage{
+  width:80%;
+  height:80%;    
+}
+.MainSectionItemImagePng{
+  width:100%;
+  height:100%;    
+  border-radius: 15%;
+}
+.MainSectionItemImagePng:Hover{    
+  border-radius: 30%;    
+}
+
+.MainSectionContainerActivities{    
+  background:  radial-gradient(var(--main-MainSectionActivities-color), white);
+}
+.MainSectionContainerLanguage{    
+  background: radial-gradient(var(--main-MainSectionLanguage-color), white);
+}
+.MainSectionContainerMath{       
+  background:radial-gradient(var(--main-MainSectionMath-color), white);    
+}
+.MainSectionContainerSoftwareDev{
+  background:var(--main-MainSectionSoftwareDev-color);
+}
+.MainSectionContainerPersonalInterests{
+  background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);    
+}
+.MainSectionContainerBooks{
+  background:radial-gradient(var(--main-MainSectionBooks-color), white);    
+
+  display:flex;
+  flex-direction: row;    
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;  
+  
+  margin:5vw;
+  padding:2vw;
+}

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import CSSAnimation from '../Views/KidsActivities/KidsPages.css'
 
 class ShuffleCardsAndShow extends Component {
 

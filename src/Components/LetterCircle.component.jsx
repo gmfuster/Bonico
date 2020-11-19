@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import LanguagePagesCSS from '../Views/KidsActivities/KidsPages.css'
 
 class LetterCircle extends Component {     
     

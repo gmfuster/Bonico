@@ -9,12 +9,12 @@ class PersonalInterestsSections extends Component {
         <React.Fragment>            
 
             <div className="MainSectionContainer MainSectionContainerPersonalInterests TopMarginToDealWithNavBar" id="PersonalInterestsSection" >
-                <div>                    
+                <div className="cardDiv">                    
                     <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
                         <img src="/images/MainItemcardImages/feedforpositivity.png" className="MainSectionItemImagePng" alt="Read backwards"></img>    
                         </a>
                 </div>   
-                <div>
+                <div className="cardDiv">
                     <Link to="/ReadBackwards" className="CardTextLink">
                         <img src="/images/MainItemcardImages/readBackwards.svg" className="MainSectionItemImage" alt="Read backwards"></img>    
                     </Link>

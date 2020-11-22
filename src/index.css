@@ -273,27 +273,26 @@ header.picture {
   border-radius: 0%;
 }
 
-.MainSectionContainer > div{    
-  color: var(--main-MainText-color);  
+.cardDiv{
+  color: var(--main-text-color);  
   width:300px;
   height: 300px;      
   border-radius: 15%;
   border-width: 5px;
   border-style: solid;
-  border-color:var(--main-MainText-color); 
+  border-color:var(--main-text-color); 
   margin:10px;
 }
-.MainSectionContainer > div > .CardTextLink{    
-  color: var(--main-MainText-color);     
+.cardDiv > .CardTextLink{    
+  color: var(--main-text-color);     
 }
-.MainSectionContainer > div:hover {
+.cardDiv:hover{
   background-color:var(--main-CardBGHover-color);
-  color: var(--main-MainTextHover-color);    
-  
+  color: var(--main-CardBGHover-color);    
 }
-.MainSectionContainer > div:hover > .CardTextLink{
+.cardDiv:hover> .CardTextLink{
   background-color:var(--main-CardBGHover-color);
-  color: var(--main-MainTextHover-color);    
+  color: var(--main-CardBGHover-color);    
 }
 
 .MainSectionHeaderText{
@@ -309,7 +308,7 @@ header.picture {
 }
 /*.MainSectionItem{
   background-color:var( --main-CardBG-color);    
-  color: var(--main-MainText-color);  
+  color: var(--main-text-color);  
   width:350px;
   height: 350px;    
   padding-top: 15%;          
@@ -333,7 +332,7 @@ header.picture {
 }
 .MainSectionItemImage{
   width:80%;
-  height:80%;    
+  height:80%;     
 }
 .MainSectionItemImagePng{
   width:100%;

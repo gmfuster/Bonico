@@ -220,7 +220,7 @@ code {
   border-radius: 25px;
 }
 
-.letterCardsForReadingWorkds{
+.letterCardsForReadingWords{
   background-color: lightblue;
   color:navy;
   font-size: 15vh;
@@ -230,6 +230,21 @@ code {
   margin:5px;
   width:20vw;
   height:18vh;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+.letterCardsForReadingWords:focus{
+  outline:none; 
+}
+.buttonGeneral:focus{
+  outline:none;
+  
 }
 
 .cardsAnimation { animation-name: animation1; animation-duration: 1s; animation-iteration-count: 2} 

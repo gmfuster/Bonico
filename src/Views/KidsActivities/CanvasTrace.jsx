@@ -194,7 +194,7 @@ class CanvasTrace extends Component {
     render() {
       return(
   
-        
+        //todo printable with middle line too
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            

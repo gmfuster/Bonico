@@ -134,7 +134,8 @@ class ThreeLetterWordSounds extends Component {
             flexDirection:"row",
             justifyContent:"center",
             fontSize:"3vw",            
-            alignItems:"flex-start",            
+            alignItems:"flex-start",                            
+            userSelect: "none"
         }
 
       return(
@@ -167,12 +168,12 @@ class ThreeLetterWordSounds extends Component {
                 {arrayOfWordsAsLetters.map( (item, index) =>
                                    
                     <div>
-                        <span className="letterCardsForReadingWorkds"> {item[1]}</span>
-                        <span  className="letterCardsForReadingWorkds">{item[2]}</span>
+                        <span className="letterCardsForReadingWords"> {item[1]}</span>
+                        <span  className="letterCardsForReadingWords">{item[2]}</span>
                         <span  style={{color:"navy", fontSize:"20vh"}}>-</span>
-                        <span className="letterCardsForReadingWorkds" style={{background:"lightpink"}}>{item[0]}</span>
-                        <span  className="letterCardsForReadingWorkds">{item[1]}</span>
-                        <span  className="letterCardsForReadingWorkds" >{item[2]}</span> 
+                        <span className="letterCardsForReadingWords" style={{background:"lightpink"}}>{item[0]}</span>
+                        <span  className="letterCardsForReadingWords">{item[1]}</span>
+                        <span  className="letterCardsForReadingWords" >{item[2]}</span> 
                         <hr style={{height:"5px", backgroundColor:"navy" }}></hr>
                     </div>                        
                     

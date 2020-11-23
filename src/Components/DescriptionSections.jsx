@@ -5,7 +5,9 @@ class DescriptionSections extends Component {
         return(
             <React.Fragment>
                 <div className="DescriptionSectionText">
-                    LEARNING IS AWESOME! <br/> Some activities require a touch screen and some contain a printable.  Most require an adult to help.
+                    LEARNING IS AWESOME! <br/> 
+                    Some activities require a touch screen and some contain a printable.  <br/>
+                    Some things may not work well in older browsers.
                 </div>
             </React.Fragment>
         )};

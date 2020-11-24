@@ -7,6 +7,9 @@ import {Link} from 'react-router-dom';
 
 class KidsSections extends Component {
     render() {
+
+        const path = process.env.REACT_APP_FOR_PATH;
+
         return(
     
         <React.Fragment>            
@@ -20,54 +23,54 @@ class KidsSections extends Component {
                 </div>
                 */}
                 <div className="cardDiv">
-                    <Link to="/MinorPrintables" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/MinorPrintables.svg" className="MainSectionItemImage" alt="Minor Printables"></img>   
+                    <Link to= {path + "/MinorPrintables"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/MinorPrintables.svg"} className="MainSectionItemImage" alt="Minor Printables"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/CanvasTrace" className="CardTextLink">
-                        <img src="/Images/MainItemcardImages/CanvasTrace.svg" className="MainSectionItemImage" alt="trace on canvas"></img>   
+                    <Link to={path + "/CanvasTrace"} className="CardTextLink">
+                        <img src= {path + "/images/MainItemcardImages/CanvasTrace.svg"} className="MainSectionItemImage" alt="trace on canvas"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/bdpq" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/pdbq.svg" className="MainSectionItemImage" alt="P B Q D"></img>   
+                    <Link to= {path + "/bdpq"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/pdbq.svg"} className="MainSectionItemImage" alt="P B Q D"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/bdpqCircles" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/pdbqCircles.svg" className="MainSectionItemImage" alt="P B Q D Circles"></img>   
+                    <Link to={path +  "/bdpqCircles"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/pdbqCircles.svg"} className="MainSectionItemImage" alt="P B Q D Circles"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/mnwCircles" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/mnwCircles.svg" className="MainSectionItemImage" alt="M N W Circles"></img>   
+                    <Link to={path +  "/mnwCircles"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/mnwCircles.svg"} className="MainSectionItemImage" alt="M N W Circles"></img>   
                     </Link>
                 </div>
 
                 <div className="cardDiv">
-                    <Link to="/greaterLessEqual" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/GreaterLessEqual.svg" className="MainSectionItemImage" alt="Greater Less Equal"></img>   
+                    <Link to={path + "/greaterLessEqual"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/GreaterLessEqual.svg"} className="MainSectionItemImage" alt="Greater Less Equal"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/ThreeLetterWordSounds" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/3LetterWordSounds.svg" className="MainSectionItemImage" alt="3 letter word sounds"></img>   
+                    <Link to={path + "/ThreeLetterWordSounds"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/3LetterWordSounds.svg"} className="MainSectionItemImage" alt="3 letter word sounds"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/ThreeLetterRhymes" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/3LetterRhyme.svg" className="MainSectionItemImage" alt="3 letter rhymes"></img>   
+                    <Link to={path + "/ThreeLetterRhymes"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/3LetterRhyme.svg"} className="MainSectionItemImage" alt="3 letter rhymes"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/BeginEndSounds" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/BeginEndSounds.svg" className="MainSectionItemImage" alt="3 letter rhymes"></img>   
+                    <Link to={path + "/BeginEndSounds"} className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/BeginEndSounds.svg"} className="MainSectionItemImage" alt="3 letter rhymes"></img>   
                     </Link>
                 </div>
                 <div className="cardDiv">
-                    <Link to="/PlusOnePlusZero" className="CardTextLink">                                                    
-                        <img src="/Images/MainItemcardImages/PlusOnePlusZero.svg" className="MainSectionItemImage" alt="Plus One Plus Zero"></img>   
+                    <Link to={path + "/PlusOnePlusZero" } className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemcardImages/PlusOnePlusZero.svg"} className="MainSectionItemImage" alt="Plus One Plus Zero"></img>   
                     </Link>
                 </div>
             </div>

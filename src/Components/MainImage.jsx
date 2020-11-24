@@ -2,9 +2,19 @@ import React, {Component} from "react";
 
 class MainImage extends Component {       
     render() {
-      return(
+
+      var imageStyle = {
+        backgroundPosition: "center",
+        backgroundImage: "url(" + process.env.REACT_APP_FOR_PATH + "/images/boyplaybeach.png)",
+        backgroundSize: "cover",
+        height: "60vh",
+        position: "relative"
+    }
+
+     return(
+        
         <React.Fragment>
-            <header className="picture TopMarginToDealWithNavBarImg"/>  
+            <header style = {imageStyle} className="TopMarginToDealWithNavBarImg"/>  
         </React.Fragment>
       )
     }

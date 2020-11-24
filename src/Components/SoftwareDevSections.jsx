@@ -6,8 +6,9 @@ import {Link} from 'react-router-dom';
 
 class SoftwareDevSections extends Component {
     render() {
+        //change links and images to use paht from process.env.REACT_APP_FOR_PATH if publishing.
         return(
-    
+            
         <React.Fragment>            
 
             <div className="MainSectionContainer MainSectionContainerSoftwareDev TopMarginToDealWithNavBar" id="SofwareDevSection" >

@@ -255,15 +255,14 @@ code {
   50% {  color: navy; } 
   100% { color:deeppink }
 }
-header.picture {
-  background-position: center;
-  /*background-image: url("images/beach_main_part.jpg");    */
-  background-image: url("/Images/boyplaybeach.png");
+/*header.picture {
+  background-position: center;  
+  background-image: url("/images/boyplaybeach.png");
   background-size: cover;
   height: 60vh;
   position: relative;
   
-}
+}*/
 
 .TopMarginToDealWithNavBarImg{
   margin-top:5vh;

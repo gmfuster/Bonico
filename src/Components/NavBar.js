@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NavBar extends Component {   
     render() {
+
+        const path = process.env.REACT_APP_FOR_PATH ;
       return(
         <React.Fragment>
             <Navbar bg="dark" variant="dark" fixed="top" expand="lg" >
@@ -21,11 +23,10 @@ class NavBar extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">                    
-                        <Nav.Link href="/" style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Home</Nav.Link>
-                        <Nav.Link href="/#KidsSection" style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Kids Activities</Nav.Link>                       
-                        {/*<Nav.Link href="/#SofwareDevSection" style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Software Dev. Notes</Nav.Link>  */}
-                        <Nav.Link href="/#PersonalInterestsSection" style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>For Grown Ups</Nav.Link>
-                        <Nav.Link href="/#BooksSection"><span style={{border:"solid 2px var(--main-ButtonTextColor-color)", padding:"2px", borderRadius:"5px"}}>Books</span></Nav.Link>                        
+                        <Nav.Link href= {path + "/"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Home</Nav.Link>
+                        <Nav.Link href= {path + "/#KidsSection"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Kids Activities</Nav.Link>                                              
+                        <Nav.Link href= {path + "/#PersonalInterestsSection"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>For Grown Ups</Nav.Link>
+                        <Nav.Link href= {path + "/#BooksSection"}><span style={{border:"solid 2px var(--main-ButtonTextColor-color)", padding:"2px", borderRadius:"5px"}}>Books</span></Nav.Link>                        
                     </Nav>
                 </Navbar.Collapse>                
             </Navbar>

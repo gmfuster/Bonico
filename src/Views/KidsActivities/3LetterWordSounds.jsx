@@ -132,8 +132,7 @@ class ThreeLetterWordSounds extends Component {
             textAlign: "center",
             display:"flex",
             flexDirection:"row",
-            justifyContent:"center",
-            fontSize:"3vw",            
+            justifyContent:"center",          
             alignItems:"flex-start",                            
             userSelect: "none"
         }
@@ -149,13 +148,13 @@ class ThreeLetterWordSounds extends Component {
                 Click on a square to uncover a new letter.  It is recommended to try to make the sounds of the last 2 letters first, then add the first sound to it.<br/><br/>
 
                 <div style={cardStyles}>                
-                    <div style={{  background:"lightpink", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter0}>
+                    <div style={{  background:"lightpink", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter0}>
                     <span style={{ fontSize:"10vw" }}>{this.state.letter0}</span>                 
                     </div>   
-                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter1}>
+                    <div style={{ background:"lightblue", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter1}>
                     <span style={{ fontSize:"10vw" }}>{this.state.letter1}</span>                 
                     </div>   
-                    <div style={{ background:"lightblue", width: "15vw", border: "outset 5px black", height:"25vh", cursor:"pointer" }} onClick={this.getLetter2}>
+                    <div style={{ background:"lightblue", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter2}>
                     <span style={{ fontSize:"10vw" }}>{this.state.letter2}</span>                 
                     </div>                              
                    
@@ -166,16 +165,18 @@ class ThreeLetterWordSounds extends Component {
                 
                 {/*use map, not foreach, map gets a new object that we show}*/}
                 {arrayOfWordsAsLetters.map( (item, index) =>
-                                   
-                    <div>
-                        <span className="letterCardsForReadingWords"> {item[1]}</span>
-                        <span  className="letterCardsForReadingWords">{item[2]}</span>
-                        <span  style={{color:"navy", fontSize:"20vh"}}>-</span>
-                        <span className="letterCardsForReadingWords" style={{background:"lightpink"}}>{item[0]}</span>
-                        <span  className="letterCardsForReadingWords">{item[1]}</span>
-                        <span  className="letterCardsForReadingWords" >{item[2]}</span> 
-                        <hr style={{height:"5px", backgroundColor:"navy" }}></hr>
-                    </div>                        
+                    <div>               
+                        <div  style={cardStyles}>
+                            <span className="letterCardsForReadingWords"> {item[1]}</span>
+                            <span  className="letterCardsForReadingWords">{item[2]}</span>
+                            <span  style={{color:"navy", fontSize:"10vw"}}>-</span>
+                            <span className="letterCardsForReadingWords" style={{background:"lightpink"}}>{item[0]}</span>
+                            <span  className="letterCardsForReadingWords">{item[1]}</span>
+                            <span  className="letterCardsForReadingWords" >{item[2]}</span>                                                 
+                            {/*<hr style={{height:"5px", backgroundColor:"navy" }}></hr>*/}
+                        </div>                        
+                        <br/>
+                    </div>
                     
                     
                 )}

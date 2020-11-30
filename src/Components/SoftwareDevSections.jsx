@@ -14,17 +14,17 @@ class SoftwareDevSections extends Component {
             <div className="MainSectionContainer MainSectionContainerSoftwareDev TopMarginToDealWithNavBar" id="SofwareDevSection" >
                 <div>
                     <Link to="/CSSAnimations" className="CardTextLink">
-                        <img src="/images/MainItemcardImages/animations.svg" className="MainSectionItemImage" alt="CSS animations"></img>    
+                        <img src="/images/MainItemCardImages/animations.svg" className="MainSectionItemImage" alt="CSS animations"></img>    
                     </Link>
                 </div>
                 <div>
                     <Link to="/CSSPositioning" className="CardTextLink">
-                        <img src="/images/MainItemcardImages/positioning.svg" className="MainSectionItemImage" alt="CSS positioning"></img>    
+                        <img src="/images/MainItemCardImages/positioning.svg" className="MainSectionItemImage" alt="CSS positioning"></img>    
                     </Link>
                 </div>  
                 <div>
                     <Link to="/ReactNotes1" className="CardTextLink">
-                        <img src="/images/MainItemcardImages/reactnotes1.svg" className="MainSectionItemImage" alt="React Notes 1"></img>    
+                        <img src="/images/MainItemCardImages/reactnotes1.svg" className="MainSectionItemImage" alt="React Notes 1"></img>    
                     </Link>
                 </div>               
             </div>      

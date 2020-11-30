@@ -112,7 +112,7 @@ class CanvasTrace extends Component {
             ctx.font=`${fonts}px Arial`; 
         }      
         //once size is reduced to fit, make a bit smaller so it's not all the way to the edge
-        fonts = fonts -10;
+        fonts = fonts -25;
         ctx.font=`${fonts}px Arial`; 
         ctx.strokeText(this.state.textForCanvas, 50 , fonts); //50 so J and similar are not cut off.
                 
@@ -199,8 +199,10 @@ class CanvasTrace extends Component {
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
             Use your finger.  Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
-            <TextFieldWithButton textForInput = "Enter you text" textForButton="Move to canvas!" functionToCall= {this.updateCanvas}/>
-            <button className="buttonPrintable" onClick={this.printTheText}>Printable</button>
+            <TextFieldWithButton textForInput = "Enter you text" textForButton="To canvas!" functionToCall= {this.updateCanvas}/>
+            <br/>
+            
+            {/* TODO fix button format and get printout with middle line too <button className="buttonPrintable" onClick={this.printTheText}>Printable</button><br/> */}
             
             <canvas className ="traceLetterCanvas"  
                     ref={this.refToCanvas}                     

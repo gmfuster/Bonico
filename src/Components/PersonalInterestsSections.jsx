@@ -14,12 +14,12 @@ class PersonalInterestsSections extends Component {
             <div className="MainSectionContainer MainSectionContainerPersonalInterests TopMarginToDealWithNavBar" id="PersonalInterestsSection" >
                 <div className="cardDiv">                    
                     <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
-                        <img src= {path +"/images/MainItemcardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="Read backwards"></img>    
+                        <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="Read backwards"></img>    
                         </a>
                 </div>   
                 <div className="cardDiv">
                     <Link to= {path + "/ReadBackwards"} className="CardTextLink">
-                        <img src= {path + "/images/MainItemcardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
+                        <img src= {path + "/images/MainItemCardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
                     </Link>
                 </div>                     
             </div>      

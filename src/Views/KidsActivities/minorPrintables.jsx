@@ -12,18 +12,14 @@ function MinorPrintables () {
          <br/>
 
             <div className="myContentsAreGrid1">
-                
-                <br/>
-                <div style={{textAlign:"center"}}>
-                    <a className="buttonPrintable" style={{textDecoration:"none"}} href="authorvsillustrator.pdf" target="_new">Author vs Illustrator!</a>
-                </div>
-
-                <br/><br/>
-                <div style={{textAlign:"center"}}>
-                    <a className="buttonPrintable" style={{textDecoration:"none"}} href="patterns.pdf" target="_new">Patterns!</a>
+                                
+                <div style={{marginBottom:"5vh"}}>
+                    <a className="buttonPrintable" href="authorvsillustrator.pdf" target="_new">Author vs Illustrator!</a>
                 </div>
                 
-
+                <div style={{marginBottom:"5vh"}}>
+                    <a className="buttonPrintable"  href="patterns.pdf" target="_new">Patterns!</a>
+                </div>                
                 
             </div>        
         </div>

@@ -55,29 +55,43 @@ code {
   margin-bottom: 3vw;
 }
 .myContentsAreGrid1{
-  display:grid;
-  grid-template-columns: 20% 20% 20% 20% 20% ;
+  display:flex;  
+  flex-direction: row;    
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;   
   margin-left:10vw;
   margin-right:10vw;
-  margin-top: 3vw;
-  margin-bottom: 3vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 .inputText{
-  margin:4px;
-  width:20vw;
-  padding: 15px; 
+  margin:2px;
+  padding: 1vw; 
   border-width: 1px;
-  border-radius: 30px;
+  border-radius: 20px;
+  width:55vw;
+}
+.buttonInputWithButtons{
+  background-color: var(--main-ButtonBKColor-color);
+  border-color: var(--main-ButtonColor-color); 
+  color: var(--main-ButtonColor-color);      
+  padding: 1vw;  
+  border-width: 0px;
+  border-radius: 20px;
+  margin:2px;
+  width:15vw;
+}
+.buttonInputWithButtons:focus{
+  outline:none;
 }
 .buttonGeneral{
   background-color: var(--main-ButtonBKColor-color);
   border-color: var(--main-ButtonColor-color); 
-  color: var(--main-ButtonColor-color);  
-  width:175px;
-  font-size: 18px;
-  padding: 15px;  
+  color: var(--main-ButtonColor-color);      
+  padding: 2vw;  
   border-width: 0px;
-  border-radius: 30px;
+  border-radius: 25px;
   margin:2px;
 }
 .buttonGeneral:focus{
@@ -85,14 +99,14 @@ code {
 }
 
 .buttonPrintable{
-  background-color: deeppink;
-  border-color: navy; 
+  background-color: deeppink;  
   color:white;    
-  font-size: 18px;
-  padding: 15px;  
-  border-width: 0px;
-  border-radius: 30px;
-  margin:2px;
+  font-size: 4vh;
+  padding: 2vw;  
+  border: solid navy 0px;
+  border-radius: 25px; 
+  text-align: center;  
+  text-decoration: none;
 }
 .buttonPrintable:hover{
   color:white;
@@ -125,10 +139,10 @@ code {
   padding:15px;    
 }
 .LabelBDPQ{
-  font-size : 40vh;    
+  font-size : 10vw;    
 }
 .correctLetterLabel{
-  font-size : 40vh;
+  font-size : 10vw;
   color:green;
 }
 .pbdqImages{
@@ -223,13 +237,11 @@ code {
 .letterCardsForReadingWords{
   background-color: lightblue;
   color:navy;
-  font-size: 15vh;
-  border:5px solid navy;
-  border-radius: 10px;;
-  padding:15px;
-  margin:5px;
-  width:20vw;
-  height:18vh;
+  font-size: 10vw;
+  border:2px solid navy;
+  border-radius: 0px;;    
+  width:15vw;
+  height:15vw;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

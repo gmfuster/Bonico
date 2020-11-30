@@ -26,7 +26,8 @@ class bdpq extends Component {
         {
           word = (index < this.state.words.length - 1)? this.state.words[index+1] : this.state.words[0];          
         }
-        this.setState({selectedWord:word});        
+        this.setState({selectedWord:word});     
+        this.forceUpdate();                   
     }
 
     clickLetter = (l) => {
@@ -42,6 +43,9 @@ class bdpq extends Component {
     }
 
     render() {
+
+      const path = process.env.REACT_APP_FOR_PATH ;
+
       return(
   
       <React.Fragment>
@@ -50,7 +54,7 @@ class bdpq extends Component {
 
               <button title="Get Word" onClick={this.getAWordFromArray} className="buttonGeneral">Get Word</button><br/>
               <br/>Choose the letter that matches the beginning of the word shown.<br/>
-              <img src="../images/Language/correct.svg" className="pbdqImages" ref={this.refToCorrectImage} style={{visibility: 'hidden'}} /> 
+              <img src= {path + "/images/Language/correct.svg"} className="pbdqImages" ref={this.refToCorrectImage} style={{visibility: 'hidden'}} /> 
               {/*<button className="pbdqButton"><img src="../images/Language/P.svg" onClick={() => this.clickLetter("p")} className="pbdqImages"></img></button>*/}
               <button className="pbdqButton" onClick={() => this.clickLetter("p")} >p</button>
               <button className="pbdqButton" onClick={() => this.clickLetter("b")} >b</button>
@@ -61,9 +65,10 @@ class bdpq extends Component {
               <button className="pbdqButton"><img src="../images/Language/q.svg" onClick={() => this.clickLetter("q")} className="pbdqImages"></img></button>
               <button className="pbdqButton"><img src="../images/Language/d.svg" onClick={() => this.clickLetter("d")} className="pbdqImages"></img></button>
             */}
-              <img src="../images/Language/incorrect.svg" className="pbdqImages" ref={this.refToIncorrectImage} style={{visibility:'hidden'}}/> 
+              <img src= {path + "/images/Language/incorrect.svg"} className="pbdqImages" ref={this.refToIncorrectImage} style={{visibility:'hidden'}}/> 
               <br/>               
-              <label className="correctLetterLabel">{this.state.selectedWord[0]}</label><label className="LabelBDPQ">{this.state.selectedWord.substr(1,this.state.selectedWord.length-1)}</label>
+              <label className="correctLetterLabel">{this.state.selectedWord[0]}</label>
+              <label className="LabelBDPQ">{this.state.selectedWord.substr(1,this.state.selectedWord.length-1)}</label>              
             </div>
         
         </div>

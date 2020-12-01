@@ -58,16 +58,19 @@ class KidsSections extends Component {
                         <img src= {path + "/images/MainItemCardImages/3LetterWordSounds.svg"} className="MainSectionItemImage" alt="3 letter word sounds"></img>   
                     </Link>
                 </div>
+                {/*}
                 <div className="cardDiv">
                     <Link to={path + "/ThreeLetterRhymes"} className="CardTextLink">                                                    
                         <img src= {path + "/images/MainItemCardImages/3LetterRhyme.svg"} className="MainSectionItemImage" alt="3 letter rhymes"></img>   
                     </Link>
                 </div>
+            
                 <div className="cardDiv">
                     <Link to={path + "/BeginEndSounds"} className="CardTextLink">                                                    
                         <img src= {path + "/images/MainItemCardImages/BeginEndSounds.svg"} className="MainSectionItemImage" alt="3 letter rhymes"></img>   
                     </Link>
                 </div>
+                */}
                 <div className="cardDiv">
                     <Link to={path + "/PlusOnePlusZero" } className="CardTextLink">                                                    
                         <img src= {path + "/images/MainItemCardImages/PlusOnePlusZero.svg"} className="MainSectionItemImage" alt="Plus One Plus Zero"></img>   

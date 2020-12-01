@@ -89,7 +89,7 @@ code {
   background-color: var(--main-ButtonBKColor-color);
   border-color: var(--main-ButtonColor-color); 
   color: var(--main-ButtonColor-color);      
-  padding: 2vw;  
+  padding: 1vw;  
   border-width: 0px;
   border-radius: 25px;
   margin:2px;
@@ -101,8 +101,8 @@ code {
 .buttonPrintable{
   background-color: deeppink;  
   color:white;    
-  font-size: 4vh;
-  padding: 2vw;  
+  font-size: 3vh;
+  padding: 1vw;  
   border: solid navy 0px;
   border-radius: 25px; 
   text-align: center;  
@@ -120,7 +120,7 @@ code {
   color:white;
   text-decoration: none;
 }
-.buttonGeneral:focus{
+.buttonPrintable:focus{
   outline:none;
 }
 
@@ -253,10 +253,6 @@ code {
 }
 .letterCardsForReadingWords:focus{
   outline:none; 
-}
-.buttonGeneral:focus{
-  outline:none;
-  
 }
 
 .cardsAnimation { animation-name: animation1; animation-duration: 1s; animation-iteration-count: 2} 

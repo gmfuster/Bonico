@@ -21,6 +21,14 @@ function MinorPrintables () {
                     <a className="buttonPrintable"  href="patterns.pdf" target="_new">Patterns!</a>
                 </div>                
                 
+                <div style={{marginBottom:"5vh"}}>
+                    <a className="buttonPrintable" style={{textDecoration:"none"}} href="rhymes.pdf" target="_new">Rhyming Cards!</a>
+                </div>  
+
+                <div style={{marginBottom:"5vh"}}>
+                <a className="buttonPrintable" style={{textDecoration:"none"}} href="startandendsounds.pdf" target="_new">Being/End Sounds!</a>
+                </div> 
+
             </div>        
         </div>
       </React.Fragment>)

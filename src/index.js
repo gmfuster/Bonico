@@ -44,8 +44,8 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CanvasTrace"} component={CanvasTrace}/>                      
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/GreaterLessEqual"} component={GreaterLessEqual}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterWordSounds"} component={ThreeLetterWordSounds}/>  
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterRhymes"} component={ThreeLetterRhymes}/>  
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/BeginEndSounds"} component={BeginEndSounds}/>  
+                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterRhymes"} component={ThreeLetterRhymes}/>  */}
+                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/BeginEndSounds"} component={BeginEndSounds}/>  */}
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOnePlusZero"} component={PlusOnePlusZero}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

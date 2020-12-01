@@ -18,6 +18,7 @@ import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import BeginEndSounds from "./Views/KidsActivities/BeginEndSounds";
 import ThreeLetterRhymes from "./Views/KidsActivities/3LetterRhymes";
 import PlusOnePlusZero from "./Views/KidsActivities/PlusOnePlusZero";
+import Subtraction from "./Views/KidsActivities/Subtraction";
 import MinorPrintables from "./Views/KidsActivities/minorPrintables";
 
 import CSSAnimations from "./Views/SoftwareNotes/cssanimations";
@@ -47,6 +48,7 @@ const routing = (
                     {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterRhymes"} component={ThreeLetterRhymes}/>  */}
                     {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/BeginEndSounds"} component={BeginEndSounds}/>  */}
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOnePlusZero"} component={PlusOnePlusZero}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Subtraction"} component={Subtraction}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  

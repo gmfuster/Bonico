@@ -5,16 +5,15 @@ class PlusOnePlusZero extends Component {
 
     constructor()
     {
+        //todo change deprecated and remove from state what not needed in state
+
         super();   
         //default is  1 or 0                         
-        this.state = { result:"?", elementsForWhatToAdd:[0,1], elementsForWhatToAddTo: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] }
-        //this.elementsForWhatToAdd = [0, 1] ;
-        //this.elementsNumber = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  ;        
+        this.state = { result:"?", elementsForWhatToAdd:[0,1], elementsForWhatToAddTo: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] }             
 
         this.numberWeAddTo = 0;
         this.numberBeingAdded = 0;
-        
-        //
+                
     }     
 
     setOption = (optionString) => {

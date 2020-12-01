@@ -194,7 +194,7 @@ class CanvasTrace extends Component {
     render() {
       return(
   
-        //todo printable with middle line too
+        //todo printable with middle line too, TODO use canvas element instead of having canvas code here.
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            

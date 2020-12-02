@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="MinorPrintables.svg"
+   sodipodi:docname="Subtraction.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg8"
    version="1.1"
@@ -16,6 +16,12 @@
    width="400mm">
   <defs
      id="defs2">
+    <rect
+       id="rect925"
+       height="81.642857"
+       width="331.10714"
+       y="17.297619"
+       x="-126.24404" />
     <rect
        x="-122.46428"
        y="5.2023807"
@@ -81,7 +87,7 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="727.32947"
+     inkscape:cy="933.7023"
      inkscape:cx="584.28568"
      inkscape:zoom="0.35"
      inkscape:pageshadow="2"
@@ -121,21 +127,24 @@
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect978);fill:#0d92f4;fill-opacity:1;stroke:none;"
        transform="matrix(8.5968263,0,0,13.109322,897.54633,-41.188757)" />
     <text
-       transform="scale(0.70361385,1.4212341)"
-       id="text884"
-       y="106.0641"
-       x="-180.26735"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:89.7274px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#e7066a;fill-opacity:1;stroke:none;stroke-width:2.24316"
-       xml:space="preserve"><tspan
-         id="tspan894"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#e7066a;fill-opacity:1;stroke-width:2.24316"
-         y="106.0641"
-         x="-180.26735"
-         sodipodi:role="line">Misc.</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#e7066a;fill-opacity:1;stroke-width:2.24316"
-         y="218.22336"
-         x="-180.26735"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:182.122px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#e71d7c;fill-opacity:1;stroke:none;stroke-width:4.553"
+       x="-181.09801"
+       y="224.73851"
+       id="text884-8"
+       transform="scale(0.71614887,1.3963577)"><tspan
          sodipodi:role="line"
-         id="tspan1015">Printables</tspan></text>
+         x="-181.09801"
+         y="224.73851"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#e71d7c;fill-opacity:1;stroke-width:4.553"
+         id="tspan886-9">2 - 1</tspan></text>
+    <text
+       transform="matrix(5.3012228,0,0,10.402136,540.02575,-177.80863)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect925);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text923"
+       xml:space="preserve"><tspan
+         x="-126.24414"
+         y="26.95234"><tspan
+           style="fill:#e71d7c;fill-opacity:1">Subtraction</tspan></tspan></text>
   </g>
 </svg>

@@ -22,7 +22,7 @@ class CanvasComponent extends Component {
         this.refToCanvas.current.addEventListener('touchstart', this.canvasTouchStart, {passive:false})    ;
         this.refToCanvas.current.addEventListener('touchmove', this.canvasTouchMove, {passive:false})    ;
         //TODO in the future add whether the default should be erased on reset or not, for now, it is not.
-        this.setCanvasDefault(this.props.DefaultDisplay, this.props.IsThisAnImage, this.IsThisText); 
+        this.setCanvasDefault(); 
     }
           
     handleResize = () => {        
@@ -95,12 +95,12 @@ class CanvasComponent extends Component {
 
     /*UPDATE CANVAS START*/    
 
-    setCanvasDefault = (defaultDisplay, isItImage, isItText) => {
+    setCanvasDefault = () => {
 
         var ctx = this.refToCanvas.current.getContext("2d");                 
         ctx.clearRect(0, 0, this.refToCanvas.current.width, this.refToCanvas.current.height);  
         
-        if (isItText){
+        if (this.props.IsThisText == "true"){            
             //set size to biggest possible that will fit
             //using ratio of 150c/110f=> c => 150/110 => 1.36 => 0.73 ==> just a bit smaller
             var fonts = this.refToCanvas.current.height * 0.63;//default size
@@ -108,7 +108,7 @@ class CanvasComponent extends Component {
             fonts = Math.round(fonts);        
             ctx.font = `${fonts}px Arial`;         
             // lower the font size until the text fits the canvas
-            while(ctx.measureText(defaultDisplay).width>this.refToCanvas.current.width){
+            while(ctx.measureText(this.props.DefaultDisplay).width>this.refToCanvas.current.width){
                 fonts--;
                 ctx.font=`${fonts}px Arial`; 
             }      
@@ -116,12 +116,12 @@ class CanvasComponent extends Component {
             fonts = fonts -25;
             ctx.font=`${fonts}px Arial`; 
 
-            ctx.strokeText(defaultDisplay, 50 , fonts); //50 so J and similar are not cut off.
+            ctx.strokeText(this.props.DefaultDisplay, 50 , fonts); //50 so J and similar are not cut off.
         }
         //we are not getting the image but the image path
-        if (isItImage) {
+        if (this.props.IsThisAnImage == "true") {              
             let img = new Image();
-            img.src = defaultDisplay;
+            img.src = this.props.DefaultDisplay;
 
             let imgW = this.refToCanvas.current.width;
             let imgH = this.refToCanvas.current.height;
@@ -152,6 +152,9 @@ class CanvasComponent extends Component {
     }
     /*LISTENER EVENTS END*/    
 
+    resetCanvas =() =>{
+        this.defaultDisplay();
+    }
     render() {
         
         var canvasStyle = {           

@@ -13,7 +13,8 @@ class Subtraction extends Component {
 
         const path = process.env.REACT_APP_FOR_PATH;
 
-        this.imgPath = path + "/images//substractionline.svg";        
+        this.imgPath = path + "/images//substractionline.svg";   
+        this.refToCanvas = React.createRef();      
     }         
    
     generateRandomNumber = (length) => {
@@ -30,7 +31,7 @@ class Subtraction extends Component {
 
         this.result =  Math.abs(random1 - random2)        
         
-        
+        this.refToCanvas.current.setCanvasDefault();
     }
             
     showResult = () => {
@@ -67,7 +68,7 @@ class Subtraction extends Component {
                    <span >{this.state.result}</span>                 
                 </div>   
             </div>                  
-            <CanvasComponent DefaultDisplay={this.imgPath} IsThisAnImage = "true" IsThisText = "false" canvasWidth ="90vw" canvasHeight="40vh"/> 
+            <CanvasComponent DefaultDisplay={this.imgPath} IsThisAnImage = "true" IsThisText = "false" canvasWidth ="90vw" canvasHeight="40vh" ref={this.refToCanvas}   /> 
             
             
         </div>

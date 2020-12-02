@@ -317,6 +317,13 @@ code {
   color: var(--main-CardBGHover-color);    
 }
 
+.cardDivLang{
+  border-color:yellow; 
+}
+.cardDivAll{
+  border-color:darksalmon; 
+}
+
 .MainSectionHeaderText{
   font-size: 5vh;    
   

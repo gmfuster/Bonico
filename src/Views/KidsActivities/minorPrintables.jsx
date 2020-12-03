@@ -14,20 +14,24 @@ function MinorPrintables () {
             <div className="myContentsAreGrid1">
                                 
                 <div style={{marginBottom:"5vh"}}>
-                    <a className="buttonPrintable" href="authorvsillustrator.pdf" target="_new">Author vs Illustrator!</a>
-                </div>
+                    <a className="buttonPrintable buttonPrintableLang" href="authorvsillustrator.pdf" target="_new">Author vs Illustrator!</a>
+                </div>                                              
                 
                 <div style={{marginBottom:"5vh"}}>
-                    <a className="buttonPrintable"  href="patterns.pdf" target="_new">Patterns!</a>
-                </div>                
-                
-                <div style={{marginBottom:"5vh"}}>
-                    <a className="buttonPrintable" style={{textDecoration:"none"}} href="rhymes.pdf" target="_new">Rhyming Cards!</a>
+                    <a className="buttonPrintable buttonPrintableLang" style={{textDecoration:"none"}} href="rhymes.pdf" target="_new">Rhyming Cards!</a>
                 </div>  
 
                 <div style={{marginBottom:"5vh"}}>
-                <a className="buttonPrintable" style={{textDecoration:"none"}} href="startandendsounds.pdf" target="_new">Being/End Sounds!</a>
+                <a className="buttonPrintable buttonPrintableLang" style={{textDecoration:"none"}} href="startandendsounds.pdf" target="_new">Being/End Sounds!</a>
                 </div> 
+
+                <div style={{marginBottom:"5vh"}}>
+                <a className="buttonPrintable buttonPrintableMath" style={{textDecoration:"none"}} href="CombiningNumbersAddition.pdf" target="_new">2 and 3 make 5</a>
+                </div> 
+
+                <div style={{marginBottom:"5vh"}}>
+                    <a className="buttonPrintable buttonPrintableMath"  href="patterns.pdf" target="_new">Patterns!</a>
+                </div>  
 
             </div>        
         </div>

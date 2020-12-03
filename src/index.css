@@ -102,8 +102,7 @@ code {
   background-color: deeppink;  
   color:white;    
   font-size: 3vh;
-  padding: 1vw;  
-  border: solid navy 0px;
+  padding: 1vw;    
   border-radius: 25px; 
   text-align: center;  
   text-decoration: none;
@@ -123,7 +122,13 @@ code {
 .buttonPrintable:focus{
   outline:none;
 }
+.buttonPrintableMath{
+  border: solid navy 5px;
+}
 
+.buttonPrintableLang{
+  border: solid red 6px;
+}
 .CodeContainer{
   border:3px solid gray;  
   background-color:lightcyan;

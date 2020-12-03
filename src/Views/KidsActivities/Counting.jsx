@@ -12,7 +12,7 @@ class Counting extends Component {
         this.digit1 = 0; this.digit2 = 0;      
     }             
     //todo see how to pass the parameter to one function without it being called on load
-    nextDigit1 = (d, s) => {
+    nextDigit = (d, s) => {
 
         switch(d) {
             case "1":
@@ -54,23 +54,23 @@ class Counting extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-           Click on each digit (number) to get the next one.  Pay attention to have both numbers together form the bigger number.  You can set the first number at 2 and Click
-           on the second one to see 20, 21, 22 or have a 5 on the second number and click on the first one to see 15, 25, 35 etc.<br/>                       
+           Increase or decrease the number by clicking on the + or - buttons.  Pay attention to how the blue and pink numbers combine to create the  bigger number.
+           <br/><br/>
            
             <div>                   
                 <div style = {divHorContainer}>
-                    <button style = {{backgroundColor:"navy", width:"20vw" }} onClick={() => this.nextDigit("1", "UP")}>+</button>
-                    <button  style = {{backgroundColor:"deeppink", width:"20vw" }} onClick={() => this.nextDigit("2", "UP")}>-</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw", fontSize:"2vw" }} onClick={() => this.nextDigit("1", "UP")}>+</button>
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("2", "UP")}>+</button> <br/>
                 </div>   
                 <br/>   
                 <div style = {divHorContainer}>
-                    <span style = {{ color:"white", backgroundColor:"navy", width:"20vw", fontSize:"18vw", textAlign:"center"}}>{this.state.digit1 } </span>
-                    <span style = {{ color:"white", backgroundColor:"deeppink", width:"20vw", fontSize:"18vw", textAlign:"center"}}>{this.state.digit2}</span> <br/>
+                    <span style = {{ color:"white", backgroundColor:"navy", width:"25vw", height:"25vw", fontSize:"18vw", textAlign:"center"}}>{this.state.digit1 } </span>
+                    <span style = {{ color:"white", backgroundColor:"deeppink", width:"25vw", height:"25vw",fontSize:"18vw", textAlign:"center"}}>{this.state.digit2}</span> <br/>
                 </div>                              
                 <br/>   
                 <div style = {divHorContainer}>
-                    <button style = {{backgroundColor:"navy", width:"20vw" }} onClick={() => this.nextDigit("1", "DOWN")}>+</button>  
-                    <button  style = {{backgroundColor:"deeppink", width:"20vw" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("1", "DOWN")}>-</button>  
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
                 </div>                 
             </div>
             

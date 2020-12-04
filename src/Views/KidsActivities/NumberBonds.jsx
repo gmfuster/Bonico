@@ -5,36 +5,38 @@ class NumberBonds extends Component {
     constructor()
     {
         super();           
-        this.state = { result:"?", numberOne:"?", numberTwo:"?"}       
-
-        this.result = null;                
-        this.numbersToUse = [1,2,3,4,5,6,7,8,9,10];    
-
-        const path = process.env.REACT_APP_FOR_PATH;
-
-        this.imgPath = path + "/images//substractionline.svg";   
-        this.refToCanvas = React.createRef();      
+        this.state = { total:"?", el1:"?", el2:"?", correction:""}       
+                  
+        this.numbersToUse = [1,2,3,4,5,6,7,8,9];    
+        this.random1 = "?";
+        this.randomTotal ="?";
     }         
    
     generateRandomNumber = (length) => {
         return Math.floor(Math.random() * length);      
     }
     
-    getNewNumbers = () => {
+    goClick = () => {
 
-        let random1 = this.generateRandomNumber(this.numbersToUse.length);
-        let random2 = this.generateRandomNumber(this.numbersToUse.length);
-                
-        (random1>= random2)? this.setState( { numberOne: random1, numberTwo: random2}) : this.setState( { numberTwo: random1, numberOne: random2});
-        this.setState( {result : "?"});
+        this.random1 = this.generateRandomNumber(this.numbersToUse.length);
+        this.randomTotal = this.generateRandomNumber(this.numbersToUse.length);        
 
-        this.result =  Math.abs(random1 - random2)        
-        
-        this.refToCanvas.current.setCanvasDefault();
+        if (this.random1 > this.randomTotal){            
+            [this.random1, this.randomTotal] = [this.randomTotal, this.random1];
+        }               
+
+        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?"});                             
+        this.forceUpdate();
     }
-            
-    showResult = () => {
-        this.setState( {result : this.result});
+    resetClick = () => {
+        this.setState( {el2:"?", correction:""});
+        this.forceUpdate();
+    }
+
+    numberClick = (n) => {
+                
+        (this.random1 + n == this.randomTotal)? this.setState( { correction:"YAY!", el2: n}): this.setState( { correction: "☹☹☹", el2: n})
+        this.forceUpdate();
     }
 
     render() {
@@ -43,14 +45,14 @@ class NumberBonds extends Component {
             display:"flex",
             flexDirection:"row",
             justifyContent:"center",
-            userSelect:"none",            
+            userSelect:"none",                        
         }
 
         var divVertContainer = {
             display:"flex",            
             flexDirection:"column",            
             userSelect:"none",            
-            padding:"2vw"
+            padding:"1vw"
         }
 
       return(
@@ -59,38 +61,43 @@ class NumberBonds extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-            Click the GO button and click on the number that solves the equation.  Use the stairs to see where you are and count up to where you want to be<br/> 
+            Click the GO button to get an equation to solve.  Click on the number that solves the equation.  Use the stairs to see where you are and count up to where you want to be<br/> 
             
+            {/*buttons */}
             <div style = {divHorContainer}>
-                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.goClick}>GO</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("1")}>1</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("2")}>2</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("3")}>3</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("4")}>4</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("5")}>5</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("6")}>6</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("7")}>7</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("8")}>8</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick("9")}>9</button>
-                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.resetClick}>Reset</button>
+                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.goClick}>GO!</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(0)}>0</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(1)}>1</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(2)}>2</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(3)}>3</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(4)}>4</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(5)}>5</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(6)}>6</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(7)}>7</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(8)}>8</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(9)}>9</button>
+                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.resetClick}>Undo</button>
             </div>   
             
             <div style = {divHorContainer}>
+
+                {/*stairs */}
                 <div style = {divVertContainer}>
-                    <div style={{backgroundColor:"deeppink", width:"3vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>9</div>
-                    <div style={{backgroundColor:"deeppink", width:"6vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>8</div>
-                    <div style={{backgroundColor:"deeppink", width:"9vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>7</div>
-                    <div style={{backgroundColor:"deeppink", width:"12vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>6</div>
-                    <div style={{backgroundColor:"deeppink", width:"15vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>5</div>
-                    <div style={{backgroundColor:"deeppink", width:"18vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>4</div>
-                    <div style={{backgroundColor:"deeppink", width:"21vw", height:"3vh",borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>3</div>
-                    <div style={{backgroundColor:"deeppink", width:"24vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>2</div>
-                    <div style={{backgroundColor:"deeppink", width:"27vw", height:"3vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>1</div>
-                    <div style={{backgroundColor:"deeppink", width:"30vw", height:"3vh",borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>0</div>
+                    <div style={{backgroundColor:"deeppink", width:"3vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>9</div>
+                    <div style={{backgroundColor:"deeppink", width:"6vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>8</div>
+                    <div style={{backgroundColor:"deeppink", width:"9vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>7</div>
+                    <div style={{backgroundColor:"deeppink", width:"12vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>6</div>
+                    <div style={{backgroundColor:"deeppink", width:"15vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>5</div>
+                    <div style={{backgroundColor:"deeppink", width:"18vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>4</div>
+                    <div style={{backgroundColor:"deeppink", width:"21vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>3</div>
+                    <div style={{backgroundColor:"deeppink", width:"24vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>2</div>
+                    <div style={{backgroundColor:"deeppink", width:"27vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>1</div>
+                    <div style={{backgroundColor:"deeppink", width:"30vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>0</div>
                 </div>  
 
+                {/*bond */}
                 <div style = {divVertContainer} >
-                    <div style = {{border:"3px solid deeppink", width:"10vw", height:"6vh",fontSize:"2vw"}}>1</div>
+                    <div style = {{border:"3px solid deeppink", width:"10vw", height:"6vh",fontSize:"2vw"}}>{this.state.total}</div>
                     <div style = {divHorContainer}>
                         <div style = {{borderRight:"3px solid deeppink", width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
                         <div style = {{width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
@@ -98,12 +105,28 @@ class NumberBonds extends Component {
                         <div style = {{borderLeft:"3px solid deeppink", width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
                     </div>
                     <div  style = {divHorContainer}>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>1</div>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>1</div>                    
+                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>{this.state.el1}</div>
+                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>{this.state.el2}</div>                    
                     </div>
                 </div>
 
-            </div>            
+                {/*Equation*/}
+                <div style = {{paddingTop:"10vh", paddingLeft:"2vw", fontSize:"5vw"}}>
+                    <div style = {divVertContainer} > 
+                        <div style = {divHorContainer}>
+                            <label style = {{ }}>{this.state.el1}</label>
+                            <span>+</span>
+                            <label>{this.state.el2}</label>
+                            <label>=</label>
+                            <label>{this.state.total}</label>
+                        </div>
+                        <label style = {{fontSize:"4vw", border:"2px solid salmon" }}>{this.state.correction}</label>
+                    </div>
+                </div>
+                              
+            </div>    
+
+                
             
             
             

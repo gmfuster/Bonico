@@ -75,6 +75,11 @@ class KidsSections extends Component {
                         <img src= {path + "/images/MainItemCardImages/Subtraction.svg"} className="MainSectionItemImage" alt="Subtraction"></img>   
                     </Link>
                 </div>
+                <div className="cardDiv">
+                    <Link to={path + "/NumberBonds" } className="CardTextLink">                                                    
+                        <img src= {path + "/images/MainItemCardImages/NumberBonds.svg"} className="MainSectionItemImage" alt="Number Bonds"></img>   
+                    </Link>
+                </div>
 
 
 

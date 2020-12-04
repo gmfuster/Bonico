@@ -42,7 +42,7 @@ class Counting extends Component {
 
        var divHorContainer = {
         display:"flex",
-        flexDdirection:"row",
+        flexDirection:"row",
         justifyContent:"center",
         userSelect:"none"
     }

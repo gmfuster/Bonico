@@ -14,6 +14,8 @@ import bdpqCircles from "./Views/KidsActivities/bdpqCircles";
 import mnwCircles from "./Views/KidsActivities/mnwCircles";
 import CanvasTrace from "./Views/KidsActivities/CanvasTrace";
 import GreaterLessEqual from "./Views/KidsActivities/greaterLessEqual";
+import NumberBonds from "./Views/KidsActivities/NumberBonds";
+
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import BeginEndSounds from "./Views/KidsActivities/BeginEndSounds";
 import ThreeLetterRhymes from "./Views/KidsActivities/3LetterRhymes";
@@ -51,6 +53,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOnePlusZero"} component={PlusOnePlusZero}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Subtraction"} component={Subtraction}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Counting"} component={Counting}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NumberBonds"} component={NumberBonds}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

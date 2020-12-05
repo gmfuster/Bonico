@@ -5,11 +5,12 @@ class NumberBonds extends Component {
     constructor()
     {
         super();           
-        this.state = { total:"?", el1:"?", el2:"?", correction:""}       
+        this.state = { total:"?", el1:"?", el2:"?", correction:"", signs:["","","","","","","","","",""]}       
                   
         this.numbersToUse = [1,2,3,4,5,6,7,8,9];    
         this.random1 = "?";
         this.randomTotal ="?";
+        this.signs=["","","","","","","","","",""]  ;
     }         
    
     generateRandomNumber = (length) => {
@@ -25,7 +26,10 @@ class NumberBonds extends Component {
             [this.random1, this.randomTotal] = [this.randomTotal, this.random1];
         }               
 
-        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?"});                             
+        this.signs=["","","","","","","","","",""]  ;
+        this.signs[this.random1] = "==>";
+        this.signs[this.randomTotal] = "==>";
+        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs});                             
         this.forceUpdate();
     }
     resetClick = () => {
@@ -61,7 +65,8 @@ class NumberBonds extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-            Click the GO button to get an equation to solve.  Click on the number that solves the equation.  Use the stairs to see where you are and count up to where you want to be<br/> 
+            Click the GO button to get an equation to solve.  Click on the number that solves the equation.  Use the stairs to see where you are and count up 
+            to where you want to be (put your finger at the step you already have, and start counting up the number of steps you need.<br/> 
             
             {/*buttons */}
             <div style = {divHorContainer}>
@@ -83,16 +88,16 @@ class NumberBonds extends Component {
 
                 {/*stairs */}
                 <div style = {divVertContainer}>
-                    <div style={{backgroundColor:"deeppink", width:"3vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>9</div>
-                    <div style={{backgroundColor:"deeppink", width:"6vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>8</div>
-                    <div style={{backgroundColor:"deeppink", width:"9vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>7</div>
-                    <div style={{backgroundColor:"deeppink", width:"12vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>6</div>
-                    <div style={{backgroundColor:"deeppink", width:"15vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>5</div>
-                    <div style={{backgroundColor:"deeppink", width:"18vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>4</div>
-                    <div style={{backgroundColor:"deeppink", width:"21vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>3</div>
-                    <div style={{backgroundColor:"deeppink", width:"24vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>2</div>
-                    <div style={{backgroundColor:"deeppink", width:"27vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>1</div>
-                    <div style={{backgroundColor:"deeppink", width:"30vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}>0</div>
+                    <div style={{backgroundColor:"deeppink", width:"4vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[9]}</span>9</div>
+                    <div style={{backgroundColor:"deeppink", width:"8vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[8]}</span>8</div>
+                    <div style={{backgroundColor:"deeppink", width:"12vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[7]}</span>7</div>
+                    <div style={{backgroundColor:"deeppink", width:"16vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[6]}</span>6</div>
+                    <div style={{backgroundColor:"deeppink", width:"20vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[5]}</span>5</div>
+                    <div style={{backgroundColor:"deeppink", width:"24vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[4]}</span>4</div>
+                    <div style={{backgroundColor:"deeppink", width:"28vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[3]}</span>3</div>
+                    <div style={{backgroundColor:"deeppink", width:"32vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[2]}</span>2</div>
+                    <div style={{backgroundColor:"deeppink", width:"36vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[1]}</span>1</div>
+                    <div style={{backgroundColor:"deeppink", width:"40vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[0]}</span>0</div>
                 </div>  
 
                 {/*bond */}

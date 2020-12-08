@@ -5,12 +5,13 @@ class NumberBonds extends Component {
     constructor()
     {
         super();           
-        this.state = { total:"?", el1:"?", el2:"?", correction:"", signs:["","","","","","","","","",""]}       
+        this.state = { total:"?", el1:"?", el2:"?", correction:"", signs:["","","","","","","","","",""], dots:["","","","","","","","","",""]}       
                   
         this.numbersToUse = [1,2,3,4,5,6,7,8,9];    
         this.random1 = "?";
         this.randomTotal ="?";
-        this.signs=["","","","","","","","","",""]  ;
+        this.signs=["","","","","","","","","",""];
+        this.dots=["","","","","","","","","",""];
     }         
    
     generateRandomNumber = (length) => {
@@ -27,9 +28,11 @@ class NumberBonds extends Component {
         }               
 
         this.signs=["","","","","","","","","",""]  ;
-        this.signs[this.random1] = "==>";
-        this.signs[this.randomTotal] = "==>";
-        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs});                             
+        this.dots=["","","","","","","","","",""]  ;
+        this.signs[this.random1] = ">>>";
+        this.signs[this.randomTotal] = ">>>";        
+        this.dots[this.random1] = "☻";        
+        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs, dots:this.dots});                             
         this.forceUpdate();
     }
     resetClick = () => {
@@ -49,14 +52,16 @@ class NumberBonds extends Component {
             display:"flex",
             flexDirection:"row",
             justifyContent:"center",
-            userSelect:"none",                        
+            userSelect:"none",     
+            fontSize:"2vw"                   
         }
 
         var divVertContainer = {
             display:"flex",            
             flexDirection:"column",            
             userSelect:"none",            
-            padding:"1vw"
+            padding:"1vw",
+            fontSize:"2vw"
         }
 
       return(
@@ -70,48 +75,79 @@ class NumberBonds extends Component {
             
             {/*buttons */}
             <div style = {divHorContainer}>
-                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.goClick}>GO!</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(0)}>0</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(1)}>1</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(2)}>2</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(3)}>3</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(4)}>4</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(5)}>5</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(6)}>6</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(7)}>7</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(8)}>8</button>
-                <button style = {{color:"white", backgroundColor:"navy", width:"8vw", fontSize:"2vw" }} onClick={() => this.numberClick(9)}>9</button>
-                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw", fontSize:"2vw" }} onClick={this.resetClick}>Undo</button>
+                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw" }} onClick={this.goClick}>GO!</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(0)}>0</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(1)}>1</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(2)}>2</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(3)}>3</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(4)}>4</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(5)}>5</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(6)}>6</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(7)}>7</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw" }} onClick={() => this.numberClick(8)}>8</button>
+                <button style = {{color:"white", backgroundColor:"navy", width:"6vw"}} onClick={() => this.numberClick(9)}>9</button>
+                <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw" }} onClick={this.resetClick}>Undo</button>
             </div>   
             
             <div style = {divHorContainer}>
 
                 {/*stairs */}
                 <div style = {divVertContainer}>
-                    <div style={{backgroundColor:"deeppink", width:"4vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[9]}</span>9</div>
-                    <div style={{backgroundColor:"deeppink", width:"8vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[8]}</span>8</div>
-                    <div style={{backgroundColor:"deeppink", width:"12vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[7]}</span>7</div>
-                    <div style={{backgroundColor:"deeppink", width:"16vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[6]}</span>6</div>
-                    <div style={{backgroundColor:"deeppink", width:"20vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[5]}</span>5</div>
-                    <div style={{backgroundColor:"deeppink", width:"24vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[4]}</span>4</div>
-                    <div style={{backgroundColor:"deeppink", width:"28vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[3]}</span>3</div>
-                    <div style={{backgroundColor:"deeppink", width:"32vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[2]}</span>2</div>
-                    <div style={{backgroundColor:"deeppink", width:"36vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[1]}</span>1</div>
-                    <div style={{backgroundColor:"deeppink", width:"40vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white",fontSize:"2vw"}}><span style = {{background:"navy"}}>{this.state.signs[0]}</span>0</div>
+
+                    <span style={{backgroundColor:"deeppink", width:"5vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[9]}9 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[9]}</span>                    
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"9vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[8]}8 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[8]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"13vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[7]}7 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[7]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"17vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[6]}6 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[6]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"21vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[5]}5 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[5]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"25vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[4]}4 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[4]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"29vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[3]}3 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[3]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"33vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white",}}>
+                        {this.state.signs[2]}2 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[2]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"37vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[1]}1 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[1]}</span>
+                    </span>
+                    <span style={{backgroundColor:"deeppink", width:"41vw", height:"6vh",borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
+                        {this.state.signs[0]}0 
+                        <span style = {{ color:"yellow"}}>{this.state.dots[0]}</span>
+                    </span>
                 </div>  
 
                 {/*bond */}
                 <div style = {divVertContainer} >
-                    <div style = {{border:"3px solid deeppink", width:"10vw", height:"6vh",fontSize:"2vw"}}>{this.state.total}</div>
+                    <div style = {{border:"3px solid deeppink", width:"10vw", height:"6vh"}}>{this.state.total}</div>
                     <div style = {divHorContainer}>
-                        <div style = {{borderRight:"3px solid deeppink", width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
-                        <div style = {{width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
-                        <div style = {{width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
-                        <div style = {{borderLeft:"3px solid deeppink", width:"2.5vw", height:"10vh",fontSize:"2vw"}}/>
+                        <div style = {{borderRight:"3px solid deeppink", width:"2.5vw", height:"10vh"}}/>
+                        <div style = {{width:"2.5vw", height:"10vh"}}/>
+                        <div style = {{width:"2.5vw", height:"10vh"}}/>
+                        <div style = {{borderLeft:"3px solid deeppink", width:"2.5vw", height:"10vh"}}/>
                     </div>
                     <div  style = {divHorContainer}>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>{this.state.el1}</div>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", fontSize:"2vw"}}>{this.state.el2}</div>                    
+                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el1}</div>
+                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el2}</div>                    
                     </div>
                 </div>
 

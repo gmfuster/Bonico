@@ -11,7 +11,7 @@ class Counting extends Component {
         this.result = null;                         
         this.digit1 = 0; this.digit2 = 0;      
     }             
-    //todo see how to pass the parameter to one function without it being called on load
+    
     nextDigit = (d, s) => {
 
         switch(d) {
@@ -59,8 +59,8 @@ class Counting extends Component {
            
             <div>                   
                 <div style = {divHorContainer}>
-                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw", fontSize:"2vw" }} onClick={() => this.nextDigit("1", "UP")}>+</button>
-                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("2", "UP")}>+</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw", fontSize:"2vw", height:"8vh" }} onClick={() => this.nextDigit("1", "UP")}>+</button>
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("2", "UP")}>+</button> <br/>
                 </div>   
                 <br/>   
                 <div style = {divHorContainer}>
@@ -69,8 +69,8 @@ class Counting extends Component {
                 </div>                              
                 <br/>   
                 <div style = {divHorContainer}>
-                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("1", "DOWN")}>-</button>  
-                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("1", "DOWN")}>-</button>  
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
                 </div>                 
             </div>
             

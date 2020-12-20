@@ -33,6 +33,10 @@ function MinorPrintables () {
                     <a className="buttonPrintable buttonPrintableMath"  href="patterns.pdf" target="_new">Patterns!</a>
                 </div>  
 
+                <div style={{marginBottom:"5vh"}}>
+                    <a className="buttonPrintable buttonPrintableMath"  href="equationproblems.pdf" target="_new">Add/Subtract!</a>
+                </div> 
+
             </div>        
         </div>
       </React.Fragment>)

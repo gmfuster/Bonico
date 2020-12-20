@@ -15,6 +15,7 @@ import mnwCircles from "./Views/KidsActivities/mnwCircles";
 import CanvasTrace from "./Views/KidsActivities/CanvasTrace";
 import GreaterLessEqual from "./Views/KidsActivities/greaterLessEqual";
 import NumberBonds from "./Views/KidsActivities/NumberBonds";
+import FillSquares from "./Views/KidsActivities/FillSquares";
 
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import BeginEndSounds from "./Views/KidsActivities/BeginEndSounds";
@@ -54,6 +55,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Subtraction"} component={Subtraction}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Counting"} component={Counting}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NumberBonds"} component={NumberBonds}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/FillSquares"} component={FillSquares}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

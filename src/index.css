@@ -382,43 +382,16 @@ code {
   margin:5vw;
   padding:2vw;
 }
-/*SLIDERS*/
-.sliderContainer{    
-  margin-left:5vw;
-  margin-right:5vw;
-  margin-top:2vh;
-  margin-bottom:2vh;  
-}
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 5vh;
-  background: navy;
-  outline: none;
-  opacity: 1;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  border-radius: 15px;
-}
 
-.slider:hover {
-  opacity: 1;
+.MathSquarePink{
+  background:deeppink;
+  border:5px solid navy;  
+  width:8vw;
+  height:8vw;
 }
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 5vh;
-  height: 5vh;
-  background: deeppink;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.slider::-moz-range-thumb {
-  width: 5vh;
-  height: 5vh;
-  background: deeppink;
-  cursor: pointer;
-  border-radius: 50px;
+.MathSquareBlue{
+  background:skyblue;
+  border:5px solid navy;  
+  width:8vw;
+  height:8vw;
 }

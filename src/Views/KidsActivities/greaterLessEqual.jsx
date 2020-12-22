@@ -7,14 +7,18 @@ class GreaterLessEqual extends Component {
     {
         super();                
         this.elementsForCard = ["<", ">", " = "]  ;
-        this.elementsForCardNumbersPlayers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  ;        
+        this.elementsForCardNumbersPlayers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  ;
+        this.childPlayer1Ref = React.createRef();    
+        this.childPlayer2Ref = React.createRef();    
+        this.childComparisonRef = React.createRef();    
     }     
 
     getNewResults = () => {        
-                
-        this.refs.childPlayer1.roll();
-        this.refs.childPlayer2.roll();
-        this.refs.childComparison.roll();
+        
+        console.log(this.childPlayer1Ref);        
+        this.childPlayer1Ref.current.roll();
+        this.childPlayer2Ref.current.roll();
+        this.childComparisonRef.current.roll();
                 
     }
     /*UPDATE CANVAS END*/    
@@ -43,20 +47,20 @@ class GreaterLessEqual extends Component {
             <div style={cardStyles}>                
                 <div style={{border:"solid navy 2px",  marginRight:20, marginTop:120}}>        
                     PLAYER 1 <br/>
-                    <ShuffleCardsAndShow  ref="childPlayer1"
+                    <ShuffleCardsAndShow  ref={this.childPlayer1Ref}
                         elementsForCard = {this.elementsForCardNumbersPlayers} myWidth="20vw" myHeight = "30vh" myFont="10vw" myColor="lightblue"
                     />  
                 </div>
 
                 <div>
                     SATISFY THIS! <br/>
-                    <ShuffleCardsAndShow  ref="childComparison"
+                    <ShuffleCardsAndShow  ref={this.childComparisonRef}
                     elementsForCard = {this.elementsForCard}     myWidth="20vw" myHeight = "25vh" myFont="10vw" myColor="lightpink"
                  />   
                 </div>                
                 <div style={{border:"solid navy 2px", marginLeft:20, marginTop:120} }>                
                     PLAYER 2<br/>
-                    <ShuffleCardsAndShow  ref="childPlayer2"
+                    <ShuffleCardsAndShow  ref={this.childPlayer2Ref}
                         elementsForCard = {this.elementsForCardNumbersPlayers}     myWidth="20vw" myHeight = "30vh" myFont="10vw" myColor="lightblue"
                     />  
                 </div>        

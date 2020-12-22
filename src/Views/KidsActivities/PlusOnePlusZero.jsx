@@ -13,7 +13,8 @@ class PlusOnePlusZero extends Component {
 
         this.numberWeAddTo = 0;
         this.numberBeingAdded = 0;
-                
+        this.numberWeAddToRef = React.createRef();        
+        this.numberBeingAddedRef = React.createRef();
     }     
 
     setOption = (optionString) => {
@@ -27,8 +28,8 @@ class PlusOnePlusZero extends Component {
 
     getNewResults = () => {        
         this.setState({result: "?"}); 
-        this.refs.numberWeAddTo.roll();
-        this.refs.numberBeingAdded.roll();                        
+        this.numberWeAddToRef.current.roll();
+        this.numberBeingAddedRef.current.roll();                        
     }    
 
     storeResultNumberWeAddTo = (number) => {
@@ -74,7 +75,7 @@ class PlusOnePlusZero extends Component {
             <br/><br/>
             <div style={cardStyles}>                
                 <div >                            
-                    <ShuffleCardsAndShow  ref="numberWeAddTo"
+                    <ShuffleCardsAndShow  ref={this.numberWeAddToRef}
                         elementsForCard = {this.state.elementsForWhatToAddTo} myWidth="15vw" myHeight = "25vh" myFont="10vw" myColor="lightblue" callbackFunction= {this.storeResultNumberWeAddTo}
                     />  
                 </div>
@@ -82,7 +83,7 @@ class PlusOnePlusZero extends Component {
                    <span style={{ fontSize:"10vw" }}>+</span>                 
                 </div>                
                 <div >                                   
-                    <ShuffleCardsAndShow  ref="numberBeingAdded"
+                    <ShuffleCardsAndShow  ref={this.numberBeingAddedRef}
                         elementsForCard = {this.state.elementsForWhatToAdd} myWidth="15vw" myHeight = "25vh" myFont="10vw" myColor="lightblue" callbackFunction= {this.storeResultNumberBeingAdded}
                     />  
                 </div>  

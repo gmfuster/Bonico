@@ -294,13 +294,13 @@ code {
 
 .cardDiv{
   color: var(--main-text-color);  
-  width:300px;
-  height: 300px;      
+  width:210px;
+  height: 210px;      
   border-radius: 15%;
-  border-width: 5px;
+  border-width: 8px;
   border-style: solid;
   border-color:var(--main-text-color); 
-  margin:10px;
+  margin:5px;
 }
 .cardDiv > .CardTextLink{    
   color: var(--main-text-color);     

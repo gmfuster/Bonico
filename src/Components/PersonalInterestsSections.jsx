@@ -12,6 +12,13 @@ class PersonalInterestsSections extends Component {
         <React.Fragment>            
 
             <div className="MainSectionContainer MainSectionContainerPersonalInterests TopMarginToDealWithNavBar" id="PersonalInterestsSection" >
+        
+            <div >                                        
+                <iframe type="text/html" className="cardDiv" frameborder="0"                      
+                src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
+            </div>
+
+
                 <div className="cardDiv">                    
                     <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
                         <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="Read backwards"></img>    

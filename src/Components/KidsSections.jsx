@@ -27,12 +27,12 @@ class KidsSections extends Component {
                         <img src= {path + "/images/MainItemCardImages/MinorPrintables.svg"} className="MainSectionItemImage" alt="Minor Printables"></img>   
                     </Link>
                 </div>
-
                 <div className="cardDiv cardDivAll">
                     <Link to={path + "/CanvasTrace"} className="CardTextLink">
                         <img src= {path + "/images/MainItemCardImages/CanvasTrace.svg"} className="MainSectionItemImage" alt="trace on canvas"></img>   
                     </Link>
                 </div>
+                
                 <div className="cardDiv cardDivLang">
                     <Link to= {path + "/bdpq"} className="CardTextLink">                                                    
                         <img src= {path + "/images/MainItemCardImages/pdbq.svg"} className="MainSectionItemImage" alt="P B Q D"></img>   

@@ -28,7 +28,9 @@ import MinorPrintables from "./Views/KidsActivities/minorPrintables";
 import CSSAnimations from "./Views/SoftwareNotes/cssanimations";
 import CSSPositioning from "./Views/SoftwareNotes/csspositioning";
 import ReactNotes1 from "./Views/SoftwareNotes/reactnotes1";
+
 import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
+import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 
 
 /*change to common page for all circle letters if adding any more*/
@@ -64,6 +66,7 @@ const routing = (
                     <Route exact path ={process.env.REACT_APP_FOR_PATH + "/ReactNotes1"} component={ReactNotes1}/>  
                     
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ReadBackwards"} component={ReadBackwards}/>                      
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/RemoveDupPics"} component={RemoveDupPics}/>                      
                     
                 </Switch>              
             </div>

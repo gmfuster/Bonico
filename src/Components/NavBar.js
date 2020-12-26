@@ -13,7 +13,7 @@ class NavBar extends Component {
                 <Navbar.Brand href="/">
                     <img
                         alt=""
-                        src="/images/jdrawing.svg"
+                        src= {path + "/images/jdrawing.svg"}
                         width="50"
                         height="50"
                         className="rounded-circle d-inline-block align-top"

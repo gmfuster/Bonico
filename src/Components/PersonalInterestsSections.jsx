@@ -28,7 +28,12 @@ class PersonalInterestsSections extends Component {
                     <Link to= {path + "/ReadBackwards"} className="CardTextLink">
                         <img src= {path + "/images/MainItemCardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
                     </Link>
-                </div>                     
+                </div>      
+                <div className="cardDiv">
+                    <Link to= {path + "/RemoveDupPics"} className="CardTextLink">
+                        <img src= {path + "/images/MainItemCardImages/RemoveDupPics.svg"} className="MainSectionItemImage" alt="Remove duplocate pictures"></img>    
+                    </Link>
+                </div>                 
             </div>      
 
         </React.Fragment>

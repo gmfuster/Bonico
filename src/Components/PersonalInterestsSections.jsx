@@ -11,30 +11,33 @@ class PersonalInterestsSections extends Component {
     
         <React.Fragment>            
 
-            <div className="MainSectionContainer MainSectionContainerPersonalInterests TopMarginToDealWithNavBar" id="PersonalInterestsSection" >
+            <div className="MainSectionContainerPersonalInterests">
+                <h1 className="sectionHeaderBlue" id="KidsSection">Things I like</h1>
+                <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="PersonalInterestsSection" >
         
-            <div >                                        
-                <iframe type="text/html" className="cardDiv" frameBorder="0"                      
-                src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
-            </div>
+                    <div >                                        
+                        <iframe type="text/html" className="cardDiv" frameBorder="0"                      
+                        src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
+                    </div>
 
 
-                <div className="cardDiv">                    
-                    <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
-                        <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="Read backwards"></img>    
-                        </a>
-                </div>   
-                <div className="cardDiv">
-                    <Link to= {path + "/ReadBackwards"} className="CardTextLink">
-                        <img src= {path + "/images/MainItemCardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
-                    </Link>
-                </div>      
-                <div className="cardDiv">
-                    <Link to= {path + "/RemoveDupPics"} className="CardTextLink">
-                        <img src= {path + "/images/MainItemCardImages/RemoveDupPics.svg"} className="MainSectionItemImage" alt="Remove duplocate pictures"></img>    
-                    </Link>
-                </div>                 
-            </div>      
+                    <div className="cardDiv">                    
+                        <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
+                            <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="Read backwards"></img>    
+                            </a>
+                    </div>   
+                    <div className="cardDiv">
+                        <Link to= {path + "/ReadBackwards"} className="CardTextLink">
+                            <img src= {path + "/images/MainItemCardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
+                        </Link>
+                    </div>      
+                    <div className="cardDiv">
+                        <Link to= {path + "/RemoveDupPics"} className="CardTextLink">
+                            <img src= {path + "/images/MainItemCardImages/RemoveDupPics.svg"} className="MainSectionItemImage" alt="Remove duplocate pictures"></img>    
+                        </Link>
+                    </div>                 
+                </div>    
+            </div>  
 
         </React.Fragment>
         )};

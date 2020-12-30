@@ -287,7 +287,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;    
-  margin:5vw;
+  margin:0vw;
   padding:2vw;
   border-radius: 0%;
 }
@@ -326,7 +326,7 @@ code {
   
 }
 .DescriptionSectionText{    
-  font-size: 5vh;     
+  font-size: 4vh;     
   text-align: center;
   margin-top: 2vh;
   margin-bottom: 2vh; 
@@ -356,19 +356,26 @@ code {
 
 .MainSectionContainerActivities{    
   background:  radial-gradient(var(--main-MainSectionActivities-color), white);
+  margin-bottom:20px;
 }
+.MainSectionContainerPersonalInterests{
+  background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);   
+  margin-bottom:20px; 
+}
+/*
 .MainSectionContainerLanguage{    
   background: radial-gradient(var(--main-MainSectionLanguage-color), white);
+  margin-bottom:15px;
 }
 .MainSectionContainerMath{       
   background:radial-gradient(var(--main-MainSectionMath-color), white);    
+  margin-bottom:15px;
 }
 .MainSectionContainerSoftwareDev{
   background:var(--main-MainSectionSoftwareDev-color);
+  margin-bottom:15px;
 }
-.MainSectionContainerPersonalInterests{
-  background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);    
-}
+
 .MainSectionContainerBooks{
   background:radial-gradient(var(--main-MainSectionBooks-color), white);    
 
@@ -382,7 +389,7 @@ code {
   margin:5vw;
   padding:2vw;
 }
-
+*/
 .MathSquarePink{
   background:deeppink;
   border:5px solid navy;  
@@ -394,4 +401,17 @@ code {
   border:5px solid navy;  
   width:8vw;
   height:8vw;
+}
+
+.sectionHeaderPink{
+  text-align: center;
+  font-size: 3vw;
+  text-decoration:underline;   
+  color:deeppink; 
+}
+.sectionHeaderBlue{
+  text-align: center;
+  font-size: 3vw;
+  text-decoration:underline;   
+  color:navy; 
 }

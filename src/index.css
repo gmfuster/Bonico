@@ -406,12 +406,17 @@ code {
 .sectionHeaderPink{
   text-align: center;
   font-size: 3vw;
-  text-decoration:underline;   
-  color:deeppink; 
+  text-decoration:none;   
+  color:deeppink;   
+  font-family: 'Times New Roman', Times, serif;
+  border:deeppink 3px solid;  
 }
 .sectionHeaderBlue{
   text-align: center;
   font-size: 3vw;
-  text-decoration:underline;   
-  color:navy; 
+  text-decoration:none;   
+  color:navy;  
+  font-family: 'Times New Roman', Times, serif;
+  border:navy 3px solid;
+  
 }

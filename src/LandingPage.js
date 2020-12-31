@@ -19,10 +19,9 @@ class LandingPage extends Component {
 
         <DescriptionSections/>
             
-        <KidsSections/>            
-
-        <Books/>
+        <KidsSections/>                    
       
+        <br/><br/>
         <PersonalInterestsSections/>       
       
 

@@ -33,8 +33,6 @@ import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
 import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 
 
-/*change to common page for all circle letters if adding any more*/
-
 const routing = (
     <React.Fragment>   
         <div className="fragmentContainer"> {/*use for some styling only*/}

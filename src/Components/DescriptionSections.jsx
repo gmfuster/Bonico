@@ -6,8 +6,8 @@ class DescriptionSections extends Component {
             <React.Fragment>
                 <div className="DescriptionSectionText">
                     LEARNING IS AWESOME! <br/> 
-                    Some activities require a touch screen.<br/>
-                    Some things may not work well in older browsers or small screens.
+                    Some activities require a touch screen.  Not designed for older browsers or phone size.<br/>
+                    Bookmark only to the Home page(routing not working at this time on github pages)
                 </div>
             </React.Fragment>
         )};

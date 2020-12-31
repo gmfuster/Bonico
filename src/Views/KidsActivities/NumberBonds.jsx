@@ -42,7 +42,7 @@ class NumberBonds extends Component {
 
     numberClick = (n) => {
                 
-        (this.random1 + n == this.randomTotal)? this.setState( { correction:"YAY!", el2: n}): this.setState( { correction: "☹☹☹", el2: n})
+        (this.random1 + n === this.randomTotal)? this.setState( { correction:"YAY!", el2: n}): this.setState( { correction: "☹☹☹", el2: n})
         this.forceUpdate();
     }
 

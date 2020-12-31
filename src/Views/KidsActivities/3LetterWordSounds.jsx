@@ -62,7 +62,7 @@ class ThreeLetterWordSounds extends Component {
 
         currentLetter =  this.arrayOfWordsAsLettersInterChange[currentRowIndex][letterPositionInWord];
         while (!foundDifferentLetter){
-            (currentRowIndex == this.arrayOfWordsAsLettersInterChange.length -1 )? newIndex =0 : newIndex = currentRowIndex++; 
+            (currentRowIndex === this.arrayOfWordsAsLettersInterChange.length -1 )? newIndex =0 : newIndex = currentRowIndex++; 
             newLetter =  this.arrayOfWordsAsLettersInterChange[newIndex][letterPositionInWord];
             if (newLetter != currentLetter){
                 foundDifferentLetter = true;

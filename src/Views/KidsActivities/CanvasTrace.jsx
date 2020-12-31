@@ -140,7 +140,7 @@ class CanvasTrace extends Component {
 
     printTheText=() =>{                          
 
-        if (this.state.textForCanvas.length == 0 ){
+        if (this.state.textForCanvas.length === 0 ){
             alert("Enter something in the canvas to print it");//make nicer pop up
             return;
         }          

@@ -100,7 +100,7 @@ class CanvasComponent extends Component {
         var ctx = this.refToCanvas.current.getContext("2d");                 
         ctx.clearRect(0, 0, this.refToCanvas.current.width, this.refToCanvas.current.height);  
         
-        if (this.props.IsThisText == "true"){            
+        if (this.props.IsThisText === "true"){            
             //set size to biggest possible that will fit
             //using ratio of 150c/110f=> c => 150/110 => 1.36 => 0.73 ==> just a bit smaller
             var fonts = this.refToCanvas.current.height * 0.63;//default size

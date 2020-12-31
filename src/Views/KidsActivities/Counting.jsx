@@ -16,18 +16,18 @@ class Counting extends Component {
 
         switch(d) {
             case "1":
-                if (s == "UP"){
-                    (this.digit1 == 9)? this.digit1 = 0 : this.digit1 ++;
+                if (s === "UP"){
+                    (this.digit1 === 9)? this.digit1 = 0 : this.digit1 ++;
                 }else{
-                    (this.digit1 == 0)? this.digit1 = 9 : this.digit1 --;
+                    (this.digit1 === 0)? this.digit1 = 9 : this.digit1 --;
                 }                
                 this.setState( { digit1: this.digit1})
                 break;
             case "2":
-                if (s == "UP"){
-                    (this.digit2 == 9)? this.digit2 = 0 : this.digit2 ++;
+                if (s === "UP"){
+                    (this.digit2 === 9)? this.digit2 = 0 : this.digit2 ++;
                 }else{
-                    (this.digit2 == 0)? this.digit2 = 9 : this.digit2 --;
+                    (this.digit2 === 0)? this.digit2 = 9 : this.digit2 --;
                 }                  
                 this.setState( { digit2: this.digit2})
         }

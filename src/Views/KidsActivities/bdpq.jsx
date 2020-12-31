@@ -22,7 +22,7 @@ class bdpq extends Component {
       this.refToIncorrectImage.current.style.visibility="hidden" 
         var index = this.generateRandomNumber();
         var word = this.state.words[index];                
-        if (word == this.state.selectedWord)
+        if (word === this.state.selectedWord)
         {
           word = (index < this.state.words.length - 1)? this.state.words[index+1] : this.state.words[0];          
         }
@@ -32,7 +32,7 @@ class bdpq extends Component {
 
     clickLetter = (l) => {
       var correctLetter = this.state.selectedWord[0];
-      if (correctLetter == l){
+      if (correctLetter === l){
         this.refToCorrectImage.current.style.visibility="visible"  
         this.refToIncorrectImage.current.style.visibility="hidden"  
       }

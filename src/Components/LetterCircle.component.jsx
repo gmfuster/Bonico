@@ -10,7 +10,7 @@ class LetterCircle extends Component {
 
     setColor = () => {            
         //(this.props.letter == this.props.targetLetter)? this.setState({backgroundColor:"g"}) : this.setState({backgroundColor:"r"}); 
-        if (this.props.letter == this.props.targetLetter)
+        if (this.props.letter === this.props.targetLetter)
         {
             this.setState({backgroundColor:"g"})
             this.props.functionToCallBack();

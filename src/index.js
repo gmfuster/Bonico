@@ -16,6 +16,7 @@ import CanvasTrace from "./Views/KidsActivities/CanvasTrace";
 import GreaterLessEqual from "./Views/KidsActivities/greaterLessEqual";
 import NumberBonds from "./Views/KidsActivities/NumberBonds";
 import FillSquares from "./Views/KidsActivities/FillSquares";
+import PlusOrMinus from "./Views/KidsActivities/PlusOrMinus";
 
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import BeginEndSounds from "./Views/KidsActivities/BeginEndSounds";
@@ -39,7 +40,7 @@ const routing = (
         
         <NavBar/>                           
 
-         <Router>
+         <Router>{/*todo change to use basename here instead for the env variable*/}
             <div>
                 <Switch>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
@@ -49,13 +50,12 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CanvasTrace"} component={CanvasTrace}/>                      
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/GreaterLessEqual"} component={GreaterLessEqual}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterWordSounds"} component={ThreeLetterWordSounds}/>  
-                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/threeLetterRhymes"} component={ThreeLetterRhymes}/>  */}
-                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/BeginEndSounds"} component={BeginEndSounds}/>  */}
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOnePlusZero"} component={PlusOnePlusZero}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Subtraction"} component={Subtraction}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Counting"} component={Counting}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NumberBonds"} component={NumberBonds}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/FillSquares"} component={FillSquares}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOrMinus"} component={PlusOrMinus}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

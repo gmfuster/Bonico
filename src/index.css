@@ -409,7 +409,8 @@ code {
   text-decoration:none;   
   color:deeppink;   
   font-family: 'Times New Roman', Times, serif;
-  border:deeppink 3px solid;  
+  border-bottom:deeppink 3px solid;  
+  margin:2vw;
 }
 .sectionHeaderBlue{
   text-align: center;
@@ -417,6 +418,6 @@ code {
   text-decoration:none;   
   color:navy;  
   font-family: 'Times New Roman', Times, serif;
-  border:navy 3px solid;
-  
+  border-bottom:navy 3px solid;
+  margin:2vw;
 }

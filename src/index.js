@@ -32,6 +32,7 @@ import ReactNotes1 from "./Views/SoftwareNotes/reactnotes1";
 
 import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
 import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
+import Chinese from "./Views/PersonalInterests/Chinese";
 
 
 const routing = (
@@ -64,7 +65,8 @@ const routing = (
                     <Route exact path ={process.env.REACT_APP_FOR_PATH + "/ReactNotes1"} component={ReactNotes1}/>  
                     
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ReadBackwards"} component={ReadBackwards}/>                      
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/RemoveDupPics"} component={RemoveDupPics}/>                      
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/RemoveDupPics"} component={RemoveDupPics}/>      
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Chinese"} component={Chinese}/>                  
                     
                 </Switch>              
             </div>

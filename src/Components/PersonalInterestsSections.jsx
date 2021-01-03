@@ -12,18 +12,14 @@ class PersonalInterestsSections extends Component {
         <React.Fragment>            
 
             <div className="MainSectionContainerPersonalInterests">
-                <h1 className="sectionHeaderBlue" id="PersonalInterestsSection">I like to write books (sometimes)</h1>
+                <h1 className="sectionHeaderBlue" id="PersonalInterestsSection">Hobbies</h1>
                 <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >        
                     <div >                                        
                         <iframe type="text/html" className="cardDiv" frameBorder="0"                      
                         src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
                     </div>
-                </div>
-            </div>
-
-            <div className="MainSectionContainerPersonalInterests">
-                <h1 className="sectionHeaderBlue" id="">Trying to be healthier and happier</h1>
-                <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >   
+                
+            
                     <div className="cardDiv">                    
                         <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
                             <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="feed for positivity"></img>    
@@ -34,13 +30,19 @@ class PersonalInterestsSections extends Component {
                     <div className="cardDiv">
                         <Link to= {path + "/ReadBackwards"} className="CardTextLink">
                             <img src= {path + "/images/MainItemCardImages/readBackwards.svg"} className="MainSectionItemImage" alt="Read backwards"></img>    
-                     </Link>
+                        </Link>
+                     </div> 
+
+                     <div className="cardDiv">
+                        <Link to= {path + "/Chinese"} className="CardTextLink">
+                            <img src= {path + "/images/MainItemCardImages/Chinese.svg"} className="MainSectionItemImage" alt="Some Chinese symbols"></img>    
+                        </Link>
                      </div> 
                  </div>
             </div>
 
             <div className="MainSectionContainerPersonalInterests">
-                <h1 className="sectionHeaderBlue" id="">Programing is fun even if sometimes frustrating</h1>
+                <h1 className="sectionHeaderBlue" id="">Programming</h1>
                 <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >  
                     <div className="cardDiv">
                         <Link to= {path + "/RemoveDupPics"} className="CardTextLink">

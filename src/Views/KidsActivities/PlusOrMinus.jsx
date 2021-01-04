@@ -75,7 +75,7 @@ class PLusOrMinus extends Component {
         this.equation = this.arrayOfQuestionObjects[this.arrayInd].equation;
         this.setState( {text:this.arrayOfQuestionObjects[this.arrayInd].text, equation:"Click to see equation", drop1:"", drop2:"",dropSign:"", dropSol:""} );        
         //set the index for the next time    
-        (this.arrayInd == this.arrayOfQuestionObjects.length -1 ) ? this.arrayInd = 0 : this.arrayInd++;
+        (this.arrayInd === this.arrayOfQuestionObjects.length -1 ) ? this.arrayInd = 0 : this.arrayInd++;
     }
 
     handleDragStart(e, num) {
@@ -101,6 +101,8 @@ class PLusOrMinus extends Component {
                 break;
             case "sol":
                 this.setState( {dropSol:number});
+                break;
+            default:
                 break;
         }
         

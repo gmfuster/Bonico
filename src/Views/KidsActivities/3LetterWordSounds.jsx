@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import ShuffleCardsAndShow from "../../Components/ShuffleCardsAndShow";
 
 class ThreeLetterWordSounds extends Component {
     
@@ -58,13 +57,15 @@ class ThreeLetterWordSounds extends Component {
             case 2:                
                 currentRowIndex = this.letter2Index;
                 break;
+            default:
+                break;
         }
 
         currentLetter =  this.arrayOfWordsAsLettersInterChange[currentRowIndex][letterPositionInWord];
         while (!foundDifferentLetter){
             (currentRowIndex === this.arrayOfWordsAsLettersInterChange.length -1 )? newIndex =0 : newIndex = currentRowIndex++; 
             newLetter =  this.arrayOfWordsAsLettersInterChange[newIndex][letterPositionInWord];
-            if (newLetter != currentLetter){
+            if (newLetter !== currentLetter){
                 foundDifferentLetter = true;
             }
         }  
@@ -78,6 +79,8 @@ class ThreeLetterWordSounds extends Component {
                 break;
             case 2:                
                 this.letter2Index = newIndex;
+                break;
+            default:
                 break;
         }        
         
@@ -106,6 +109,8 @@ class ThreeLetterWordSounds extends Component {
                     this.setState({letter2:nextLetter });                                             ;                                      
                     break;
                 }
+            default:
+                break;
         }
                 
     }

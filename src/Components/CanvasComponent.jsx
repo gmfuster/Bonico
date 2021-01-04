@@ -103,7 +103,7 @@ class CanvasComponent extends Component {
         if (this.props.IsThisText === "true"){            
             //set size to biggest possible that will fit
             //using ratio of 150c/110f=> c => 150/110 => 1.36 => 0.73 ==> just a bit smaller
-            var fonts = this.refToCanvas.current.height * 0.63;//default size
+           // var fonts = this.refToCanvas.current.height * 0.63;//default size
             var fonts = this.refToCanvas.current.width * 0.40;        
             fonts = Math.round(fonts);        
             ctx.font = `${fonts}px Arial`;         
@@ -119,7 +119,7 @@ class CanvasComponent extends Component {
             ctx.strokeText(this.props.DefaultDisplay, 50 , fonts); //50 so J and similar are not cut off.
         }
         //we are not getting the image but the image path
-        if (this.props.IsThisAnImage == "true") {              
+        if (this.props.IsThisAnImage === "true") {              
             let img = new Image();
             img.src = this.props.DefaultDisplay;
 

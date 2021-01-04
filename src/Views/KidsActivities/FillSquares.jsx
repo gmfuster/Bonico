@@ -23,6 +23,8 @@ class FillSquares extends Component {
                 return "MathSquarePink";
             case "MathSquareBlank": /*not used now*/
                 return "MathSquarePink";
+            default:
+                break;
         }
     }
 
@@ -39,6 +41,8 @@ class FillSquares extends Component {
             case "MathSquareBlue":
                 this.currentPink--;
                 this.currentBlue++;
+                break;
+            default:
                 break;
         }
 

@@ -8,30 +8,30 @@ class LetterCircleList extends Component {
         this.state = {theList:[], newList:[], numberPerLetter:5};
         this.numberOfLettersFound = 0;
                 
-        if (this.props.targetLetter == "undefined" || this.props.targetLetter == null || this.props.targetLetter === "")
+        if (this.props.targetLetter === "undefined" || this.props.targetLetter === null || this.props.targetLetter === "")
             return;
         //todo add check for letterGroup being undefined and set default for it        
         if (this.props.letterGroup === "bdpq"){
             for (var i=0; i<this.state.numberPerLetter; i++){
                 this.state.theList.push({id:i, value:"b"})
             }
-            for (var i=this.state.numberPerLetter; i< (this.state.numberPerLetter * 2); i++){
+            for (i=this.state.numberPerLetter; i< (this.state.numberPerLetter * 2); i++){
                 this.state.theList.push({id:i, value:"d"})
             }
-            for (var i=this.state.numberPerLetter * 2; i<this.state.numberPerLetter * 3; i++){
+            for (i=this.state.numberPerLetter * 2; i<this.state.numberPerLetter * 3; i++){
                 this.state.theList.push({id:i, value:"q"})
             }
-            for (var i=this.state.numberPerLetter * 3; i<this.state.numberPerLetter *4; i++){
+            for (i=this.state.numberPerLetter * 3; i<this.state.numberPerLetter *4; i++){
                 this.state.theList.push({id:i, value:"p"})
             }
         }else if (this.props.letterGroup === "mnw"){
-            for (var i=0; i<this.state.numberPerLetter; i++){
+            for (i=0; i<this.state.numberPerLetter; i++){
                 this.state.theList.push({id:i, value:"M"})
             }
-            for (var i=this.state.numberPerLetter; i<this.state.numberPerLetter * 2; i++){
+            for (i=this.state.numberPerLetter; i<this.state.numberPerLetter * 2; i++){
                 this.state.theList.push({id:i, value:"N"})
             }
-            for (var i=this.state.numberPerLetter * 2; i<this.state.numberPerLetter * 3; i++){
+            for (i=this.state.numberPerLetter * 2; i<this.state.numberPerLetter * 3; i++){
                 this.state.theList.push({id:i, value:"W"})
             }
         }
@@ -40,10 +40,10 @@ class LetterCircleList extends Component {
         let theListCopy = [...this.state.theList];
         while (!allDone && theListCopy.length > 0 ){
             var index = this.generateRandomNumber(theListCopy.length);
-            //var newItem =  {id:index, value:this.state.theList[index]};
             var newItem = {...theListCopy[index]};
+            //todo
             //don't use include because we are not comparing the item, but the contents - fix this, when removing we reget the indexes so it won't end
-            if (!this.state.newList.find(it => it.id == newItem.id && it.value === newItem.value)){
+            if (!this.state.newList.find(it => it.id === newItem.id && it.value === newItem.value)){
                 this.state.newList.push(newItem);  
                 theListCopy.splice(index, 1)              ;
             }

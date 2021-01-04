@@ -17,7 +17,7 @@ class  ReadBackwards extends Component {
                   
       xmlText = await response.text();      
       var parser = new DOMParser();
-      var xmlDoc = parser.parseFromString(xmlText, "text/xml");                 
+      xmlDoc = parser.parseFromString(xmlText, "text/xml");                 
       
       let arrayOfNews = [];            
       for (var i=0; i< 20; i++){    

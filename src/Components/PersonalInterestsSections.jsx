@@ -15,7 +15,7 @@ class PersonalInterestsSections extends Component {
                 <h1 className="sectionHeaderBlue" id="PersonalInterestsSection">Hobbies</h1>
                 <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >        
                     <div >                                        
-                        <iframe type="text/html" className="cardDiv" frameBorder="0"                      
+                        <iframe type="text/html" className="cardDiv" frameBorder="0"   title="jonandhismomtalkabout"                    
                         src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
                     </div>
                 

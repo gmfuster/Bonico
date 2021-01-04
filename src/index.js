@@ -19,8 +19,6 @@ import FillSquares from "./Views/KidsActivities/FillSquares";
 import PlusOrMinus from "./Views/KidsActivities/PlusOrMinus";
 
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
-import BeginEndSounds from "./Views/KidsActivities/BeginEndSounds";
-import ThreeLetterRhymes from "./Views/KidsActivities/3LetterRhymes";
 import PlusOnePlusZero from "./Views/KidsActivities/PlusOnePlusZero";
 import Subtraction from "./Views/KidsActivities/Subtraction";
 import Counting from "./Views/KidsActivities/Counting";

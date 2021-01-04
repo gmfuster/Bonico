@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import CanvasComponent from "../../Components/CanvasComponent";
 
 class Counting extends Component {
 
@@ -30,6 +29,9 @@ class Counting extends Component {
                     (this.digit2 === 0)? this.digit2 = 9 : this.digit2 --;
                 }                  
                 this.setState( { digit2: this.digit2})
+                break;
+            default:
+                break;
         }
         
     }   

@@ -41,6 +41,7 @@ class PersonalInterestsSections extends Component {
                  </div>
             </div>
 
+            {/*}
             <div className="MainSectionContainerPersonalInterests">
                 <h1 className="sectionHeaderBlue" id="">Programming</h1>
                 <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >  
@@ -52,7 +53,7 @@ class PersonalInterestsSections extends Component {
                     </div>  
                 </div>               
              </div>    
-
+        */}
         </React.Fragment>
         )};
 

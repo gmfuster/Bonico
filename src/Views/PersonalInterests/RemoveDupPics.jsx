@@ -26,7 +26,7 @@ class  RemoveDupPics extends Component {
                 To enter the folders to search I used a regular textbox and a regular button.  For both buttons, call another method:
 
                 <div className="CodeContainer">
-                private void button1_Click(object sender, EventArgs e) {"{"} <br/>
+                private void button1_Click(object sender, EventArgs e) {"{"} <br/> 
                     &emsp; this.buttonSelectClick(FolderOption.one);<br/>
                 {"}"}<br/><br/>
                 private void buttonSelectClick(FolderOption op)

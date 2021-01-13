@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 
-class DescriptionSections extends Component {
-    render() {
+function DescriptionSections () {
+    
         return(
             <React.Fragment>
                 <div className="DescriptionSectionText">
@@ -11,7 +11,8 @@ class DescriptionSections extends Component {
                     Hover over squares for a tooltip with more info.
                 </div>
             </React.Fragment>
-        )};
-}
+        )
+};
+        
 
 export default DescriptionSections;

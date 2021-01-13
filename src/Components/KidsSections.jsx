@@ -1,11 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 
 
-class KidsSections extends Component {
-    render() {
+function KidsSections () {
+    
 
-        const path = process.env.REACT_APP_FOR_PATH;
+        const path = process.env.REACT_APP_FOR_PATH;        
 
         return(
     
@@ -109,8 +109,8 @@ class KidsSections extends Component {
             </div>                
             <br/>
         </React.Fragment>
-        )};
+        )
+};
 
 
-}
 export default KidsSections;

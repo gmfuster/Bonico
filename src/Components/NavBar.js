@@ -1,13 +1,12 @@
-import React, {Component} from "react";
+import React from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class NavBar extends Component {   
-    render() {
+function NavBar () {   
 
-        const path = process.env.REACT_APP_FOR_PATH ;
+     const path = process.env.REACT_APP_FOR_PATH ;
 
       return(
         <React.Fragment>
@@ -30,9 +29,8 @@ class NavBar extends Component {
                     </Nav>
                 </Navbar.Collapse>                
             </Navbar>
-      </React.Fragment>)
+      </React.Fragment>);
 
-  };
   }
   
   export default NavBar;

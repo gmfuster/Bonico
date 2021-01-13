@@ -1,12 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 //import Container from 'react-bootstrap/Container';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
 
-class SoftwareDevSections extends Component {
-    render() {
-        //change links and images to use paht from process.env.REACT_APP_FOR_PATH if publishing.
+function SoftwareDevSections () {
+            
         return(
             
         <React.Fragment>            
@@ -30,8 +29,7 @@ class SoftwareDevSections extends Component {
             </div>      
 
         </React.Fragment>
-        )};
-
+        );
 
 }
 export default SoftwareDevSections;

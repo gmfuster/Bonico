@@ -20,8 +20,7 @@ class CanvasComponent extends Component {
         this.refToCanvas.current.width = this.refToCanvas.current.clientWidth;
         this.refToCanvas.current.height = this.refToCanvas.current.clientHeight;    
         this.refToCanvas.current.addEventListener('touchstart', this.canvasTouchStart, {passive:false})    ;
-        this.refToCanvas.current.addEventListener('touchmove', this.canvasTouchMove, {passive:false})    ;
-        //TODO in the future add whether the default should be erased on reset or not, for now, it is not.
+        this.refToCanvas.current.addEventListener('touchmove', this.canvasTouchMove, {passive:false})    ;        
         this.setCanvasDefault(); 
     }
           
@@ -32,8 +31,7 @@ class CanvasComponent extends Component {
         this.refToCanvas.current.width = this.refToCanvas.current.clientWidth;
         this.refToCanvas.current.height = this.refToCanvas.current.clientHeight;  
         this.setCanvasDefault(); //todo see why not redoing the image on resize
-    }
-    //make sure there is no scrolling or can't use the canvas
+    }    
 
     /*POSITIONING START*/
     GetOffset = (object, offset) => {
@@ -100,10 +98,7 @@ class CanvasComponent extends Component {
         var ctx = this.refToCanvas.current.getContext("2d");                 
         ctx.clearRect(0, 0, this.refToCanvas.current.width, this.refToCanvas.current.height);  
         
-        if (this.props.IsThisText === "true"){            
-            //set size to biggest possible that will fit
-            //using ratio of 150c/110f=> c => 150/110 => 1.36 => 0.73 ==> just a bit smaller
-           // var fonts = this.refToCanvas.current.height * 0.63;//default size
+        if (this.props.IsThisText === "true"){                       
             var fonts = this.refToCanvas.current.width * 0.40;        
             fonts = Math.round(fonts);        
             ctx.font = `${fonts}px Arial`;         
@@ -118,7 +113,7 @@ class CanvasComponent extends Component {
 
             ctx.strokeText(this.props.DefaultDisplay, 50 , fonts); //50 so J and similar are not cut off.
         }
-        //we are not getting the image but the image path
+        //we are not getting the image but the image path (using string instead of bool)
         if (this.props.IsThisAnImage === "true") {              
             let img = new Image();
             img.src = this.props.DefaultDisplay;
@@ -144,8 +139,7 @@ class CanvasComponent extends Component {
     }
     canvasTouchMove = (e) => {
         
-        var ctx = this.refToCanvas.current.getContext("2d");            
-        //todo reorganize the code so I don't have to get the canvas and ctx each time
+        var ctx = this.refToCanvas.current.getContext("2d");                    
         this.getTouchPosition(e, this.refToCanvas.current);      
         this.drawDot(ctx, this.touchX, this.touchY, 12);        
         e.preventDefault();         
@@ -165,10 +159,8 @@ class CanvasComponent extends Component {
           }
 
         return(
-            <React.Fragment>
-                                                                                                            
-                    <canvas style ={canvasStyle} ref={this.refToCanvas}       />                                        
-          
+            <React.Fragment>                                                                                                            
+                    <canvas style ={canvasStyle} ref={this.refToCanvas}       />                                                  
             </React.Fragment>
         )};
 }

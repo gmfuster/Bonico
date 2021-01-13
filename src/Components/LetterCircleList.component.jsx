@@ -40,9 +40,7 @@ class LetterCircleList extends Component {
         let theListCopy = [...this.state.theList];
         while (!allDone && theListCopy.length > 0 ){
             var index = this.generateRandomNumber(theListCopy.length);
-            var newItem = {...theListCopy[index]};
-            //todo
-            //don't use include because we are not comparing the item, but the contents - fix this, when removing we reget the indexes so it won't end
+            var newItem = {...theListCopy[index]};           
             if (!this.state.newList.find(it => it.id === newItem.id && it.value === newItem.value)){
                 this.state.newList.push(newItem);  
                 theListCopy.splice(index, 1)              ;
@@ -52,15 +50,9 @@ class LetterCircleList extends Component {
                     allDone = true;
                 }
             }
-        }
-        
-        /*this.state.newList = this.state.theList.map( function newArray(item , index)  {
-            var newItem = {id:index, value:item};
-            return newItem;
-          });                */
+        }               
     }
-    
-    //TODO add a something to indicate when all, 5 or whatever have been found
+       
     generateRandomNumber = (length) => {
         return Math.floor(Math.random() * length);      
     }

@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 
-//for grown ups - 
-class PersonalInterestsSections extends Component {
-    render() {
+function PersonalInterestsSections () {
+    
 
         const path = process.env.REACT_APP_FOR_PATH;
 
@@ -38,25 +37,11 @@ class PersonalInterestsSections extends Component {
                             <img src= {path + "/images/MainItemCardImages/Chinese.svg"} className="MainSectionItemImage" alt="Some Chinese symbols"></img>    
                         </Link>
                      </div> 
+                    
                  </div>
             </div>
-
-            {/*}
-            <div className="MainSectionContainerPersonalInterests">
-                <h1 className="sectionHeaderBlue" id="">Programming</h1>
-                <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >  
-                    <div className="cardDiv">
-                        <Link to= {path + "/RemoveDupPics"} className="CardTextLink">
-                         <img src= {path + "/images/MainItemCardImages/RemoveDupPics.svg"} className="MainSectionItemImage" alt="Remove duplicate pictures"
-                         title="C# code to create a utility to identify duplicate images in 2 different folders"></img>    
-                        </Link>
-                    </div>  
-                </div>               
-             </div>    
-        */}
+            
         </React.Fragment>
-        )};
-
-
+    );
 }
 export default PersonalInterestsSections;

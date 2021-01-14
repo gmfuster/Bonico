@@ -45,7 +45,8 @@ class ShuffleCardsAndShow extends Component {
             fontFamily:"Times New Roman",   
             fontSize:this.props.myFont,
             width: this.props.myWidth,            
-            height:this.props.myHeight 
+            height:this.props.myHeight ,
+            userSelect:"none",
           };
       return(  
             

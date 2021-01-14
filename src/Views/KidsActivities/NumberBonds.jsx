@@ -5,7 +5,7 @@ class NumberBonds extends Component {
     constructor()
     {
         super();           
-        this.state = { total:"?", el1:"?", el2:"?", correction:"", signs:["","","","","","","","","",""], dots:["","","","","","","","","",""]}       
+        this.state = { total:"?", el1:"?", el2:"?", correction:"", signs:["","","","","","","","","",""], dots:["","","","","","","","","",""], items1:"", items2:""}       
                   
         this.numbersToUse = [1,2,3,4,5,6,7,8,9];    
         this.random1 = "?";
@@ -32,7 +32,18 @@ class NumberBonds extends Component {
         this.signs[this.random1] = ">>>";
         this.signs[this.randomTotal] = ">>>";        
         this.dots[this.random1] = "☻";        
-        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs, dots:this.dots, correction:""});                             
+
+        let items1 = ""; let items2="";
+        for (let i = 1; i <= this.random1; i++)
+        {
+            items1 += " ♥ ";
+        }
+        for (let i = 1; i <= (this.randomTotal - this.random1); i++)
+        {
+            items2 += " ♥ ";
+        }
+
+        this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs, dots:this.dots, correction:"", items1:items1, items2:items2});                             
         this.forceUpdate();
     }
     resetClick = () => {
@@ -91,7 +102,8 @@ class NumberBonds extends Component {
             
             <div style = {divHorContainer}>
 
-                {/*stairs */}
+                {/*stairs - comment out for now, seems to confuse more than help */}
+                {/*}
                 <div style = {divVertContainer}>
 
                     <span style={{backgroundColor:"deeppink", width:"5vw", height:"6vh", borderBottom:"2px solid navy", textAlign:"right", color:"white"}}>
@@ -135,24 +147,22 @@ class NumberBonds extends Component {
                         <span style = {{ color:"yellow"}}>{this.state.dots[0]}</span>
                     </span>
                 </div>  
+                */}
 
-                {/*bond */}
-                <div style = {divVertContainer} >
-                    <div style = {{border:"3px solid deeppink", width:"11vw", height:"7vh"}}>{this.state.total}</div>
-                    <div style = {divHorContainer}>
-                        <div style = {{borderRight:"3px solid deeppink", width:"2.5vw", height:"11vh"}}/>
-                        <div style = {{width:"2.5vw", height:"11vh"}}/>
-                        <div style = {{width:"2.5vw", height:"11vh"}}/>
-                        <div style = {{borderLeft:"3px solid deeppink", width:"2.5vw", height:"11vh"}}/>
-                    </div>
-                    <div  style = {divHorContainer}>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el1}</div>
-                        <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el2}</div>                    
-                    </div>
+                <div style = {{paddingTop:"2vh", paddingLeft:"1vw", marginTop: "5vh",  width:"25vw", height:"55vh"}}>
+                    <span style = {{margin:"5%", fontSize:"5vw", color:"darkblue"}}>{this.state.items1} </span>
+                    <span style = {{margin:"5%", fontSize:"5vw", color:"deeppink"}}>{this.state.items2} </span>
                 </div>
-
+                {/*bond */}
+                <div style = {{margin:"5vh", width:"25vw", height:"55vh"}}>                    
+                        <div style = {{border:"3px solid deeppink", width:"100%", height:"15%"}}>{this.state.total}</div>                        
+                        <div  style = {divHorContainer}>
+                            <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el1}</div>
+                            <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el2}</div>                    
+                        </div>                    
+                </div>
                 {/*Equation*/}
-                <div style = {{paddingTop:"10vh", paddingLeft:"1vw"}}>
+                <div style = {{paddingTop:"1vh", paddingLeft:"1vw", margin: "5vh"}}>
                     <div style = {divVertContainer} > 
                         <div style = {divHorContainer}>
                             <label style = {{fontSize:"6vw"}}>{this.state.el1}</label>

@@ -104,7 +104,13 @@ function KidsSections () {
                             <img src= {path + "/images/MainItemCardImages/PlusOrMinus.svg"} className="MainSectionItemImage" alt="I this adding or subtracting"
                             title="Get a question and drag and drop numbers to form the equation, then check if you got it right."></img>   
                         </Link>
-                    </div>                            
+                    </div>     
+                    <div className="cardDiv">
+                        <Link to={path + "/Sorting" } className="CardTextLink">                                                    
+                            <img src= {path + "/images/MainItemCardImages/Sorting.svg"} className="MainSectionItemImage" alt="sort items"
+                            title="Sort from greatest to least or least to greatest"></img>   
+                        </Link>
+                    </div>                           
                 </div>
             </div>                
             <br/>

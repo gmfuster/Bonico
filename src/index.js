@@ -17,6 +17,7 @@ import GreaterLessEqual from "./Views/KidsActivities/greaterLessEqual";
 import NumberBonds from "./Views/KidsActivities/NumberBonds";
 import FillSquares from "./Views/KidsActivities/FillSquares";
 import PlusOrMinus from "./Views/KidsActivities/PlusOrMinus";
+import Sorting from "./Views/KidsActivities/Sorting";
 
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import PlusOnePlusZero from "./Views/KidsActivities/PlusOnePlusZero";
@@ -55,6 +56,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NumberBonds"} component={NumberBonds}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/FillSquares"} component={FillSquares}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOrMinus"} component={PlusOrMinus}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Sorting"} component={Sorting}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

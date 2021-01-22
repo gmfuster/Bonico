@@ -10,14 +10,14 @@ class Sorting extends Component {
             numbers: 'number'
         }
         this.sortingBy= {
-            greatestToLeast: 'Greatest To Least',
-            leastToGreatest: 'Least To Greatest'
+            greatestToLeast: 'Greatest To Least ↘ ',
+            leastToGreatest: 'Least To Greatest ↗ '
         }
         this.totalNumberToSort = 4; //if more, add more divs and els to state array
         this.optionChosen = this.options.numbers;  
         this.sortingBychosen = this.sortingBy.leastToGreatest;
-
-        this.state = {sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:["", "", "", ""]};
+        this.sourceElements = [];
+        this.state = {sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:["", "", "", ""], textSortedByComputer:["","","",""]};
         
     }      
 
@@ -25,7 +25,7 @@ class Sorting extends Component {
         (this.sortingBychosen === this.sortingBy.greatestToLeast)? 
         this.sortingBychosen = this.sortingBy.leastToGreatest: this.sortingBychosen = this.sortingBy.greatestToLeast;
         //set variable and then set state to make setStates easier to read.
-        this.setState({sortBy:this.sortingBychosen});
+        this.setState({sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:[], textSortedByComputer:[]});
     }
     
 
@@ -37,7 +37,7 @@ class Sorting extends Component {
 
     //OK to get double numbers
     getThingsToSort = (option) => {
-
+        //TODO to clean up and rename
         this.optionChosen = option;
         let randomNum = 0;
         let textArray = [];
@@ -57,26 +57,53 @@ class Sorting extends Component {
             }
         }else{
             for (let i = 1; i< this.totalNumberToSort+1; i++){
-                randomNum = this.generateRandomNumber(30);    //OK to use zero on this one            
+                randomNum = this.generateRandomNumber(75);    //OK to use zero on this one            
                 textArray.push(randomNum);
             }
         }
-        this.setState({textToDisplay:textArray});       
-    }
+        this.sourceElements = textArray;
+        this.setState({textToDisplay:textArray, textSortedByComputer:[], textSortedByKid:[]});   
 
-    handleDragStart(e, text) {
-       
-        e.dataTransfer.setData("textToShow", text);
+    }
+    showSolution = () => {
+
+        let sortedArray =this.sourceElements.slice();         
+
+        if (this.optionChosen === this.options.items){            
+            if (this.sortingBychosen === this.sortingBy.leastToGreatest){
+                sortedArray.sort((a,b) => a.length - b.length);
+            }
+            else{
+                sortedArray.sort((a,b) => b.length - a.length);
+            }
+        }
+        else{            
+            if (this.sortingBychosen === this.sortingBy.leastToGreatest){
+                sortedArray.sort( (a,b) => parseInt(a)  - parseInt(b));
+            }
+            else{
+                sortedArray.sort((a,b) => parseInt(b) - parseInt(a));
+            }
+        }
+        this.setState({textSortedByComputer: sortedArray});              
+
+    }
+    handleDragStart(e, el) {
+               
+        e.dataTransfer.setData("sourceElement", el);
     }
     
 
     handleDrop(e, element ) {
 
-        const text = e.dataTransfer.getData("textToShow");       
-        //element is the div in the UI starting with 1 at top and going down
+        const sourceElement = e.dataTransfer.getData("sourceElement");       
+
         let a = this.state.textSortedByKid.slice(); 
-        a[element-1] = text;        
-        this.setState({textSortedByKid: a});                    
+        a[element] = this.state.textToDisplay[sourceElement];   
+
+        let source = this.state.textToDisplay.slice();
+        source[sourceElement] = "";
+        this.setState({textSortedByKid: a, textToDisplay: source});                    
     }
 
     render() {           
@@ -92,7 +119,7 @@ class Sorting extends Component {
             flexDirection:"Column",
             justifyContent:"center",            
             userSelect:"none",
-            width:"40vw",
+            width:"30vw",
             height:"60vh",
             alignItems:"center",
             padding:"2vh"
@@ -113,40 +140,64 @@ class Sorting extends Component {
             <br/>
 
             <div style={divHorContainer}>
-                <div style={{border:"2px solid deeppink", fontSize:"2.5vw"}}>
+                <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
                     <div style={divVertContainer}>
+                        DRAG
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,this.state.textToDisplay[0])} style={{border:"2px darkblue solid", width:"80%", height:"15%", textAlign:"center"}}>
+                        <div draggable onDragStart={(e) => this.handleDragStart(e,0)} style={{border:"2px darkblue solid", width:"80%", height:"15%", textAlign:"center"}}>
                             {this.state.textToDisplay[0]}</div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,this.state.textToDisplay[1])} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div draggable onDragStart={(e) => this.handleDragStart(e,1)} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textToDisplay[1]}</div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,this.state.textToDisplay[2])} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div draggable onDragStart={(e) => this.handleDragStart(e,2)} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textToDisplay[2]}</div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,this.state.textToDisplay[3])}style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div draggable onDragStart={(e) => this.handleDragStart(e,3)}style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textToDisplay[3]}</div>  
                     </div>
                 </div>
 
-                <div style={{border:"2px solid deeppink", fontSize:"2vw"}}>
+                <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"deeppink"}}>
                     <div style={divVertContainer}>
+                        DROP
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "1")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "0")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByKid[0]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "2")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "1")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByKid[1]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "3")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "2")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByKid[2]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "4")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "3")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByKid[3]}
+                        </div> 
+                    </div>
+                </div>
+
+                <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"teal"}}>
+                    <div style={divVertContainer}>
+                        <button onClick={this.showSolution}>Show Answer!</button>  
+                        <br/>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "1")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                            {this.state.textSortedByComputer[0]}
+                        </div>
+                        <br/>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "2")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                            {this.state.textSortedByComputer[1]}
+                        </div>
+                        <br/>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "3")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                            {this.state.textSortedByComputer[2]}
+                        </div>
+                        <br/>
+                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "4")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                            {this.state.textSortedByComputer[3]}
                         </div> 
                     </div>
                 </div>

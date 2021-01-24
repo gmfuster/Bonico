@@ -13,7 +13,7 @@ function NavBar () {
             <Navbar bg="dark" variant="dark" fixed="top" expand="lg" >
                 <Navbar.Brand href="/">
                     <img
-                        alt=""
+                        alt="Home"
                         src= {path + "/images/jdrawing.svg"}
                         width="50"
                         height="50"
@@ -26,6 +26,26 @@ function NavBar () {
                         <Nav.Link href= {path + "/"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Home</Nav.Link>
                         <Nav.Link href= {path + "/#KidsSection"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)"}}>Kindergarten</Nav.Link>                                              
                         <Nav.Link href= {path + "/#PersonalInterestsSection"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)"}}>My Interests</Nav.Link>                        
+                    </Nav>
+                    <Nav>                       
+                        <Nav.Link href="https://twitter.com/GMFuster" target="_new">
+                            <img alt="Twitter"
+                                src= {path + "/images/Twitter_Logo_Blue.svg"}
+                                width="50"
+                                height="50"
+                                className="rounded-circle d-inline-block align-top"
+                            /> 
+                        </Nav.Link>
+                        <Nav.Link href="https://gmfuster.medium.com/" target="_new">
+                        <img alt="Twitter"
+                                src= {path + "/images/mediumLogo.png"}
+                                width="50"
+                                height="50"
+                                className="rounded-circle d-inline-block align-top"
+                            /> 
+                        </Nav.Link>
+                        
+                        
                     </Nav>
                 </Navbar.Collapse>                
             </Navbar>

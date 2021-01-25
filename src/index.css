@@ -16,7 +16,6 @@
   --main-ButtonColor-color:#1697f9ff;
   --main-ButtonTextColor-color:#1697f9ff;
   --main-ButtonBKColor-color:#343a40;
-  --main-blueText-color:#1697f9ff
 }
 
 .fragmentContainer{  
@@ -136,7 +135,6 @@ code {
   margin:5px;
 }
 
-
 .traceLetterCanvas {           
   width: 80vw;
   height:70vh;
@@ -196,7 +194,6 @@ code {
     margin:5px;
 }
 
-
 .radio-toolbar label:hover {
   background-color: deeppink;
 }
@@ -209,7 +206,6 @@ code {
     background-color: aqua;
     border-color:var(--main-ButtonColor-color);
 }
-
 
 .circleWhite {            
   background-color: white;
@@ -321,10 +317,6 @@ code {
   border-color:darksalmon; 
 }
 
-.MainSectionHeaderText{
-  font-size: 5vh;    
-  
-}
 .DescriptionSectionText{    
   font-size: 4vh;     
   text-align: center;
@@ -362,34 +354,7 @@ code {
   background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);   
   margin-bottom:20px; 
 }
-/*
-.MainSectionContainerLanguage{    
-  background: radial-gradient(var(--main-MainSectionLanguage-color), white);
-  margin-bottom:15px;
-}
-.MainSectionContainerMath{       
-  background:radial-gradient(var(--main-MainSectionMath-color), white);    
-  margin-bottom:15px;
-}
-.MainSectionContainerSoftwareDev{
-  background:var(--main-MainSectionSoftwareDev-color);
-  margin-bottom:15px;
-}
 
-.MainSectionContainerBooks{
-  background:radial-gradient(var(--main-MainSectionBooks-color), white);    
-
-  display:flex;
-  flex-direction: row;    
-  text-align: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;  
-  
-  margin:5vw;
-  padding:2vw;
-}
-*/
 .MathSquarePink{
   background:deeppink;
   border:5px solid navy;  

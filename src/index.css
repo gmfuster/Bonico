@@ -21,7 +21,7 @@
 .fragmentContainer{  
   color: var(--main-text-color);
   font-family: 'Arima Madurai', cursive;  
-  font-size: large;
+  font-size: 1.4vw;
 }
 
 code {
@@ -53,6 +53,7 @@ code {
   margin-top: 3vw;
   margin-bottom: 3vw;
 }
+/*todo rename this or remove and use some better arrangement*/
 .myContentsAreGrid1{
   display:flex;  
   flex-direction: row;    
@@ -98,13 +99,12 @@ code {
 }
 
 .buttonPrintable{
-  background-color: deeppink;  
+  background-color: var(--main-ButtonBKColor-color);  
   color:white;    
-  font-size: 3vh;
-  padding: 1vw;    
-  border-radius: 25px; 
+  border-radius:10px;
+  padding: 3px;      
   text-align: center;  
-  text-decoration: none;
+  text-decoration: none;  
 }
 .buttonPrintable:hover{
   color:white;
@@ -122,11 +122,11 @@ code {
   outline:none;
 }
 .buttonPrintableMath{
-  border: solid navy 5px;
+  border: solid navy 2px;
 }
 
 .buttonPrintableLang{
-  border: solid red 6px;
+  border: solid red 2px;
 }
 .CodeContainer{
   border:3px solid gray;  
@@ -385,5 +385,21 @@ code {
   font-family: 'Times New Roman', Times, serif;
   border-bottom:navy 3px solid;
   margin:2vw;
+}
+
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  background-color: darkblue;  
+  margin: 5vw;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+}
+
+.grid-item {      
+  text-align: center;
+  padding: 10px;
+  background:lightsteelblue;
 }
 

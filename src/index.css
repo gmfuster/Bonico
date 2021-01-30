@@ -291,12 +291,13 @@ code {
 .cardDiv{
   color: var(--main-text-color);  
   width:210px;
-  height: 210px;      
-  border-radius: 15%;
-  border-width: 8px;
-  border-style: solid;
-  border-color:var(--main-text-color); 
-  margin:5px;
+  height: 210px;        
+  
+}
+.cardDiv2{
+  color: var(--main-text-color);    
+  width:210px;
+  height: 210px;       
 }
 .cardDiv > .CardTextLink{    
   color: var(--main-text-color);     
@@ -309,12 +310,24 @@ code {
   background-color:var(--main-CardBGHover-color);
   color: var(--main-CardBGHover-color);    
 }
-
+/*same borders as in cardDiv - TODO rearrange what goes where to split the properties more*/
 .cardDivLang{
   border-color:red; 
+  border-radius: 15%;
+  border-width: 8px;
+  border-style: solid;
 }
 .cardDivAll{
   border-color:darksalmon; 
+  border-radius: 15%;
+  border-width: 8px;
+  border-style: solid;
+}
+.cardDivMath{
+  border-color:var(--main-text-color); 
+  border-radius: 15%;
+  border-width: 8px;
+  border-style: solid;
 }
 
 .DescriptionSectionText{    
@@ -349,6 +362,17 @@ code {
 .MainSectionContainerActivities{    
   background:  radial-gradient(var(--main-MainSectionActivities-color), white);
   margin-bottom:20px;
+
+  display:flex;
+  flex-direction: row;    
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;    
+  margin:0vw;
+  padding:2vw;
+  border-radius: 0%;
+
 }
 .MainSectionContainerPersonalInterests{
   background:radial-gradient(var(--main-MainSectionPersonalInterests-color), white);   

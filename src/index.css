@@ -323,12 +323,14 @@ code {
   border-width: 8px;
   border-style: solid;
 }
-.cardDivMath{
+.cardDivMath, .cardDivNavy{
   border-color:var(--main-text-color); 
   border-radius: 15%;
   border-width: 8px;
   border-style: solid;
 }
+
+
 
 .DescriptionSectionText{    
   font-size: 4vh;     

@@ -25,7 +25,7 @@ function LandingPageCardComponent (props) {
                         <img src= {path + imgSrc} className="MainSectionItemImage" alt={topic}></img>   
                     </Link>                   
                 </div >
-                <div className="cardDiv2" style={{display: "flex", justifyContent: "center", alignItems:"center", margin:"2px"}}>
+                <div className="cardDiv2" style={{display: "flex", justifyContent: "center", alignItems:"center", margin:"2px", fontSize:"2.5vh"}}>
                     <div >
                         {props.text}
                     </div>

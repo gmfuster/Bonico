@@ -19,10 +19,8 @@ function PersonalInterestsSections () {
                 text="Some Chinese symbols"/>                
             </div>
 
-
-
-            <h1 className="sectionHeaderPink" id="PersonalInterestsSection">Books (I'm working on it)</h1>
-            <div className="MainSectionContainerPersonalInterests">                
+            <h2 id="PersonalInterestsSection" style={{textAlign: "center"}}>Just found out I like writing books too</h2>
+            <div className="MainSectionContainerPersonalInterests">                            
                 <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >        
                     <div >                                        
                         <iframe type="text/html" className="cardDiv" frameBorder="0"   title="jonandhismomtalkabout"                    

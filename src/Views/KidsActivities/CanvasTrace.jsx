@@ -200,10 +200,7 @@ class CanvasTrace extends Component {
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
             Use your finger.  Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
             <TextFieldWithButton textForInput = "Enter you text" textForButton="To canvas!" functionToCall= {this.updateCanvas}/>
-            <br/>
-            
-            {/* TODO fix button format and get printout with middle line too <button className="buttonPrintable" onClick={this.printTheText}>Printable</button><br/> */}
-            
+            <br/><br/>                                    
             <canvas className ="traceLetterCanvas"  
                     ref={this.refToCanvas}                     
                      />                

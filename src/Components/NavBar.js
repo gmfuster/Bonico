@@ -10,7 +10,7 @@ function NavBar () {
 
       return(
         <React.Fragment>
-            <Navbar bg="dark" variant="dark" fixed="top" expand="lg" >
+            <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
                 <Navbar.Brand href="/">
                     <img
                         alt="Home"

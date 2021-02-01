@@ -21,7 +21,7 @@ function KidsSections () {
                 
                 <LandingPageCardComponent topic = "/bdpq" imageSrc = "/images/MainItemCardImages/pdbq.svg" borderColorClass= "cardDivLang" 
                 text="Get a word and identify its starting letter (b p q d)"/>                                                         
-                <LandingPageCardComponent topic = "/pdbqCircles" imageSrc = "/images/MainItemCardImages/pdbqCircles.svg" borderColorClass= "cardDivLang"
+                <LandingPageCardComponent topic = "/bdpqCircles" imageSrc = "/images/MainItemCardImages/pdbqCircles.svg" borderColorClass= "cardDivLang"
                 text="Choose to find the p-b-d-q and find them"/>   
                 <LandingPageCardComponent topic = "/mnwCircles" imageSrc = "/images/MainItemCardImages/mnwCircles.svg" borderColorClass= "cardDivLang"
                 text="Choose to find the m-n-w and find them"/>   

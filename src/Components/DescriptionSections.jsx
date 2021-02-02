@@ -6,8 +6,9 @@ function DescriptionSections () {
             <React.Fragment>
                 <div className="DescriptionSectionText">
                     LEARNING IS AWESOME! <br/> 
-                    Some activities require a touch screen.  Not designed for older browsers or phone size.<br/>
-                    Bookmark only to the Home page.<br/>                
+                    Some activities require a touch screen.  <br/>
+                    Not designed for older browsers or phone size. <br/>
+                    Drag and Drop activities are not ready for mobile devices.<br/>                    
                 </div>
             </React.Fragment>
         )

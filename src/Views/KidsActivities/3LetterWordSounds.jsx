@@ -149,24 +149,22 @@ class ThreeLetterWordSounds extends Component {
       <React.Fragment>
          <div className="TopMarginToDealWithNavBarAll">
             <div className="CenterMe">
-                Scroll down to to see a list of words you can copy paste print.<br/><br/>
-                Click on a square to uncover a new letter.  It is recommended to try to make the sounds of the last 2 letters first, then add the first sound to it.<br/><br/>
+                Scroll down to to see a list of words.<br/><br/>
+                Click on the squares to uncover a new letter and read the word by making up the sounds.<br/><br/>
 
                 <div style={cardStyles}>                
                     <div style={{  background:"lightpink", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter0}>
-                    <span style={{ fontSize:"10vw" }}>{this.state.letter0}</span>                 
+                    <span style={{ fontSize:"15vw" }}>{this.state.letter0}</span>                 
                     </div>   
                     <div style={{ background:"lightblue", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter1}>
-                    <span style={{ fontSize:"10vw" }}>{this.state.letter1}</span>                 
+                    <span style={{ fontSize:"15vw" }}>{this.state.letter1}</span>                 
                     </div>   
                     <div style={{ background:"lightblue", width: "20vw", border: "outset 5px black", height:"20vw", cursor:"pointer" }} onClick={this.getLetter2}>
-                    <span style={{ fontSize:"10vw" }}>{this.state.letter2}</span>                 
-                    </div>                              
-                   
+                    <span style={{ fontSize:"15vw" }}>{this.state.letter2}</span>                 
+                    </div>                                                 
                 </div>   
 
-                <br/><br/>
-                <br/><br/>                                                             
+                <br/><br/>                                                                          
                 
                 {/*use map, not foreach, map gets a new object that we show}*/}
                 {arrayOfWordsAsLetters.map( (item, index) =>

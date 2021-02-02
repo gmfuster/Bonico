@@ -56,23 +56,23 @@ class Counting extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-           Increase or decrease the number by clicking on the + or - buttons.  Pay attention to how the blue and pink numbers combine to create the  bigger number.
+           Increase or decrease the number by clicking on the + or - buttons and see what numbers you make.
            <br/><br/>
            
             <div>                   
                 <div style = {divHorContainer}>
-                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw", fontSize:"2vw", height:"8vh" }} onClick={() => this.nextDigit("1", "UP")}>+</button>
-                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("2", "UP")}>+</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"20vw", fontSize:"5vw", height:"8vh", textAlign:"center", display: "flex", justifyContent: "center", alignItems:"center",outline:"none"}} onClick={() => this.nextDigit("1", "UP")}>+</button>
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"20vw",fontSize:"5vw",height:"8vh", textAlign:"center",display: "flex", justifyContent: "center", alignItems:"center",outline:"none" }} onClick={() => this.nextDigit("2", "UP")}> +</button> <br/>
                 </div>   
                 <br/>   
                 <div style = {divHorContainer}>
-                    <span style = {{ color:"white", backgroundColor:"navy", width:"25vw", height:"25vw", fontSize:"18vw", textAlign:"center"}}>{this.state.digit1 } </span>
-                    <span style = {{ color:"white", backgroundColor:"deeppink", width:"25vw", height:"25vw",fontSize:"18vw", textAlign:"center"}}>{this.state.digit2}</span> <br/>
+                    <span style = {{ color:"white", backgroundColor:"navy", width:"20vw", height:"20vw", fontSize:"18vw", textAlign:"center"}}>{this.state.digit1 } </span>
+                    <span style = {{ color:"white", backgroundColor:"deeppink", width:"20vw", height:"20vw",fontSize:"18vw", textAlign:"center"}}>{this.state.digit2}</span> <br/>
                 </div>                              
                 <br/>   
                 <div style = {divHorContainer}>
-                    <button style = {{color:"white", backgroundColor:"navy", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("1", "DOWN")}>-</button>  
-                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"25vw",fontSize:"2vw",height:"8vh" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
+                    <button style = {{color:"white", backgroundColor:"navy", width:"20vw",fontSize:"5vw",height:"8vh",textAlign:"center",display: "flex", justifyContent: "center", alignItems:"center",outline:"none" }} onClick={() => this.nextDigit("1", "DOWN")}>-</button>  
+                    <button  style = {{color:"white", backgroundColor:"deeppink", width:"20vw",fontSize:"5vw",height:"8vh",textAlign:"center", display: "flex", justifyContent: "center", alignItems:"center",outline:"none" }} onClick={() => this.nextDigit("2", "DOWN")}>-</button> <br/>
                 </div>                 
             </div>
             

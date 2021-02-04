@@ -17,7 +17,7 @@ import GreaterLessEqual from "./Views/KidsActivities/greaterLessEqual";
 import NumberBonds from "./Views/KidsActivities/NumberBonds";
 import FillSquares from "./Views/KidsActivities/FillSquares";
 import PlusOrMinus from "./Views/KidsActivities/PlusOrMinus";
-import Sorting from "./Views/KidsActivities/Sorting";
+import Sorting from "./Views/KidsActivities/SortingNoDnD";
 
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import PlusOnePlusZero from "./Views/KidsActivities/PlusOnePlusZero";

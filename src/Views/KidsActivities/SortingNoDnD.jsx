@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Sorting extends Component {
+class SortingNoDnD extends Component {
 
     constructor()
     {
@@ -87,25 +87,7 @@ class Sorting extends Component {
         }
         this.setState({textSortedByComputer: sortedArray});              
 
-    }
-
-    //drag and drop
-    handleDragStart(e, el) {
-               
-        e.dataTransfer.setData("sourceElement", el);
     }    
-    handleDrop(e, element ) {
-
-        const sourceElement = e.dataTransfer.getData("sourceElement");       
-
-        let a = this.state.textSortedByKid.slice(); 
-        a[element] = this.state.textToDisplay[sourceElement];   
-
-        let source = this.state.textToDisplay.slice();
-        source[sourceElement] = "";
-        this.setState({textSortedByKid: a, textToDisplay: source});                    
-    }
-    
 
 
 
@@ -142,47 +124,46 @@ class Sorting extends Component {
             <span style={{ fontSize:"2vw"}}> Sort by <strong>{this.state.sortBy}</strong></span>                       
             
             <br/>
-
+            {/*TODO if going to use something similar again, do a component instead*/}
             <div style={divHorContainer}>
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
-                    <div style={divVertContainer}>
-                        DRAG
+                    <div style={divVertContainer}>                        
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,0)} style={{border:"2px darkblue solid", width:"80%", height:"15%", textAlign:"center"}}>
-                            {this.state.textToDisplay[0]}</div>
+                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row", justifyContent:"center" }}>
+                            <button disabled ="true">&#129045;</button>
+                            <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>                                
+                                {this.state.textToDisplay[0]}
+                            </div>
+                            <button>&#129047;</button>
+                        </div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,1)} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textToDisplay[1]}</div>
+                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row",justifyContent:"center" }}>
+                            <button>&#129045;</button>
+                            <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
+                                {this.state.textToDisplay[1]}
+                            </div>
+                            <button>&#129047;</button>
+                        </div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,2)} style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textToDisplay[2]}</div>
+                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row",justifyContent:"center" }}>
+                            <button>&#129045;</button>
+                            <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
+                                {this.state.textToDisplay[2]}
+                            </div>
+                            <button>&#129047;</button>
+                        </div>
                         <br/>
-                        <div draggable onDragStart={(e) => this.handleDragStart(e,3)}style={{border:"2px darkblue solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textToDisplay[3]}</div>  
+                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid",display:"flex", flexDirection:"row", justifyContent:"center" }}>
+                            
+                            <button>&#129045;</button>
+                            <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
+                                {this.state.textToDisplay[3]}
+                            </div>  
+                            <button disabled ="true">&#129047;</button>
+                        </div>
                     </div>
                 </div>
 
-                <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"deeppink"}}>
-                    <div style={divVertContainer}>
-                        DROP
-                        <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "0")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textSortedByKid[0]}
-                        </div>
-                        <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "1")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textSortedByKid[1]}
-                        </div>
-                        <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "2")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textSortedByKid[2]}
-                        </div>
-                        <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "3")} style={{border:"2px deeppink solid", width:"80%", height:"15%",textAlign:"center"}}>
-                            {this.state.textSortedByKid[3]}
-                        </div> 
-                    </div>
-                </div>
 
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"teal"}}>
                     <div style={divVertContainer}>
@@ -212,4 +193,4 @@ class Sorting extends Component {
   };
   }
   
-  export default Sorting;
+  export default SortingNoDnD;

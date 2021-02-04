@@ -132,8 +132,7 @@ class PLusOrMinus extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-           Have somebody read the question to you.  Try to build the equation for the question by drag and droppping the numbers.<br/>           
-
+           Read the question and build the equation.  (Not set for mobile devices due to drag and drop).<br/>           
            <button className="buttonGeneral" onClick={this.getNextQuestion}>Get Question</button><br/><br/>
 
            <div style={{fontSize:"3vw", background:"lightpink", padding:"5px", border:"2px solid navy"}}>{this.state.text}</div><br/><br/>

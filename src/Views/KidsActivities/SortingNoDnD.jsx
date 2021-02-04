@@ -17,7 +17,7 @@ class SortingNoDnD extends Component {
         this.optionChosen = this.options.numbers;  
         this.sortingBychosen = this.sortingBy.leastToGreatest;
         this.sourceElements = [];
-        this.state = {sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:["", "", "", ""], textSortedByComputer:["","","",""]};
+        this.state = {sortBy:this.sortingBychosen, textToDisplay:[], textSortedByComputer:["","","",""]};
         
     }      
 
@@ -25,7 +25,7 @@ class SortingNoDnD extends Component {
         (this.sortingBychosen === this.sortingBy.greatestToLeast)? 
         this.sortingBychosen = this.sortingBy.leastToGreatest: this.sortingBychosen = this.sortingBy.greatestToLeast;
         //set variable and then set state to make setStates easier to read.
-        this.setState({sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:[], textSortedByComputer:[]});
+        this.setState({sortBy:this.sortingBychosen, textToDisplay:[],  textSortedByComputer:[]});
     }
     
 
@@ -89,7 +89,31 @@ class SortingNoDnD extends Component {
 
     }    
 
+    goDown = (n) =>{
 
+        let arrAux = this.state.textToDisplay.slice();
+
+        if (n < (this.state.textToDisplay.length -1 )){
+            let aux = this.state.textToDisplay[n+1];
+            arrAux[n+1]  = this.state.textToDisplay[n];
+            arrAux[n]= aux;
+
+            this.setState({textToDisplay:arrAux});
+            this.forceUpdate();
+        }        
+    }
+    goUp = (n) =>{
+        let arrAux = this.state.textToDisplay.slice();
+
+        if (n > 0){
+            let aux = this.state.textToDisplay[n-1];
+            arrAux[n-1]  = this.state.textToDisplay[n];
+            arrAux[n]= aux;
+
+            this.setState({textToDisplay:arrAux});
+            this.forceUpdate();
+        }
+    }
 
     render() {           
 
@@ -121,41 +145,40 @@ class SortingNoDnD extends Component {
             <br/>            
             <br/>
            
-            <span style={{ fontSize:"2vw"}}> Sort by <strong>{this.state.sortBy}</strong></span>                       
-            
+            <span style={{ fontSize:"2vw"}}> Sort by <strong>{this.state.sortBy}</strong></span>  
+            <button onClick={this.showSolution} style={{margin:"5px"}}>Show Answer!</button>                                   
             <br/>
+
             {/*TODO if going to use something similar again, do a component instead*/}
             <div style={divHorContainer}>
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
-                    <div style={divVertContainer}>                        
-                        <br/>
-                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row", justifyContent:"center" }}>
-                            <button disabled ="true">&#129045;</button>
+                    <div style={divVertContainer}>  
+                        <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row", justifyContent:"center" }}>
+                            <button disabled ="true" >&#129045;</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>                                
                                 {this.state.textToDisplay[0]}
                             </div>
-                            <button>&#129047;</button>
+                            <button onClick={ () => this.goDown(0)}>&#129047;</button>
                         </div>
                         <br/>
-                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row",justifyContent:"center" }}>
-                            <button>&#129045;</button>
+                        <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row",justifyContent:"center" }}>
+                            <button onClick={ () => this.goUp(1)}>&#129045;</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[1]}
                             </div>
-                            <button>&#129047;</button>
+                            <button onClick={ () => this.goDown(1)}>&#129047;</button>
                         </div>
                         <br/>
-                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid", display:"flex", flexDirection:"row",justifyContent:"center" }}>
-                            <button>&#129045;</button>
+                        <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row",justifyContent:"center" }}>
+                            <button onClick={ () => this.goUp(2)}>&#129045;</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[2]}
                             </div>
-                            <button>&#129047;</button>
+                            <button onClick={ () => this.goDown(2)}>&#129047;</button>
                         </div>
                         <br/>
-                        <div style={{width:"80%", height:"15%", textAlign:"center",border:"2px darkblue solid",display:"flex", flexDirection:"row", justifyContent:"center" }}>
-                            
-                            <button>&#129045;</button>
+                        <div style={{width:"80%", height:"15%", textAlign:"center",display:"flex", flexDirection:"row", justifyContent:"center" }}>                            
+                            <button onClick={ () => this.goUp(3)}>&#129045;</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[3]}
                             </div>  
@@ -166,22 +189,20 @@ class SortingNoDnD extends Component {
 
 
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"teal"}}>
-                    <div style={divVertContainer}>
-                        <button onClick={this.showSolution}>Show Answer!</button>  
-                        <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "1")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                    <div style={divVertContainer}>                        
+                        <div style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByComputer[0]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "2")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByComputer[1]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "3")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByComputer[2]}
                         </div>
                         <br/>
-                        <div onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e, "4")} style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
+                        <div style={{border:"2px teal solid", width:"80%", height:"15%",textAlign:"center"}}>
                             {this.state.textSortedByComputer[3]}
                         </div> 
                     </div>

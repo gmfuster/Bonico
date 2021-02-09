@@ -2,9 +2,7 @@ import React from "react";
 import LandingPageCardComponent from "./LandingPageCardComponent";
 
 function PersonalInterestsSections () {
-    
-
-        const path = process.env.REACT_APP_FOR_PATH;
+            
 
         return(
     

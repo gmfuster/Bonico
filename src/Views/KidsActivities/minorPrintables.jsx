@@ -8,20 +8,20 @@ function MinorPrintables () {
         
       <React.Fragment>
          <div className="TopMarginToDealWithNavBarAll">            
-            <div class="grid-container3">
-                <div class="grid-item">
+            <div className="grid-container3">
+                <div className="grid-item">
                     <div style={{margin:"3vh"}}>
                         <a className="buttonPrintable buttonPrintableLang" href="authorvsillustrator.pdf" target="_new">Author/Illustrator!</a>
                     </div>      
                     Graphic to indicate what author and illustrator do in a book.
                 </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <div style={{margin:"3vh"}}>
                     <a className="buttonPrintable buttonPrintableLang" style={{textDecoration:"none"}} href="rhymes.pdf" target="_new">Rhyming!</a>
                 </div>  
                 Print these cards and practice finding which ones rhyme.
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <div style={{margin:"3vh"}}>
                     <a className="buttonPrintable buttonPrintableLang" style={{textDecoration:"none"}} href="startandendsounds.pdf" target="_new">Being/End Sounds!</a>                    
                 </div> 
@@ -29,19 +29,19 @@ function MinorPrintables () {
             </div>  
 
 
-            <div class="grid-item">
+            <div className="grid-item">
                 <div style={{margin:"3vh"}}>
                     <a className="buttonPrintable buttonPrintableMath" style={{textDecoration:"none"}} href="CombiningNumbersAddition.pdf" target="_new">Add!</a>
                 </div> 
                 Color the squares and write the addition equation to go with them.
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <div style={{margin:"3vh"}}>
                     <a className="buttonPrintable buttonPrintableMath"  href="patterns.pdf" target="_new">Patterns!</a>
                 </div> 
                 Work on some patterns.
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <div style={{margin:"3vh"}}>
                     <a className="buttonPrintable buttonPrintableMath"  href="equationproblems.pdf" target="_new">Add/Subtract!</a>
                 </div> 

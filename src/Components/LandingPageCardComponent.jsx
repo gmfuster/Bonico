@@ -8,7 +8,7 @@ function LandingPageCardComponent (props) {
     const imgSrc = props.imageSrc;
     var classN = "cardDiv";
     
-    if (props.borderColorClass != undefined){
+    if (props.borderColorClass !== undefined){
         classN = "cardDiv " + props.borderColorClass;
     }
     

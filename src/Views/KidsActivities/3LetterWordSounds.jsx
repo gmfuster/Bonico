@@ -168,7 +168,7 @@ class ThreeLetterWordSounds extends Component {
                 
                 {/*use map, not foreach, map gets a new object that we show}*/}
                 {arrayOfWordsAsLetters.map( (item, index) =>
-                    <div>               
+                    <div key={index}>               
                         <div  style={cardStyles}>
                             <span className="letterCardsForReadingWords"> {item[1]}</span>
                             <span  className="letterCardsForReadingWords">{item[2]}</span>

@@ -39,8 +39,8 @@ class LetterCircleList extends Component {
         let allDone = false;
         let theListCopy = [...this.state.theList];
         while (!allDone && theListCopy.length > 0 ){
-            var index = this.generateRandomNumber(theListCopy.length);
-            var newItem = {...theListCopy[index]};           
+            let index = this.generateRandomNumber(theListCopy.length);
+            let newItem = {...theListCopy[index]};           
             if (!this.state.newList.find(it => it.id === newItem.id && it.value === newItem.value)){
                 this.state.newList.push(newItem);  
                 theListCopy.splice(index, 1)              ;

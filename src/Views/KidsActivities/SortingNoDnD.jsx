@@ -154,7 +154,7 @@ class SortingNoDnD extends Component {
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
                     <div style={divVertContainer}>  
                         <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row", justifyContent:"center" }}>
-                            <button disabled ="true" >&#129045;</button>
+                            <button disabled ={true} >&#129045;</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>                                
                                 {this.state.textToDisplay[0]}
                             </div>
@@ -182,7 +182,7 @@ class SortingNoDnD extends Component {
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[3]}
                             </div>  
-                            <button disabled ="true">&#129047;</button>
+                            <button disabled ={true}>&#129047;</button>
                         </div>
                     </div>
                 </div>

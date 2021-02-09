@@ -1,11 +1,8 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import LandingPageCardComponent from "./LandingPageCardComponent";
 
 function KidsSections () {
-    
-
-        const path = process.env.REACT_APP_FOR_PATH;        
+               
 
         return(
     

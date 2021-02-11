@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 function LandingPageCardComponent (props) {
 
     const path = process.env.REACT_APP_FOR_PATH;   
+    const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
     const topic = props.topic
     const imgSrc = props.imageSrc;
     var classN = "cardDiv";
@@ -22,7 +23,7 @@ function LandingPageCardComponent (props) {
             <div style={st}>
                 <div className={classN}>
                     <Link to= {path  + topic } className= "CardTextLink">                                                    
-                        <img src= {path + imgSrc} className="MainSectionItemImage" alt={topic}></img>   
+                        <img src= {pathPic + imgSrc} className="MainSectionItemImage" alt={topic}></img>   
                     </Link>                   
                 </div >
                 <div className="cardDiv2" style={{display: "flex", justifyContent: "center", alignItems:"center", margin:"2px", fontSize:"2.5vh"}}>

@@ -43,8 +43,8 @@ class bdpq extends Component {
     }
 
     render() {
-
-      const path = process.env.REACT_APP_FOR_PATH ;
+      
+      const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
 
       return(
   
@@ -54,7 +54,7 @@ class bdpq extends Component {
 
               <button title="Get Word" onClick={this.getAWordFromArray} className="buttonGeneral">Get Word</button><br/>
               <br/>Choose the letter that matches the beginning of the word shown.<br/>
-              <img src= {path + "/images/Language/correct.svg"} className="pbdqImages" ref={this.refToCorrectImage} style={{visibility: 'hidden'}}  alt=""/> 
+              <img src= {pathPic + "/images/Language/correct.svg"} className="pbdqImages" ref={this.refToCorrectImage} style={{visibility: 'hidden'}}  alt=""/> 
               {/*<button className="pbdqButton"><img src="../images/Language/P.svg" onClick={() => this.clickLetter("p")} className="pbdqImages"></img></button>*/}
               <button className="pbdqButton" onClick={() => this.clickLetter("p")} >p</button>
               <button className="pbdqButton" onClick={() => this.clickLetter("b")} >b</button>
@@ -65,7 +65,7 @@ class bdpq extends Component {
               <button className="pbdqButton"><img src="../images/Language/q.svg" onClick={() => this.clickLetter("q")} className="pbdqImages"></img></button>
               <button className="pbdqButton"><img src="../images/Language/d.svg" onClick={() => this.clickLetter("d")} className="pbdqImages"></img></button>
             */}
-              <img src= {path + "/images/Language/incorrect.svg"} className="pbdqImages" ref={this.refToIncorrectImage} style={{visibility:'hidden'}} alt=""/> 
+              <img src= {pathPic + "/images/Language/incorrect.svg"} className="pbdqImages" ref={this.refToIncorrectImage} style={{visibility:'hidden'}} alt=""/> 
               <br/>               
               <label className="correctLetterLabel">{this.state.selectedWord[0]}</label>
               <label className="LabelBDPQ">{this.state.selectedWord.substr(1,this.state.selectedWord.length-1)}</label>              

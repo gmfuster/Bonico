@@ -25,14 +25,7 @@ function PersonalInterestsSections () {
                             <iframe type="text/html" className="cardDiv" frameBorder="0"   title="jonandhismomtalkabout"                    
                             src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>                
                         </div>
-                    
-                    {/* TODO move this to another icon on the nav bar}
-                        <div className="cardDiv">                    
-                            <a href="https://www.instagram.com/feedforpositivity/" target="_new" >
-                                <img src= {path +"/images/MainItemCardImages/feedforpositivity.png"} className="MainSectionItemImagePng" alt="feed for positivity"></img>    
-                            </a>
-                        </div>                                                         
-            */}
+                                       
                     </div>
                 </div>
             </div>

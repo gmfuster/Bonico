@@ -11,9 +11,10 @@ class Subtraction extends Component {
         this.result = null;                
         this.numbersToUse = [1,2,3,4,5,6,7,8,9,10];    
 
-        const path = process.env.REACT_APP_FOR_PATH;
+        const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
+        
 
-        this.imgPath = path + "/images//substractionline.svg";   
+        this.imgPath = pathPic + "/images//substractionline.svg";   
         this.refToCanvas = React.createRef();      
     }         
    

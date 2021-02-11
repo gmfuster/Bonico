@@ -4,7 +4,7 @@ function MainImage () {
    
       var imageStyle = {
         backgroundPosition: "center",
-        backgroundImage: "url(" + process.env.REACT_APP_FOR_PATH + "/images/boyplaybeach.png)",
+        backgroundImage: "url(" + process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/boyplaybeach.png)",
         backgroundSize: "cover",
         height: "60vh",
         position: "relative"   

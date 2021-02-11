@@ -11,7 +11,7 @@ class  RemoveDupPics extends Component {
     }
     render() {   
         
-        const path = process.env.REACT_APP_FOR_PATH;        
+        const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;        
       return(        
       <React.Fragment>
          <div className="TopMarginToDealWithNavBarAll">
@@ -19,7 +19,7 @@ class  RemoveDupPics extends Component {
                 I got tired of seeing some of my pictures backed up in a million folders, so I decided to create a small C# tool to identify the duplicates.  Just adding 
                 here.  Not super fast, but it got the job done. <br/>
 
-                <img src={path + "/images/softwareNotes/findduplicates.png"} alt="find duplicates screenshot"/><br/>
+                <img src={pathPic + "/images/softwareNotes/findduplicates.png"} alt="find duplicates screenshot"/><br/>
 
                 These are the parts of the code that were more interesting<br/>
 

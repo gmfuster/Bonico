@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function NavBar () {   
 
     const path = process.env.REACT_APP_FOR_PATH ;
+    const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
 
     const reactLinkSt = {
         color:"white",
@@ -25,7 +26,7 @@ function NavBar () {
                 <Navbar.Brand href="/">
                     <img
                         alt="Home"
-                        src= {path + "/images/jdrawing.svg"}
+                        src= {pathPic + "/images/jdrawing.svg"}
                         width="50"
                         height="50"
                         className="rounded-circle d-inline-block align-top"
@@ -43,7 +44,7 @@ function NavBar () {
                     <Nav>                       
                         <Nav.Link href="https://twitter.com/GnMFuster" target="_new">
                             <img alt="Twitter"
-                                src= {path + "/images/Twitter_Logo_Blue.svg"}
+                                src= {pathPic + "/images/Twitter_Logo_Blue.svg"}
                                 width="50"
                                 height="50"
                                 className="rounded-circle d-inline-block align-top"
@@ -51,7 +52,7 @@ function NavBar () {
                         </Nav.Link>
                         <Nav.Link href="https://gnmfuster.medium.com/" target="_new">
                         <img alt="Twitter"
-                                src= {path + "/images/mediumLogo.png"}
+                                src= {pathPic + "/images/mediumLogo.png"}
                                 width="50"
                                 height="50"
                                 className="rounded-circle d-inline-block align-top"

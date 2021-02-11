@@ -9,6 +9,7 @@ import Kindergarten from "./Components/Kindergarten";
 class LandingPage extends Component {
   
   render() {
+
     return(
 
     <React.Fragment>               

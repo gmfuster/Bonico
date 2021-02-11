@@ -4,9 +4,7 @@ function DescriptionSections () {
     
         return(
             <React.Fragment>
-                <div className="DescriptionSectionText">
-                    CHANGING THE ROUTING AND IMAGES NOT WORKING YET.  SORRY ABOUT THAT. <br/>
-                    
+                <div className="DescriptionSectionText">                    
                     LEARNING IS AWESOME! <br/> 
                     Some activities require a touch screen.  <br/>
                     Not designed for older browsers or phone size. <br/>        

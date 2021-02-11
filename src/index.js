@@ -40,10 +40,11 @@ const routing = (
     <React.Fragment>   
         <div className="fragmentContainer"> {/*use for some styling only*/}
         
-        <NavBar/>                           
+                                  
 
-         <Router baseline="/">{/*todo change to use basename here instead for the env variable*/}
+         <Router baseline="/">
             <div>
+                <NavBar/> 
                 <Switch>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
 

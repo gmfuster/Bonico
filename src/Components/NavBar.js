@@ -1,15 +1,26 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import {Link as ReactLink} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar () {   
 
-     const path = process.env.REACT_APP_FOR_PATH ;
+    const path = process.env.REACT_APP_FOR_PATH ;
 
+    const reactLinkSt = {
+        color:"white",
+        padding:"5px",
+        textDecoration: "none",
+        borderRight:"solid 2px var(--main-ButtonTextColor-color)",
+        fontSize:"25px"        
+    }
       return(
+          
         <React.Fragment>
+
+            
             <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
                 <Navbar.Brand href="/">
                     <img
@@ -20,12 +31,14 @@ function NavBar () {
                         className="rounded-circle d-inline-block align-top"
                     />                 
                 </Navbar.Brand>
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">                    
-                        <Nav.Link href= {path + "/"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)", borderLeft:"solid 2px var(--main-ButtonTextColor-color)"}}>Home</Nav.Link>
-                        <Nav.Link href= {path + "/#/kindergarten"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)"}}>Kindergarten</Nav.Link>                                              
-                        <Nav.Link href= {path + "/#/PersonalInterestsSection"} style={{borderRight:"solid 2px var(--main-ButtonTextColor-color)"}}>My Interests</Nav.Link>                        
+                        <ReactLink style={reactLinkSt} to= {path + "/"} >Home</ReactLink>
+                        <ReactLink style={reactLinkSt} to= {path + "/kindergarten"} >Kindergarten</ReactLink>                                              
+                        <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >My Interests</ReactLink>                        
                     </Nav>
                     <Nav>                       
                         <Nav.Link href="https://twitter.com/GnMFuster" target="_new">
@@ -47,8 +60,10 @@ function NavBar () {
                         
                         
                     </Nav>
-                </Navbar.Collapse>                
-            </Navbar>
+                </Navbar.Collapse>                    
+
+            </Navbar>                                       
+            
       </React.Fragment>);
 
   }

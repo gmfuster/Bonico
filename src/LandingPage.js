@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import  MainImage from "./Components/MainImage";
 import DescriptionSections from "./Components/DescriptionSections";
 
-import KidsSections from "./Components/KidsSections";
-import PersonalInterestsSections from "./Components/PersonalInterestsSections";
+import Kindergarten from "./Components/Kindergarten";
 
 
 
@@ -18,10 +17,7 @@ class LandingPage extends Component {
 
         <DescriptionSections/>
             
-        <KidsSections/>                    
-      
-        <br/><br/>
-        <PersonalInterestsSections/>       
+        <Kindergarten/>                                    
       
 
     </React.Fragment>)

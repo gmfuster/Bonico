@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {Route, HashRouter as Router, Switch} from 'react-router-dom';
 
 import './index.css';
 
@@ -33,6 +33,8 @@ import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
 import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 import Chinese from "./Views/PersonalInterests/Chinese";
 
+import kindergarten from "./Components/Kindergarten";
+import PersonalInterestsSection from "./Components/PersonalInterestsSections";
 
 const routing = (
     <React.Fragment>   
@@ -40,10 +42,14 @@ const routing = (
         
         <NavBar/>                           
 
-         <Router>{/*todo change to use basename here instead for the env variable*/}
+         <Router baseline="/">{/*todo change to use basename here instead for the env variable*/}
             <div>
                 <Switch>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
+
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergarten"} component={kindergarten}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PersonalInterestsSection"} component={PersonalInterestsSection}/>
+
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpq"} component={bdpq}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpqCircles"} component={bdpqCircles}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/mnwCircles"} component={mnwCircles}/> 

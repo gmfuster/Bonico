@@ -114,6 +114,7 @@ class CanvasComponent extends Component {
             ctx.strokeText(this.props.DefaultDisplay, 50 , fonts); //50 so J and similar are not cut off.
         }
         //we are not getting the image but the image path (using string instead of bool)
+        //todo do a component or a function to create the images and return it so we can call from other places
         if (this.props.IsThisAnImage === "true") {              
             let img = new Image();
             img.src = this.props.DefaultDisplay;

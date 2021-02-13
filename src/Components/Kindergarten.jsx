@@ -42,7 +42,9 @@ function kindergarten () {
                     <LandingPageCardComponent topic = "/PlusOrMinus" imageSrc = "/images/MainItemCardImages/PlusOrMinus.svg" borderColorClass= "cardDivMath"
                     text="Solve word problems"/>   
                     <LandingPageCardComponent topic = "/Sorting" imageSrc = "/images/MainItemCardImages/Sorting.svg" borderColorClass= "cardDivMath"
-                    text="Sort, then check your answer"/>                                                                            
+                    text="Sort, then check your answer"/>    
+                    <LandingPageCardComponent topic = "/ModelingTens" imageSrc = "/images/MainItemCardImages/ModelingTens.svg" borderColorClass= "cardDivMath"
+                    text="Modeling Tens and Ones"/>                                                                            
                 </div>
                 </div>               
             <br/>

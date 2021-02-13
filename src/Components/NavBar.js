@@ -23,7 +23,7 @@ function NavBar () {
 
             
             <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
-                <Navbar.Brand href="/">
+                {/*<Navbar.Brand href="/">
                     <img
                         alt="Home"
                         src= {pathPic + "/images/jdrawing.svg"}
@@ -32,7 +32,7 @@ function NavBar () {
                         className="rounded-circle d-inline-block align-top"
                     />                 
                 </Navbar.Brand>
-
+      */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                 <Navbar.Collapse id="basic-navbar-nav">

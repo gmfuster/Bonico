@@ -30,7 +30,7 @@ class ModelingTens extends Component {
             imgSrc:"",
             imgSize:""
         }
-        obj.imgSrc =  this.pathPic + "images/ModelingTensLine.svg" ;
+        obj.imgSrc =  this.pathPic + "/images/ModelingTensLine.svg" ;
         obj.imgSize = this.sizeOfLine;
         this.arrayOfImages.push(obj);        
         this.numberBuilt += 10;
@@ -42,7 +42,7 @@ class ModelingTens extends Component {
             imgSrc:"",
             imgSize:""
         }
-        obj.imgSrc =  this.pathPic + "images/ModelingTensOne.svg" ;
+        obj.imgSrc =  this.pathPic + "/images/ModelingTensOne.svg" ;
         obj.imgSize = this.sizeOfOne;
         this.arrayOfImages.push(obj);        
         this.numberBuilt += 1;

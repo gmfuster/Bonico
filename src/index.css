@@ -98,6 +98,18 @@ code {
   outline:none;
 }
 
+.buttonOptions{
+  background-color: lightblue;
+  border:2px solid navy;     
+  width:4vw;
+  height:4vw;
+  font-size:3vw;   
+  margin:2px;
+}
+.buttonOptions:focus{
+  outline:none;
+}
+
 .buttonPrintable{
   background-color: var(--main-ButtonBKColor-color);  
   color:white;    

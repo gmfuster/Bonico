@@ -36,11 +36,11 @@ class NumberBonds extends Component {
         let items1 = ""; let items2="";
         for (let i = 1; i <= this.random1; i++)
         {
-            items1 += " ♥ ";
+            items1 += " o ";
         }
         for (let i = 1; i <= (this.randomTotal - this.random1); i++)
         {
-            items2 += " ♥ ";
+            items2 += " o ";
         }
 
         this.setState( { total: this.randomTotal, el1: this.random1, el2:"?", signs:this.signs, dots:this.dots, correction:"☻", items1:items1, items2:items2});                             

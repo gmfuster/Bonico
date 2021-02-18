@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { generateRandomNumber } from "../../commonJS";
 
 class SortingNoDnD extends Component {
 
@@ -29,12 +30,6 @@ class SortingNoDnD extends Component {
     }
     
 
-    //todo maybe have a file for the functions used often and import it.
-    generateRandomNumber = (length) => {
-        return Math.floor(Math.random() * length);      
-    }
-
-
     //OK to get double numbers
     getThingsToSort = (option) => {
         //TODO to clean up and rename
@@ -44,7 +39,7 @@ class SortingNoDnD extends Component {
         let stringToSet = "";
         if (this.optionChosen === this.options.items){
             for (let i = 1; i< this.totalNumberToSort+1; i++){
-                randomNum = this.generateRandomNumber(10);    
+                randomNum = generateRandomNumber(10);    
                 //TODO have a file with math function and have more configurable random funcs  
                 //could return zero so set to 1
                 if (randomNum === 0 ){ randomNum = 1};
@@ -57,7 +52,7 @@ class SortingNoDnD extends Component {
             }
         }else{
             for (let i = 1; i< this.totalNumberToSort+1; i++){
-                randomNum = this.generateRandomNumber(75);    //OK to use zero on this one            
+                randomNum = generateRandomNumber(75);    //OK to use zero on this one            
                 textArray.push(randomNum);
             }
         }

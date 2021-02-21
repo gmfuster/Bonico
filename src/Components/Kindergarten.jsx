@@ -26,6 +26,8 @@ function kindergarten () {
                     text="Choose to find the m-n-w and find them"/>   
                     <LandingPageCardComponent topic = "/ThreeLetterWordSounds" imageSrc = "/images/MainItemCardImages/3LetterWordSounds.svg" borderColorClass= "cardDivLang"
                     text="Click square to get a letter in a 3 letter word and read"/>   
+                    <LandingPageCardComponent topic = "/Prefixsuffix" imageSrc = "/images/MainItemCardImages/Prefixsuffix.svg" borderColorClass= "cardDivLang"
+                    text="See the root and add the prefix or suffix"/>   
 
                     <LandingPageCardComponent topic = "/Counting" imageSrc = "/images/MainItemCardImages/Counting.svg" borderColorClass= "cardDivMath"
                     text="Click up or down to form 2 digit numbers"/>   

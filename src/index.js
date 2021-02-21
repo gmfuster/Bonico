@@ -18,7 +18,7 @@ import NumberBonds from "./Views/KidsActivities/NumberBonds";
 import FillSquares from "./Views/KidsActivities/FillSquares";
 import PlusOrMinus from "./Views/KidsActivities/PlusOrMinus";
 import Sorting from "./Views/KidsActivities/SortingNoDnD";
-
+import Prefixsuffix from "./Views/KidsActivities/Prefixsuffix";
 import ThreeLetterWordSounds from "./Views/KidsActivities/3LetterWordSounds";
 import PlusOnePlusZero from "./Views/KidsActivities/PlusOnePlusZero";
 import Subtraction from "./Views/KidsActivities/Subtraction";
@@ -66,6 +66,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PlusOrMinus"} component={PlusOrMinus}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Sorting"} component={Sorting}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ModelingTens"} component={ModelingTens}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Prefixsuffix"} component={Prefixsuffix}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

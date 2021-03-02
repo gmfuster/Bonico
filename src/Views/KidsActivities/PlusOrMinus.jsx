@@ -138,14 +138,14 @@ class PLusOrMinus extends Component {
             alignItems: "center"        
         }
 
-        var optionsSt = {
+        /*var optionsSt = {
             border:"2px solid navy",
             width:"4vw",
             height:"4vw",
             fontSize:"3vw",
             margin:"2px",
             background:"lightblue"
-        }
+        }*/
 
       return(  
           

@@ -12,7 +12,7 @@ function MainImage () {
      return(
         
         <React.Fragment>            
-            <img style = {imageStyle} src = {pathPicSrc} className="TopMarginToDealWithNavBarImg"/>  
+            <img style = {imageStyle} src = {pathPicSrc} className="TopMarginToDealWithNavBarImg" alt="boy at beach"/>  
         </React.Fragment>
       )
   }

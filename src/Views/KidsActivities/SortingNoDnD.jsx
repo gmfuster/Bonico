@@ -45,7 +45,7 @@ class SortingNoDnD extends Component {
                 if (randomNum === 0 ){ randomNum = 1};
                 stringToSet = "";                                
                 for (let j = 1; j < randomNum+1; j++){
-                    stringToSet += " ♥ ";
+                    stringToSet += " * ";
                 }
                 
                 textArray.push(stringToSet);
@@ -135,7 +135,7 @@ class SortingNoDnD extends Component {
         <div className="TopMarginToDealWithNavBarAll CenterMe">  
             Choose an options to sort by number of elements or by numbers.  Click the button to get things to sort and how.<br/>  
             <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.numbers)}>Get Numbers to sort!</button> 
-            <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.items)}>Get ♥s to sort!</button>  
+            <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.items)}>Get *s to sort!</button>  
             &nbsp; &nbsp;  <button className="buttonGeneral" onClick={ this.switchSortBy}>Switch Sort By</button>   
             <br/>            
             <br/>
@@ -147,39 +147,41 @@ class SortingNoDnD extends Component {
             {/*TODO if going to use something similar again, do a component instead*/}
             <div style={divHorContainer}>
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
+
                     <div style={divVertContainer}>  
                         <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row", justifyContent:"center" }}>
-                            <button disabled ={true} >&#129045;</button>
+                            <button disabled ={true} >+</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>                                
                                 {this.state.textToDisplay[0]}
                             </div>
-                            <button onClick={ () => this.goDown(0)}>&#129047;</button>
+                            <button onClick={ () => this.goDown(0)}>-</button>
                         </div>
                         <br/>
                         <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row",justifyContent:"center" }}>
-                            <button onClick={ () => this.goUp(1)}>&#129045;</button>
+                            <button onClick={ () => this.goUp(1)}>+</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[1]}
                             </div>
-                            <button onClick={ () => this.goDown(1)}>&#129047;</button>
+                            <button onClick={ () => this.goDown(1)}>-</button>
                         </div>
                         <br/>
                         <div style={{width:"80%", height:"15%", textAlign:"center", display:"flex", flexDirection:"row",justifyContent:"center" }}>
-                            <button onClick={ () => this.goUp(2)}>&#129045;</button>
+                            <button onClick={ () => this.goUp(2)}>+</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[2]}
                             </div>
-                            <button onClick={ () => this.goDown(2)}>&#129047;</button>
+                            <button onClick={ () => this.goDown(2)}>-</button>
                         </div>
                         <br/>
                         <div style={{width:"80%", height:"15%", textAlign:"center",display:"flex", flexDirection:"row", justifyContent:"center" }}>                            
-                            <button onClick={ () => this.goUp(3)}>&#129045;</button>
+                            <button onClick={ () => this.goUp(3)}>+</button>
                             <div style={{width:"80%", height:"100%", textAlign:"center",border:"2px darkblue solid"}}>
                                 {this.state.textToDisplay[3]}
                             </div>  
-                            <button disabled ={true}>&#129047;</button>
+                            <button disabled ={true}>-</button>
                         </div>
                     </div>
+                    
                 </div>
 
 

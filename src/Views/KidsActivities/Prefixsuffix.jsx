@@ -39,8 +39,7 @@ class Prefixsuffix extends Component {
         var buttonStylesSuf = Object.assign({}, buttonStylesPre, {background:"yellow"});          
 
         var wordStylesPre = {                       
-            fontSize:"12vh",                                 
-            background:"lightblue",
+            fontSize:"12vh",                                             
             borderTop:"5px solid navy",
             borderBottom:"5px solid navy",
             background:"lightgreen"

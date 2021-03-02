@@ -50,7 +50,7 @@ class Sorting extends Component {
                 if (randomNum === 0 ){ randomNum = 1};
                 stringToSet = "";                                
                 for (let j = 1; j < randomNum+1; j++){
-                    stringToSet += " ♥ ";
+                    stringToSet += " * ";
                 }
                 
                 textArray.push(stringToSet);
@@ -134,7 +134,7 @@ class Sorting extends Component {
         <div className="TopMarginToDealWithNavBarAll CenterMe">  
             Choose an options to sort by number of elements or by numbers.  Click the button to get things to sort and how.<br/>  
             <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.numbers)}>Get Numbers to sort!</button> 
-            <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.items)}>Get ♥s to sort!</button>  
+            <button className="buttonGeneral" onClick={ () => this.getThingsToSort(this.options.items)}>Get *s to sort!</button>  
             &nbsp; &nbsp;  <button className="buttonGeneral" onClick={ this.switchSortBy}>Switch Sort By</button>   
             <br/>            
             <br/>
@@ -146,7 +146,7 @@ class Sorting extends Component {
             <div style={divHorContainer}>
                 <div style={{border:"2px solid deeppink", fontSize:"2vw", color:"navy"}}>
                     <div style={divVertContainer}>
-                        DRAG
+                        
                         <br/>
                         <div draggable onDragStart={(e) => this.handleDragStart(e,0)} style={{border:"2px darkblue solid", width:"80%", height:"15%", textAlign:"center"}}>
                             {this.state.textToDisplay[0]}</div>

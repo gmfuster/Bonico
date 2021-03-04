@@ -39,7 +39,7 @@ function NavBar () {
                     <Nav className="mr-auto">                    
                         <ReactLink style={reactLinkSt} to= {path + "/"} >Home</ReactLink>
                         <ReactLink style={reactLinkSt} to= {path + "/kindergarten"} >Kindergarten</ReactLink>                                              
-                        <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >My Interests</ReactLink>                        
+                        <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
                     </Nav>
                     <Nav>                       
                         <Nav.Link href="https://twitter.com/GnMFuster" target="_new">
@@ -57,9 +57,7 @@ function NavBar () {
                                 height="50"
                                 className="rounded-circle d-inline-block align-top"
                             /> 
-                        </Nav.Link>
-                        
-                        
+                        </Nav.Link>                        
                     </Nav>
                 </Navbar.Collapse>                    
 

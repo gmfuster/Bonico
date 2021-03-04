@@ -5,11 +5,9 @@ function DescriptionSections () {
         return(
             <React.Fragment>
                 <div className="DescriptionSectionText">                    
-                    LEARNING IS AWESOME! <br/> 
-                    Some activities require a touch screen.  <br/>
-                    Not designed for older browsers or phone size. <br/>        
-                    <br/>
-                    This site is mainly for kids activities.   
+                    LEARNING IS AWESOME! <br/>     
+                    Canvas activities require a touch screen.<br/>                
+                    Not designed for older browsers or phone size. <br/>                                                
                 </div>
 
                 <div style={{background:"lightyellow", margin:"15px", padding:"15px"}}>

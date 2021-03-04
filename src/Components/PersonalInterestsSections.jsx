@@ -3,7 +3,7 @@ import LandingPageCardComponent from "./LandingPageCardComponent";
 
 function PersonalInterestsSections () {
             
-
+        window.scrollTo(0,0);
         return(
     
         <React.Fragment>            

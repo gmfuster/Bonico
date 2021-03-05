@@ -12,7 +12,8 @@ const Chinese =(props) => {
         marginTop:"12vh"
     }
     var styleSymbol = {
-        fontSize:"4vw"
+        fontSize:"4vw",
+        color:"deeppink"
     }    
     var styleSymTrans = {
         border:"2px solid navy",
@@ -24,7 +25,8 @@ const Chinese =(props) => {
                         {sym:"八", trans:"Eight", read:"Bā"}, {sym:"九", trans:"Nine", read:"Jiǔ"}, {sym:"十", trans:"Ten", read:"Shí"},
                         {sym:"人", trans:"person", read:"Rén"}, {sym:"夫",trans:"husband",read:"Fū"}, {sym:"入口",trans:"entrance",read:"Rùkǒu"},
                         {sym:"出口",trans:"exit",read:"Chūkǒu"}, {sym:"出",trans:"out",read:"Chū"}, {sym:"火", trans:"fire", read:"Huǒ" }, {sym:"厕所", trans:"toilet", read:"Cèsuǒ"},
-                        {sym:"餐饮", trans:"food", read:"Cānyǐn"}, {sym:"警察", trans:"police", read:"Jǐngchá"}, {sym:"请", trans:"please", read:"Qǐng"}
+                        {sym:"餐饮", trans:"food", read:"Cānyǐn"}, {sym:"警察", trans:"police", read:"Jǐngchá"}, {sym:"请", trans:"please", read:"Qǐng"},
+                        {sym:"你", trans:"you", read:"Nǐ"}, {sym:"名", trans:"name", read:"Míng"}, {sym:"是", trans:"yes", read:"Shì"}, {sym:"大", trans:"big/great", read:"Dà"}
     ];
     
     return (

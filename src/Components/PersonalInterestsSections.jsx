@@ -17,7 +17,7 @@ function PersonalInterestsSections () {
                         <li>Writing children's books.  I'm no artist but I like it. </li>
                         <li>Writing some of my notes on <a href="https://gnmfuster.medium.com/" target="_new">https://gnmfuster.medium.com/</a> and publishing some 
                         of them on <a href="https://medium.com/nerd-for-tech" target="_new">https://medium.com/nerd-for-tech</a></li>
-                        <li>helping translate <a href="https://www.freecodecamp.org/" target="_new">https://www.freecodecamp.org/</a> to Spanish using Crowdin (and doing some of their lessons)</li>
+                        <li>helping translate <a href="https://www.freecodecamp.org/" target="_new">https://www.freecodecamp.org/</a> to Spanish using Crowdin, Trello, and Ghost (and doing some of their lessons)</li>
                     </ul>
                     Check out some of my interests (and books) below.
                 </div>

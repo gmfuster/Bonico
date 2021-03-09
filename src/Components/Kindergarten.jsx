@@ -47,6 +47,8 @@ function kindergarten () {
                     text="Sort, then check your answer"/>    
                     <LandingPageCardComponent topic = "/ModelingTens" imageSrc = "/images/MainItemCardImages/ModelingTens.svg" borderColorClass= "cardDivMath"
                     text="Modeling Tens and Ones"/>                                                                            
+                    <LandingPageCardComponent topic = "/NextNumber" imageSrc = "/images/MainItemCardImages/NextNumber.svg" borderColorClass= "cardDivMath"
+                    text="What number comes next? and +10?"/>                                                                            
                 </div>
                 </div>               
             <br/>

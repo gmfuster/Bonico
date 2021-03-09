@@ -25,6 +25,7 @@ import Subtraction from "./Views/KidsActivities/Subtraction";
 import Counting from "./Views/KidsActivities/Counting";
 import MinorPrintables from "./Views/KidsActivities/minorPrintables";
 import ModelingTens from "./Views/KidsActivities/ModelingTens";
+import NextNumber from "./Views/KidsActivities/NextNumber";
 
 import CSSAnimations from "./Views/SoftwareNotes/cssanimations";
 import CSSPositioning from "./Views/SoftwareNotes/csspositioning";
@@ -67,6 +68,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Sorting"} component={Sorting}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ModelingTens"} component={ModelingTens}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Prefixsuffix"} component={Prefixsuffix}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NextNumber"} component={NextNumber}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
 

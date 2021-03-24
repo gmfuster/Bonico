@@ -16,20 +16,20 @@ function NavBar () {
         paddingLeft:"6px",
         paddingRight:"6px",
         textDecoration: "none",
-        /*borderRight:"solid 2px var(--main-ButtonTextColor-color)",*/
-        border:"solid 2px var(--main-ButtonTextColor-color)",
+            
+        borderRight:"solid 2px var(--main-ButtonTextColor-color)",
         fontSize:"25px" ,
         margin:"2px" ,
         display: "flex", 
         justifyContent: "center", 
         alignItems:"center"
     }
-    const reactLinkStDD = {
+    const reactLinkStDDItem = {
         color:"navy",
         padding:"5px",
-        textDecoration: "none",        
-        fontSize:"25px"        ,
-          
+        textDecoration: "underline",        
+        fontSize:"25px"         
+
     }
 
     //TODO change the nav to not use any boostrap
@@ -53,13 +53,13 @@ function NavBar () {
                     <Nav className="mr-auto">                    
                         <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
                                                          
-                        <NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt}>                            
-                            <NavDropdown.Item >
-                                <ReactLink style={reactLinkStDD} to= {path + "/kindergartenMath"} >Math</ReactLink> 
-                            </NavDropdown.Item>                            
-                            <NavDropdown.Item >
-                                <ReactLink style={reactLinkStDD} to= {path + "/kindergartenLang"} >Language</ReactLink> 
-                            </NavDropdown.Item>                           
+                        <NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>                            
+                            {/*<NavDropdown.Item >*/}
+                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Math</ReactLink> 
+                            {/*</NavDropdown.Item>       
+                                          */}                            
+                                <br/>
+                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Language</ReactLink>                             
                         </NavDropdown>                                    
 
                         <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        

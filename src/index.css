@@ -425,6 +425,16 @@ code {
   margin:2vw;
 }
 
+.sectionHeaderRed{
+  text-align: center;
+  font-size: 3vw;
+  text-decoration:none;   
+  color:red;  
+  font-family: 'Times New Roman', Times, serif;
+  border-bottom:red 3px solid;
+  margin:2vw;
+}
+
 
 .grid-container3 {
   display: grid;

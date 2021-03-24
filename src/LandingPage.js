@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import  MainImage from "./Components/MainImage";
 import DescriptionSections from "./Components/DescriptionSections";
 
-import Kindergarten from "./Components/Kindergarten";
+import KindergartenMath from "./Components/KindergartenMath";
+import KindergartenLang from "./Components/KindergartenLang";
 
 
 
@@ -18,7 +19,8 @@ class LandingPage extends Component {
 
         <DescriptionSections/>
             
-        <Kindergarten/>                                    
+        <KindergartenMath/>                                    
+        <KindergartenLang/>                                    
       
 
     </React.Fragment>)

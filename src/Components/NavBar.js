@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import {Link as ReactLink} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,16 +13,29 @@ function NavBar () {
 
     const reactLinkSt = {
         color:"white",
-        padding:"5px",
+        paddingLeft:"6px",
+        paddingRight:"6px",
         textDecoration: "none",
-        borderRight:"solid 2px var(--main-ButtonTextColor-color)",
-        fontSize:"25px"        
+        /*borderRight:"solid 2px var(--main-ButtonTextColor-color)",*/
+        border:"solid 2px var(--main-ButtonTextColor-color)",
+        fontSize:"25px" ,
+        margin:"2px" ,
+        display: "flex", 
+        justifyContent: "center", 
+        alignItems:"center"
     }
+    const reactLinkStDD = {
+        color:"navy",
+        padding:"5px",
+        textDecoration: "none",        
+        fontSize:"25px"        ,
+          
+    }
+
+    //TODO change the nav to not use any boostrap
       return(
           
-        <React.Fragment>
-
-            
+        <React.Fragment>            
             <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
                 {/*<Navbar.Brand href="/">
                     <img
@@ -37,10 +51,20 @@ function NavBar () {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">                    
-                        <ReactLink style={reactLinkSt} to= {path + "/"} >Home</ReactLink>
-                        <ReactLink style={reactLinkSt} to= {path + "/kindergarten"} >Kindergarten</ReactLink>                                              
+                        <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
+                                                         
+                        <NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt}>                            
+                            <NavDropdown.Item >
+                                <ReactLink style={reactLinkStDD} to= {path + "/kindergartenMath"} >Math</ReactLink> 
+                            </NavDropdown.Item>                            
+                            <NavDropdown.Item >
+                                <ReactLink style={reactLinkStDD} to= {path + "/kindergartenLang"} >Language</ReactLink> 
+                            </NavDropdown.Item>                           
+                        </NavDropdown>                                    
+
                         <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
                     </Nav>
+
                     <Nav>                       
                         <Nav.Link href="https://twitter.com/GnMFuster" target="_new">
                             <img alt="Twitter"

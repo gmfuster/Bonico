@@ -35,7 +35,8 @@ import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
 import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 import Chinese from "./Views/PersonalInterests/Chinese";
 
-import kindergarten from "./Components/Kindergarten";
+import kindergartenMath from "./Components/KindergartenMath";
+import kindergartenLang from "./Components/KindergartenLang";
 import PersonalInterestsSection from "./Components/PersonalInterestsSections";
 
 const routing = (
@@ -50,7 +51,8 @@ const routing = (
                 <Switch>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
 
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergarten"} component={kindergarten}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenMath"} component={kindergartenMath}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenLang"} component={kindergartenLang}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PersonalInterestsSection"} component={PersonalInterestsSection}/>
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpq"} component={bdpq}/>

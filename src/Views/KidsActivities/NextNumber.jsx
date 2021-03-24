@@ -37,6 +37,8 @@ class NextNumber extends Component {
         }else{            
             this.setState({plusOption1: plus2, plusOption2: plus1, tenOption1:plus10_2, tenOption2:plus10_1});
         }
+        this.setState({border2: ""}) ;  
+        this.setState({border1: ""}) ;  
     }
 
     clickPlus1 = (value) => {

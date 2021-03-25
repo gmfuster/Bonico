@@ -284,6 +284,21 @@ code {
 /*@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap:regular,bold,italic&subset=latin,latin-ext');*/
 
 
+.imageContainer{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottomImageText {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:8vh;
+  color:lightblue;  
+  
+}
+
 
 .TopMarginToDealWithNavBar{
   margin-top:8vh;

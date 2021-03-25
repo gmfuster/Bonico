@@ -7,12 +7,15 @@ function MainImage () {
       var imageStyle = {        
         height: "55vh",
         width:"100%"
-      }
+      }      
 
      return(
         
-        <React.Fragment>            
-            <img style = {imageStyle} src = {pathPicSrc} className="TopMarginToDealWithNavBarImg" alt="boy at beach"/>  
+        <React.Fragment>    
+            <div className="imageContainer TopMarginToDealWithNavBarImg">
+              <img style = {imageStyle} src = {pathPicSrc} alt="boy at beach"/>  
+              <div className="bottomImageText">Learning is Fun!</div>
+            </div>        
         </React.Fragment>
       )
   }

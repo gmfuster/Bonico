@@ -14,8 +14,7 @@ class GreaterLessEqual extends Component {
     }     
 
     getNewResults = () => {        
-        
-        console.log(this.childPlayer1Ref);        
+                
         this.childPlayer1Ref.current.roll();
         this.childPlayer2Ref.current.roll();
         this.childComparisonRef.current.roll();

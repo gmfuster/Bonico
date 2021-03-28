@@ -12,9 +12,7 @@ function kindergartenMath () {
             <div className="TopMarginToDealWithNavBarAll">
                 <h1 className="sectionHeaderBlue" id="KidsSection">Math for Kindergarten</h1><br/>
                 <div className="MainSectionContainerActivities">                                                                             
-                    {/*the component already has the cardDiv class, send only the one that sets the color: cardDivAll, cardDivLang}  TODO use better names for the color class*/}
-                    <LandingPageCardComponent topic = "/MinorPrintables" imageSrc = "/images/MainItemCardImages/MinorPrintables.svg" borderColorClass= "cardDivAll"
-                    text="Games and activity PDFs"/>                                                                                                  
+                    {/*the component already has the cardDiv class, send only the one that sets the color: cardDivAll, cardDivLang}  TODO use better names for the color class*/}                                                                                                                    
 
                     <LandingPageCardComponent topic = "/Counting" imageSrc = "/images/MainItemCardImages/Counting.svg" borderColorClass= "cardDivMath"
                     text="Click up or down to form 2 digit numbers"/>   

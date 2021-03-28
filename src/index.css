@@ -294,8 +294,8 @@ code {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size:8vh;
-  color:lightblue;  
+  font-size:6vw;
+  color:rgb(30, 182, 233);  
   
 }
 
@@ -346,7 +346,7 @@ code {
   border-style: solid;
 }
 .cardDivAll{
-  border-color:darksalmon; 
+  border-color:deeppink;
   border-radius: 15%;
   border-width: 8px;
   border-style: solid;

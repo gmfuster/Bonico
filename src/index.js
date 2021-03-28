@@ -26,6 +26,9 @@ import Counting from "./Views/KidsActivities/Counting";
 import MinorPrintables from "./Views/KidsActivities/minorPrintables";
 import ModelingTens from "./Views/KidsActivities/ModelingTens";
 import NextNumber from "./Views/KidsActivities/NextNumber";
+import SpinStarWarsCars from "./Views/Games/SpinStarWarsCars";
+
+
 
 import CSSAnimations from "./Views/SoftwareNotes/cssanimations";
 import CSSPositioning from "./Views/SoftwareNotes/csspositioning";
@@ -38,6 +41,7 @@ import Chinese from "./Views/PersonalInterests/Chinese";
 import kindergartenMath from "./Components/KindergartenMath";
 import kindergartenLang from "./Components/KindergartenLang";
 import PersonalInterestsSection from "./Components/PersonalInterestsSections";
+import GamesAndPDFs from './Components/GamesAndPDFs';
 
 const routing = (
     <React.Fragment>   
@@ -54,6 +58,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenMath"} component={kindergartenMath}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenLang"} component={kindergartenLang}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PersonalInterestsSection"} component={PersonalInterestsSection}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/GamesAndPDFs"} component={GamesAndPDFs}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpq"} component={bdpq}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/bdpqCircles"} component={bdpqCircles}/>
@@ -73,6 +78,8 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NextNumber"} component={NextNumber}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinStarWarsCars"} component={SpinStarWarsCars}/>  
+                    
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSPositioning"} component={CSSPositioning}/>  

@@ -12,10 +12,8 @@ function kindergartenLang () {
             <div className="TopMarginToDealWithNavBarAll">
                 <h1 className="sectionHeaderRed" id="KidsSection">Language for Kindergarten</h1><br/>
                 <div className="MainSectionContainerActivities">                                                                             
-                    {/*the component already has the cardDiv class, send only the one that sets the color: cardDivAll, cardDivLang}  TODO use better names for the color class*/}
-                    <LandingPageCardComponent topic = "/MinorPrintables" imageSrc = "/images/MainItemCardImages/MinorPrintables.svg" borderColorClass= "cardDivAll"
-                    text="Games and activity PDFs"/>  
-                    <LandingPageCardComponent topic = "/CanvasTrace" imageSrc = "/images/MainItemCardImages/CanvasTrace.svg" borderColorClass= "cardDivAll"
+                    {/*the component already has the cardDiv class, send only the one that sets the color: cardDivAll, cardDivLang}  TODO use better names for the color class*/}                    
+                    <LandingPageCardComponent topic = "/CanvasTrace" imageSrc = "/images/MainItemCardImages/CanvasTrace.svg" borderColorClass= "cardDivLang"
                     text="Enter your own text to trace"/>                                         
                     
                     <LandingPageCardComponent topic = "/bdpq" imageSrc = "/images/MainItemCardImages/pdbq.svg" borderColorClass= "cardDivLang" 

@@ -61,7 +61,7 @@ function NavBar () {
                                 <br/>
                                 <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Language</ReactLink>                             
                         </NavDropdown>                                    
-
+                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games and PDFs</ReactLink>    
                         <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
                     </Nav>
 

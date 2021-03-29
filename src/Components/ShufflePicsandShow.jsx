@@ -17,7 +17,7 @@ class ShufflePicsAndShow extends Component {
     }       
     
     componentDidMount = () => {       
-        this.refToImg.current.addEventListener('animationend', this.animationEnded) ; 
+        this.refToContainingDiv.current.addEventListener('animationend', this.animationEnded) ; 
     }   
 
    roll= () => {                                                                
@@ -38,14 +38,17 @@ class ShufflePicsAndShow extends Component {
 
    animationEnded = () => {
        
+        if (this.refToContainingDiv.current !== undefined)   {           
+            this.refToContainingDiv.current.className = null;                          
+        }            
+
         if (this.numberSelected <= 0){
             this.setState( {imageSrc:this.pathPic + "/images/clickme.svg"});
             return;
         }else{
             this.setState( { imageSrc: this.arrayOfPicPaths[this.numberSelected]});
         }
-        
-        this.refToImg.current.className = null;                  
+                
    }
 
 

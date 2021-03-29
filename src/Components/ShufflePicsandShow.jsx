@@ -7,8 +7,10 @@ class ShufflePicsAndShow extends Component {
     {
         super(props);        
         this.refToImg = React.createRef();   
+        this.refToContainingDiv = React.createRef();   
         this.arrayOfPicPaths = this.props.elementsForPics;
-        this.pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;             
+        this.pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;   
+        this.numberSelected = 0;         
 
         //set original pic, then get random from array passed, with genererate random number function
         this.state = {imageSrc: this.pathPic + "/images/clickme.svg" }  ;                
@@ -27,20 +29,23 @@ class ShufflePicsAndShow extends Component {
 
        this.numberSelected = generateRandomNumber(maxNumber);        
 
-       this.setState( {imageSrc:this.pathPic + "/images/waiting.svg"}); 
+       this.setState( {imageSrc:this.pathPic + "/images/emptyfill.svg"}); 
 
-       if (this.refToImg.current !== undefined)   {
-        this.refToImg.current.className = "cardsAnimation";              
+       if (this.refToContainingDiv.current !== undefined)   {           
+            this.refToContainingDiv.current.className = "picsAnimation";              
        }
    }
 
    animationEnded = () => {
-       /*
-        this.setState( {value:this.props.elementsForCard[this.numberSelected]});
-        this.refToImg.current.className = null;   
-        if (this.props.callbackFunction !== undefined) {
-            this.props.callbackFunction(this.props.elementsForCard[this.numberSelected]);        
-        }*/
+       
+        if (this.numberSelected <= 0){
+            this.setState( {imageSrc:this.pathPic + "/images/clickme.svg"});
+            return;
+        }else{
+            this.setState( { imageSrc: this.arrayOfPicPaths[this.numberSelected]});
+        }
+        
+        this.refToImg.current.className = null;                  
    }
 
 
@@ -50,12 +55,15 @@ class ShufflePicsAndShow extends Component {
             height:this.props.myHeight ,
             userSelect:"none",
             border:"5px lightblue solid"   ,
+            borderRadius: "50%",
             cursor:"pointer"
           };
       return(  
             
-      <React.Fragment>                                                                                 
-                <img style={picStyle} ref={this.refToImg} src={this.state.imageSrc} onClick={this.roll}></img>             
+      <React.Fragment>     
+                <div ref={this.refToContainingDiv}>
+                    <img style={picStyle} ref={this.refToImg} src={this.state.imageSrc} onClick={this.roll} alt="Images for rolling"/>                           
+                </div>                                                                            
       </React.Fragment>)
   };
   }

@@ -7,7 +7,7 @@ class SpinStarWarsCars extends Component {
     {
         super();                                        
         this.starwarscars = React.createRef();    
-        //name of pics and path to pics
+        //name of pics and path to pics - Full name with full path to pics.
         this.elementsForPics = ["A"];//TODO
         this.parthToPics = "";
     }     

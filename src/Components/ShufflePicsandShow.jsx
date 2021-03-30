@@ -57,7 +57,7 @@ class ShufflePicsAndShow extends Component {
             width: this.props.myWidth,            
             height:this.props.myHeight ,
             userSelect:"none",
-            border:"5px lightblue solid"   ,
+            border:"10px lightblue solid"   ,
             borderRadius: "50%",
             cursor:"pointer"
           };

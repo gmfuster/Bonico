@@ -7,9 +7,10 @@ class SpinStarWarsCars extends Component {
     {
         super();                                        
         this.starwarscars = React.createRef();    
-        //name of pics and path to pics - Full name with full path to pics.
-        this.elementsForPics = ["A"];//TODO
-        this.parthToPics = "";
+        //name of pics and path to pics - Full name with full path to pics.          
+        let pathForCarsPics = process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images//CarImages/";
+        this.elementsForPics = [pathForCarsPics + "darthmaul.svg", pathForCarsPics + "darthvader.svg", pathForCarsPics + "flametrooper.svg", 
+        pathForCarsPics + "jettrooper.svg", pathForCarsPics + "lukejedi.svg", pathForCarsPics + "lukepilot.svg", pathForCarsPics + "stormtrooper.svg"];        
     }     
 
     getNewResults = () => {        

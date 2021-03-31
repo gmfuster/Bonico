@@ -13,7 +13,7 @@ class SpinStarWarsCars extends Component {
         pathForCarsPics + "jettrooper.svg", pathForCarsPics + "lukejedi.svg", pathForCarsPics + "lukepilot.svg", pathForCarsPics + "stormtrooper.svg",
         pathForCarsPics + "bb8.svg", pathForCarsPics + "lukearm.svg", pathForCarsPics + "falconold.svg", pathForCarsPics + "falconnew.svg",
         pathForCarsPics + "kyloren.svg", pathForCarsPics + "captainphasma.svg", pathForCarsPics + "kylotie.svg", pathForCarsPics + "finn.svg",
-        pathForCarsPics + "clone.svg"];        
+        pathForCarsPics + "clone.svg", pathForCarsPics + "inquisitor.svg"];        
     }     
 
     getNewResults = () => {        

@@ -282,7 +282,7 @@ code {
   /*animation-name: animation2;
   animation-duration: 2s;
   animation-iteration-count: 2;  */
-  animation: 2s linear 2 animation2;
+  animation: 0.5s linear 2 animation2;
   animation-play-state: inherit;
   border: solid 10px navy;
   border-bottom-color: deeppink;

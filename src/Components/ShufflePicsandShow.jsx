@@ -54,7 +54,7 @@ class ShufflePicsAndShow extends Component {
    }
 
    reset = () => {
-        this.props.elementsForPics.slice();  
+        this.arrayOfPicPaths =  this.props.elementsForPics.slice();  
         this.setState( {imageSrc:this.pathPic + "/images/clickme.svg"});    
    }
 

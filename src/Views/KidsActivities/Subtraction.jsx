@@ -13,7 +13,6 @@ class Subtraction extends Component {
 
         const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
         
-
         this.imgPath = pathPic + "/images//substractionline.svg";   
         this.refToCanvas = React.createRef();      
     }         
@@ -54,23 +53,28 @@ class Subtraction extends Component {
       
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">             
-            Click the button to get new numbers.  Calculate using the canvas and click on ? to check your answer. Draw your own circles and cross them if you prefer that way.<br/>
+         <div className="TopMarginToDealWithNavBarAll CenterMe">   
             
-            <button className= "buttonGeneral" onClick={this.getNewNumbers}>Get New Numbers!</button><br/>
-                        
-            <div style={EquationStyle}>                                                
-                                
-                <span >{this.state.numberOne}</span>                 
-                <span >-</span>                 
-                <span >{this.state.numberTwo}</span>                 
-                <span >=</span>                                 
-                <div style={{  cursor:"pointer" }} onClick={this.showResult}>
-                   <span >{this.state.result}</span>                 
-                </div>   
-            </div>                  
-            <CanvasComponent DefaultDisplay={this.imgPath} IsThisAnImage = "true" IsThisText = "false" canvasWidth ="90vw" canvasHeight="40vh" ref={this.refToCanvas}   /> 
             
+            
+                <button className= "buttonGeneral" onClick={this.getNewNumbers} style={{width:"80%", marginLeft:"10%", marginRight:"10%"}}>Get New Numbers!</button><br/>                        
+                <div style={EquationStyle}>                                                
+                                    
+                    <span >{this.state.numberOne}</span>                 
+                    <span >-</span>                 
+                    <span >{this.state.numberTwo}</span>                 
+                    <span >=</span>                                 
+                    <div style={{ position:"relative", cursor:"pointer" }} onClick={this.showResult}>
+                        <span >{this.state.result}</span>   
+                        <img style = {{ height:"45%", width:"45%", position:"absolute", bottom:"0px", right:"0px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/clickme.svg'}  alt="click to see result"  />                        
+                    </div>   
+                </div>
+                         
+
+            <div style={{position:"relative"}}>
+                <img style = {{ height:"35%", width:"35%", position:"absolute", top:"5%", left:"10px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="click to see result"  />                                            
+                <CanvasComponent DefaultDisplay={this.imgPath} IsThisAnImage = "true" IsThisText = "false" canvasWidth ="90vw" canvasHeight="40vh" ref={this.refToCanvas}   /> 
+            </div> 
             
         </div>
   

@@ -31,8 +31,7 @@ function NavBar () {
         fontSize:"25px"         
 
     }
-
-    //TODO change the nav to not use any boostrap
+    
       return(
           
         <React.Fragment>            

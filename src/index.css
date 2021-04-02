@@ -54,7 +54,6 @@ code {
   margin-top: 3vw;
   margin-bottom: 3vw;
 }
-/*todo rename this or remove and use some better arrangement*/
 .myContentsAreGrid1{
   display:flex;  
   flex-direction: row;    
@@ -198,26 +197,30 @@ code {
 
 .radio-toolbar label {
     display: inline-block;
-    background-color:var(--main-ButtonBKColor-color);
+    /*background-color:var(--main-ButtonBKColor-color);*/
+    background-color:white;
     padding: 5px 25px;      
     font-size: 1.5vw;
     border: 2px solid var(--main-ButtonColor-color);
     border-radius: 25px;
     color:var(--main-ButtonTextColor-color);
     margin:5px;
+    box-shadow: 0 12px #999;    
 }
 
 .radio-toolbar label:hover {
   background-color: deeppink;
 }
 
+/*
 .radio-toolbar input[type="radio"]:focus + label {
     border: 2px solid yellow;
 }
-
+*/
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: aqua;
-    border-color:var(--main-ButtonColor-color);
+    border-color:var(--main-ButtonColor-color);    
+    box-shadow: 0 5px gray;
 }
 
 .circleWhite {            
@@ -361,7 +364,6 @@ code {
   background-color:var(--main-CardBGHover-color);
   color: var(--main-CardBGHover-color);    
 }
-/*same borders as in cardDiv - TODO rearrange what goes where to split the properties more*/
 .cardDivLang{
   border-color:red; 
   border-radius: 15%;

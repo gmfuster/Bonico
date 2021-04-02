@@ -27,9 +27,7 @@ class Sorting extends Component {
         //set variable and then set state to make setStates easier to read.
         this.setState({sortBy:this.sortingBychosen, textToDisplay:[], textSortedByKid:[], textSortedByComputer:[]});
     }
-    
-
-    //todo maybe have a file for the functions used often and import it.
+        
     generateRandomNumber = (length) => {
         return Math.floor(Math.random() * length);      
     }
@@ -44,9 +42,7 @@ class Sorting extends Component {
         let stringToSet = "";
         if (this.optionChosen === this.options.items){
             for (let i = 1; i< this.totalNumberToSort+1; i++){
-                randomNum = this.generateRandomNumber(10);    
-                //TODO have a file with math function and have more configurable random funcs  
-                //could return zero so set to 1
+                randomNum = this.generateRandomNumber(10);                                    
                 if (randomNum === 0 ){ randomNum = 1};
                 stringToSet = "";                                
                 for (let j = 1; j < randomNum+1; j++){

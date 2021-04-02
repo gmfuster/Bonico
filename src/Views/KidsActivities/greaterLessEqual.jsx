@@ -38,11 +38,10 @@ class GreaterLessEqual extends Component {
       
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">            
-            <button className= "buttonGeneral" onClick={this.getNewResults}>Show Numbers</button>   <br/><br/>
+         <div className="TopMarginToDealWithNavBarAll CenterMe">                        
             2 players: Player 1 and Player 2 get a number, whoever has the number that satisfies what the center card says wins.  <br/>
-            1 player: Play against the computer/tablet.  If what comes up is true, it wins, if not, you win.
-            <br/><br/>
+            1 player: Play against the computer/tablet.  If what comes up is true, it wins, if not, you win.<br/>
+            <button className= "buttonGeneral" onClick={this.getNewResults}>Show Numbers</button>   <br/><br/>            
             <div style={cardStyles}>                
                 <div style={{border:"solid navy 2px",  marginRight:20, marginTop:120}}>        
                     PLAYER 1 <br/>

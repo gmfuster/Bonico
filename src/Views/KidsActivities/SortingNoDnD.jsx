@@ -39,9 +39,7 @@ class SortingNoDnD extends Component {
         let stringToSet = "";
         if (this.optionChosen === this.options.items){
             for (let i = 1; i< this.totalNumberToSort+1; i++){
-                randomNum = generateRandomNumber(10);    
-                //TODO have a file with math function and have more configurable random funcs  
-                //could return zero so set to 1
+                randomNum = generateRandomNumber(10);                    
                 if (randomNum === 0 ){ randomNum = 1};
                 stringToSet = "";                                
                 for (let j = 1; j < randomNum+1; j++){

@@ -9,7 +9,7 @@ function DescriptionSections () {
                 </div>
 
                 <div style={{background:"lightyellow", margin:"15px", padding:"15px"}}>
-                    Contact me on <a href="https://gnmfuster.medium.com/" target="_new">Medium</a>.  
+                    Contact me on <a href="https://gnmfuster.medium.com/" target="_new">Medium</a> or <a href="https://twitter.com/gnmfuster">Twitter</a>.  
                     <br/>Check out my book on Amazon:<br/><br/>
                     <div className="CenterMe" >
                         <iframe type="text/html" className="cardDiv" frameBorder="0"   title="jonandhismomtalkabout"                    

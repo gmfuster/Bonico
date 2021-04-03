@@ -64,16 +64,20 @@ class NumberBonds extends Component {
             flexDirection:"row",
             justifyContent:"center",
             userSelect:"none",     
-            fontSize:"2vw"                   
+            fontSize:"2vw"    ,           
+            marginLeft:"10%",
+            marginRight:"10%",
         }
+
+        var divHorEq =  Object.assign({}, divHorContainer, {height:"65vh" });   
 
         var divVertContainer = {
             display:"flex",            
             flexDirection:"column",            
-            userSelect:"none",            
-            padding:"1vw",
-            fontSize:"2vw"
+            userSelect:"none",                                    
         }
+
+        var square =   Object.assign({}, divVertContainer, {width:"25%", height:"95%",border:"salmon solid 5px", fontSize:"6vw"});       
 
       return(
   
@@ -81,7 +85,7 @@ class NumberBonds extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">             
-            Click GO to get one of the numbers.  Click on the number that solves the equation.  <br/> 
+            GO to start. Click on the number that completes the bond.  <br/> 
             
             {/*buttons */}
             <div style = {divHorContainer}>
@@ -98,38 +102,38 @@ class NumberBonds extends Component {
                 <button style = {{color:"white", backgroundColor:"navy", width:"6vw"}} onClick={() => this.numberClick(9)}>9</button>
                 <button style = {{color:"white", backgroundColor:"deeppink", width:"8vw" }} onClick={this.resetClick}>Undo</button>
             </div>   
+                                                    
             
-            <div style = {divHorContainer}>              
+            <br/>
 
-                <div style = {{paddingTop:"2vh", paddingLeft:"1vw", marginTop: "5vh",  width:"25vw", height:"55vh"}}>
-                    <span style = {{margin:"5%", fontSize:"5vw", color:"darkblue"}}>{this.state.items1} </span>
-                    <span style = {{margin:"5%", fontSize:"5vw", color:"deeppink"}}>{this.state.items2} </span>
-                </div>
+            {/*Equation*/}
+            <div >                             
+                <div style = {divHorEq}>
 
-                {/*bond */}
-                <div style = {{margin:"5vh", width:"25vw", height:"55vh"}}>                    
-                        <div style = {{border:"3px solid deeppink", width:"100%", height:"15%"}}>{this.state.total}</div>                        
-                        <div  style = {divHorContainer}>
-                            <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px"}}>{this.state.el1}</div>
-                            <div style = {{border:"3px solid deeppink", width:"5vw", height:"5vw", borderRadius:"50px", color:"deeppink"}}>{this.state.el2}</div>                    
-                        </div>   
-
-                        {/*Equation*/}
-                        <div style = {{paddingTop:".5vh", paddingLeft:"1vw", margin: "2vh"}}>
-                             <div style = {divVertContainer} > 
-                                <div style = {divHorContainer}>
-                                    <label style = {{fontSize:"6vw"}}>{this.state.el1}</label>
-                                    <span style = {{fontSize:"6vw"}}>+</span>
-                                    <label style = {{fontSize:"6vw"}}>{this.state.el2}</label>
-                                    <label style = {{fontSize:"6vw"}}>=</label>
-                                    <label style = {{fontSize:"6vw"}}>{this.state.total}</label>
-                                </div>                        
+                    <div style={square}>
+                        <label>{this.state.el1}</label>                        
+                        <span style = {{margin:"5%", fontSize:"5vw", color:"darkblue", borderTop:"2px solid lightblue"}}>{this.state.items1} </span>
+                    </div>                    
+                    
+                    <span style = {{fontSize:"6vw"}}>+</span>
+                    
+                    <div style={square}>
+                        <label >{this.state.el2}</label>                        
+                        <span style = {{margin:"5%", fontSize:"5vw", color:"deeppink", borderTop:"2px solid lightblue"}}>{this.state.items2} </span>
+                    </div>                    
+                        
+                    <label style = {{fontSize:"6vw"}}>=</label>
+                    
+                    <div style={square}>
+                        <label >{this.state.total}</label>
                     </div>
-                </div>                 
-                </div>
-                <label style = {{fontSize:"14vw", border:"2px solid salmon", width:"20vw", height:"40vh", margin:"10px", color:"salmon" }}>{this.state.correction}</label>
-                              
-            </div>    
+
+                    <label style = {{fontSize:"10vw", width:"100px",marginLeft:"5px", color:"salmon" }}>{this.state.correction}</label>
+                </div>                                                    
+            </div>                                 
+
+            
+                                            
 
                 
             

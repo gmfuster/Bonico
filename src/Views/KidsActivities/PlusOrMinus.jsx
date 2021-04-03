@@ -6,10 +6,10 @@ class PLusOrMinus extends Component {
     {
         super();          
         this.arrayOfQuestionObjects = this.setUpArrayOfQuestions();
-        this.state = {text:"You question will be here", equation:"Click to see equation",
+        this.state = {text:"You question will be here", equation:"Show equation",
                         drop1:"?", drop2:"?", dropSign:"?", dropSol:"?", message:"You Got This!"};
         this.arrayInd = 0;
-        this.equation="Click to see equation";//todo change this so if clicking when no question shows message.
+        this.equation="Show equation";//todo change this so if clicking when no question shows message.
     }      
 
     setUpArrayOfQuestions = () => {
@@ -73,7 +73,7 @@ class PLusOrMinus extends Component {
     getNextQuestion = () => {
 
         this.equation = this.arrayOfQuestionObjects[this.arrayInd].equation;
-        this.setState( {text:this.arrayOfQuestionObjects[this.arrayInd].text, equation:"Click to see equation", drop1:"?", drop2:"?",dropSign:"?", dropSol:"?", message:"You Got This!"} );        
+        this.setState( {text:this.arrayOfQuestionObjects[this.arrayInd].text, equation:"Show equation", drop1:"?", drop2:"?",dropSign:"?", dropSol:"?", message:"You Got This!"} );        
         //set the index for the next time    
         (this.arrayInd === this.arrayOfQuestionObjects.length -1 ) ? this.arrayInd = 0 : this.arrayInd++;
     }
@@ -95,37 +95,12 @@ class PLusOrMinus extends Component {
     }
     resetEq = () => {
         this.setState({drop1:"?", drop2:"?", dropSol:"?", dropSign:"?"})
-    }
-    /*handleDragStart(e, num) {
-       
-        e.dataTransfer.setData("number", num);
-    }*/
+    }    
 
     showEquation = () =>{
         this.setState({equation:this.equation});
     }
-
-
-    /*handleDrop(e, element ) {
-        const number = e.dataTransfer.getData("number");
-        switch(element){
-            case "1":
-                this.setState( {drop1:number});
-                break;
-            case "2":
-                this.setState( {drop2:number});
-                break;
-            case "sign":
-                this.setState( {dropSign:number});
-                break;
-            case "sol":
-                this.setState( {dropSol:number});
-                break;
-            default:
-                break;
-        }
-        
-    }*/
+    
 
     render() {   
 
@@ -135,58 +110,37 @@ class PLusOrMinus extends Component {
             textAlign: "center",
             flexWrap: "wrap",
             justifyContent:"center",
-            alignItems: "center"        
+            alignItems: "center"       ,
+            fontSize:"5vh" 
         }
-
-        /*var optionsSt = {
-            border:"2px solid navy",
-            width:"4vw",
-            height:"4vw",
-            fontSize:"3vw",
-            margin:"2px",
-            background:"lightblue"
-        }*/
+        
 
       return(  
           
      
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">             
-           Get question and build its equation with the number and sign buttons. <br/>           
-           <button className="buttonGeneral" onClick={this.getNextQuestion}>Get Question</button><br/><br/>
+         <div className="TopMarginToDealWithNavBarAll CenterMe" style={{ position:"relative"}}>               
+            <img style = {{ height:"45%", width:"45%", position:"absolute", top:"2%", left:"2px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requiresgrownup.svg'}/>       
+           <button className="buttonGeneral" onClick={this.getNextQuestion}>Get Question</button><br/>
 
-           <div style={{fontSize:"3vw", background:"lightpink", padding:"5px", border:"2px solid navy"}}>{this.state.text}</div><br/><br/>
+           <div style={{fontSize:"3vw", background:"lightpink", padding:"5px", border:"2px solid navy"}}>{this.state.text}</div><br/>
 
-           <div style={containerStyle}>
-               {/*}
-                <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,0)}>0</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,1)}>1</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,2)}>2</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,3)}>3</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,4)}>4</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,5)}>5</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,6)}>6</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,7)}>7</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,8)}>8</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,9)}>9</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,"+")}>+</div>
-               <div style={optionsSt} draggable onDragStart={(e) => this.handleDragStart(e,"-")}>-</div>               
-            */}
+           <div style={containerStyle}>               
                 <button className="buttonOptions"  onClick={(e) => this.clickEl(e,0)}>0</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,1)}>1</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,2)}>2</button>
-               <button className="buttonOptions" onClick={(e) => this.clickEl(e,3)}>3</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,4)}>4</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,5)}>5</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,6)}>6</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,7)}>7</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,8)}>8</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,9)}>9</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,"+")}>+</button>
-               <button className="buttonOptions"  onClick={(e) => this.clickEl(e,"-")}>-</button> 
-               <button onClick={this.resetEq}>Reset Equation</button> 
-                </div>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,1)}>1</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,2)}>2</button>
+                <button className="buttonOptions" onClick={(e) => this.clickEl(e,3)}>3</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,4)}>4</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,5)}>5</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,6)}>6</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,7)}>7</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,8)}>8</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,9)}>9</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,"+")}>+</button>
+                <button className="buttonOptions"  onClick={(e) => this.clickEl(e,"-")}>-</button> 
+                <button onClick={this.resetEq}>Reset</button> 
+            </div>
             <br/>
             <div style={{background:"lightblue"}}>
                 <div style={containerStyle}>
@@ -197,16 +151,16 @@ class PLusOrMinus extends Component {
                     <div style={optionsSt}>=</div>
                     <div style={optionsSt} onDragOver={(e) => e.preventDefault()} onDrop={(e) => this.handleDrop(e,"sol" )}>{this.state.dropSol}</div>
         */}
-                    <div >{this.state.drop1}</div>
-                    <div >{this.state.dropSign}</div>
-                    <div >{this.state.drop2}</div>
-                    <div >=</div>
-                    <div >{this.state.dropSol}</div>
+                    <div >{this.state.drop1}</div>&nbsp;&nbsp;
+                    <div >{this.state.dropSign}</div>&nbsp;&nbsp;
+                    <div >{this.state.drop2}</div>&nbsp;&nbsp;
+                    <div >=</div>&nbsp;&nbsp;
+                    <div >{this.state.dropSol}</div>&nbsp;&nbsp;
                     &nbsp; &nbsp;<div >{this.state.message}</div>
                 </div>
             </div>
             <div style={containerStyle}>
-                <span style={{fontSize:"2vw", border:"2px solid navy", width:"40vw", height:"4vw", cursor:"pointer", background:"lightblue", margin:"5px"}}  
+                <span style={{fontSize:"2vw", border:"2px solid navy",width:"40vw", height:"4vw", cursor:"pointer", background:"lightblue", margin:"5px"}}  
                 onClick={this.showEquation}>{this.state.equation}</span>
             </div>
         </div>

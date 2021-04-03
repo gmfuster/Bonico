@@ -72,7 +72,7 @@ class Subtraction extends Component {
                          
 
             <div style={{position:"relative"}}>
-                <img style = {{ height:"35%", width:"35%", position:"absolute", top:"5%", left:"10px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="click to see result"  />                                            
+                <img style = {{ height:"35%", width:"35%", position:"absolute", top:"5%", left:"10px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="cRequires touch screen"  />                                            
                 <CanvasComponent DefaultDisplay={this.imgPath} IsThisAnImage = "true" IsThisText = "false" canvasWidth ="90vw" canvasHeight="40vh" ref={this.refToCanvas}   /> 
             </div> 
             

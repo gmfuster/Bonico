@@ -10,16 +10,15 @@ function PersonalInterestsSections () {
 
             <div className="TopMarginToDealWithNavBarAll">
                 <div className="CenterMyBorder">
-                I am a software developer unable to work now (priorities) <br/>                
-                I have been doing these as time allows though:<br/>
+                Software developer , always learning.  I have been: <br/>                                
                     <ul>
-                        <li>Working on this page while learning React (I know I have to refactor a bit to have more reusable components, working on it)</li>
-                        <li>Writing children's books.  I'm no artist but I like it. </li>
+                        <li>Working on these activities</li>
+                        <li>Writing children's books.</li>
                         <li>Writing some of my notes on <a href="https://gnmfuster.medium.com/" target="_new">https://gnmfuster.medium.com/</a> and publishing some 
                         of them on <a href="https://medium.com/nerd-for-tech" target="_new">https://medium.com/nerd-for-tech</a></li>
-                        <li>helping translate <a href="https://www.freecodecamp.org/" target="_new">https://www.freecodecamp.org/</a> to Spanish using Crowdin, Trello, and Ghost (and doing some of their lessons)</li>
+                        <li>helping translate <a href="https://www.freecodecamp.org/" target="_new">https://www.freecodecamp.org/</a> into Spanish using Crowdin, Trello, and Ghost (and doing some of their lessons)</li>
                     </ul>
-                    Check out some of my interests (and books) below.
+                    Other interests of mine below.
                 </div>
                 <br/>
                 <div className="MainSectionContainerActivities MainSectionContainerPersonalInterests">  

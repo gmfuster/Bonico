@@ -198,7 +198,8 @@ class CanvasTrace extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
-            Use your finger.  Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
+            Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
+            <img style = {{ height:"15%", width:"15%", position:"absolute", top:"35%", left:"0px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="cRequires touch screen"  /> 
             <TextFieldWithButton textForInput = "Enter you text" textForButton="To canvas!" functionToCall= {this.updateCanvas}/>
             <br/><br/>                                    
             <canvas className ="traceLetterCanvas"  

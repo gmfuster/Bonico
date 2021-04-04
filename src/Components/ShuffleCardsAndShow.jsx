@@ -7,7 +7,7 @@ class ShuffleCardsAndShow extends Component {
         super(props);        
         this.refToDiv = React.createRef();   
         this.state = {value:"?"}        
-        this.numberSelected = null;
+        this.numberSelected = null;        
     } 
   
     componentDidMount = () => {
@@ -46,7 +46,7 @@ class ShuffleCardsAndShow extends Component {
             fontSize:this.props.myFont,
             width: this.props.myWidth,            
             height:this.props.myHeight ,
-            userSelect:"none",
+            userSelect:"none"            
           };
       return(  
             

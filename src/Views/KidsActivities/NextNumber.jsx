@@ -71,7 +71,8 @@ class NextNumber extends Component {
             flexDirection:"row",
             justifyContent:"center",
             userSelect:"none",
-            margin:"15px"
+            margin:"15px",
+            height:"40vh"            
         }   
         var number = {
             background:"lightgreen",
@@ -80,23 +81,23 @@ class NextNumber extends Component {
             marginLeft:"5px",
             textAlign:"center",
             userSelect:"none",
-            fontSize:"6vw",
+            fontSize:"8vw",
             cursor:"pointer"
         }     
         
         this.group1Contents = <div>
-                                Choose what comes next
+                                What comes next?
                                 <div style={divHorContainer}>
                                     <div style={number} onClick={ ()=> this.clickPlus1(this.state.plusOption1)}>{this.state.plusOption1}</div>
                                     <div style={number} onClick={ ()=> this.clickPlus1(this.state.plusOption2)}>{this.state.plusOption2}</div>                
                                 </div>
                             </div>;
 
-        this.groupForPlus1 = <div style ={{border: this.state.border1, marginLeft:"5px"}}>
+        this.groupForPlus1 = <div style ={{border: this.state.border1, marginLeft:"10px"}}>
                                 {this.group1Contents}
                              </div>   ;             
     
-        this.group2Contents = <div>
+        this.group2Contents = <div >
                                 Number + 10?
                                 <div style={divHorContainer}>
                                     <div style={number} onClick={ ()=> this.clickPlus10(this.state.tenOption1)}>{this.state.tenOption1}</div>        
@@ -104,7 +105,7 @@ class NextNumber extends Component {
                                 </div> 
                             </div>
 
-        this.groupForPlus10 = <div style ={{border: this.state.border2, marginLeft:"5px"}}>
+        this.groupForPlus10 = <div style ={{border: this.state.border2, marginLeft:"10px"}}>
                                     {this.group2Contents}
                                  </div>   ;
 
@@ -113,12 +114,14 @@ class NextNumber extends Component {
       <React.Fragment>
          
         <div className="TopMarginToDealWithNavBarAll CenterMe">  
-            <span><button className="buttonGeneral" onClick={this.rollNumber}>Click</button> to get a number.  Choose the correct Next number and number + 10</span>
-            <div style={divHorContainer} >                  
+        <br/>
+            <span><button className="buttonGeneral" onClick={this.rollNumber} style={{width:"80%", marginLeft:"10%", marginRight:"10%"}}>Get a Number</button></span>
+
+            <div style={divHorContainer} >  
+
                 <ShuffleCardsAndShow  ref={this.childPlayer1Ref}
-                        elementsForCard = {this.elementsForCard} myWidth="12vw" myHeight = "12vw" myFont="6vw" myColor="lightblue"
-                        callbackFunction= {this.showOptionsForSelectedNumber}
-                    />  
+                        elementsForCard = {this.elementsForCard} myWidth="12vw" myHeight = "100%" myFont="8vw" myColor="lightblue"
+                        callbackFunction= {this.showOptionsForSelectedNumber} myBorder="solid 3px lightpink"/>  
                     {this.groupForPlus1}
                     {this.groupForPlus10}
             </div>

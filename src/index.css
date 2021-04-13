@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap:regular,bold,italic&subset=latin,latin-ext');
 
-:root {    
-  /*--main-MainSectionLanguage-color:#fff6d5df;*/
-  --main-MainSectionLanguage-color:yellow;
-  --main-MainSectionBooks-color:yellow;
-  --main-MainSectionMath-color:navy;        
-  --main-MainSectionSoftwareDev-color:#343a40 ;
+:root {              
   --main-MainSectionPersonalInterests-color: deeppink ;
   --main-MainSectionActivities-color: aqua ;
 
-  --main-text-color:navy;      
-  /*--main-CardBG-color:lightskyblue;*/
-  --main-CardBG-color:white;
+  --main-text-color:navy;        
   --main-CardBGHover-color:navy;
   --main-ButtonColor-color:#1697f9ff;
   --main-ButtonTextColor-color:#1697f9ff;
@@ -22,11 +15,6 @@
   color: var(--main-text-color);
   font-family: 'Arima Madurai', cursive;  
   font-size: 1.6vw;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 
@@ -212,11 +200,6 @@ code {
   background-color: deeppink;
 }
 
-/*
-.radio-toolbar input[type="radio"]:focus + label {
-    border: 2px solid yellow;
-}
-*/
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: aqua;
     border-color:var(--main-ButtonColor-color);    
@@ -281,10 +264,7 @@ code {
   100% { color:deeppink }
 }
 
-.picsAnimation {  
-  /*animation-name: animation2;
-  animation-duration: 2s;
-  animation-iteration-count: 2;  */
+.picsAnimation {   
   animation: 0.5s linear 2 animation2;
   animation-play-state: inherit;
   border: solid 10px navy;

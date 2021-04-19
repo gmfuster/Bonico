@@ -237,5 +237,18 @@
 </tspan></tspan><tspan
          x="-92.982422"
          y="206.11421"><tspan>R</tspan></tspan></text>
+    <circle
+       style="fill:#5e6483;fill-opacity:1;stroke:#160407;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1164"
+       sodipodi:type="arc"
+       sodipodi:cx="26.314495"
+       sodipodi:cy="173.34608"
+       sodipodi:rx="16.252975"
+       sodipodi:ry="16.252975"
+       sodipodi:start="0.2734547"
+       sodipodi:end="0.12544624"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 41.96357,177.73535 A 16.252975,16.252975 0 0 1 22.507148,189.14682 16.252975,16.252975 0 0 1 10.383725,170.12587 16.252975,16.252975 0 0 1 28.943167,157.30709 16.252975,16.252975 0 0 1 42.439754,175.37962" />
   </g>
 </svg>

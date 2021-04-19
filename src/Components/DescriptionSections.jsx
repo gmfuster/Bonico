@@ -12,8 +12,13 @@ function DescriptionSections () {
 
                 <div style={{background:"lightyellow", margin:"15px", padding:"15px"}}>                    
                     <div className="CenterMe" >
-                        <iframe type="text/html" className="cardDiv" frameBorder="0"   title="jonandhismomtalkabout"                    
-                            src="https://read.amazon.com/kp/card?asin=B08JH9GXJ9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_tKpFFbQZZHSP4" ></iframe>     
+                        <a href="https://www.amazon.com/dp/B092V2CRNF/ref=cm_sw_em_r_mt_dp_5VRHWY06VPRX9RT2QNZ2" target="_new">
+                            <img  style={{border:"3px solid navy", margin:"3px"}}  width="250" heigth="250px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/howdidyougetme.jpg"} alt="Jon and his mom talk about - Amazon"/>
+                        </a>
+                        
+                        <a  margin="10px" href="https://www.amazon.com/dp/B08JF5KNK8/ref=cm_sw_em_r_mt_dp_KJKC4PN7CP3HR4Z33DJR" target="_new">
+                            <img style={{border:"3px solid navy", margin:"3px"}} width="250" heigth="250px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/jonandhismomtalkabout.jpg"} alt="Jon and his mom talk about - Amazon"/>
+                        </a>
                     </div>
                     
 

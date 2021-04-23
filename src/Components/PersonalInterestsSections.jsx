@@ -25,7 +25,7 @@ function PersonalInterestsSections () {
                         </li>
                         <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a></li>
                         <li>Helping translate curriculum and articles into Spanish for freecodecamp (mentioned above). </li>
-                        <li>Writing some of my notes on <a href="https://gnmfuster.medium.com/" target="_new">https://gnmfuster.medium.com/</a> </li>
+                        <li>Writing some of my notes on <a href="https://gmfuster.medium.com/" target="_new">https://gmfuster.medium.com/</a> </li>
                         
                     </ul>
                     Adding some other interests of mine below.

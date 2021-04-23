@@ -76,7 +76,7 @@ class NextNumber extends Component {
         }   
         var number = {
             background:"lightgreen",
-            width:"10vw",
+            width:"12vw",
             height:"10vw",
             marginLeft:"5px",
             textAlign:"center",

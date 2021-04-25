@@ -28,7 +28,7 @@ function PersonalInterestsSections () {
                         <li>Writing some of my notes on <a href="https://gmfuster.medium.com/" target="_new">https://gmfuster.medium.com/</a> </li>
                         
                     </ul>
-                    Adding some other interests of mine below.
+                    I am interested in web development, .NET, and data science, and a few more things.  Scroll down to see.
                 </div>
                 <br/>
 

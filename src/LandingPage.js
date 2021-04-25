@@ -5,7 +5,7 @@ import DescriptionSections from "./Components/DescriptionSections";
 import KindergartenMath from "./Components/KindergartenMath";
 import KindergartenLang from "./Components/KindergartenLang";
 
-
+import FooterInfo from './Components/Footer';
 
 class LandingPage extends Component {
   
@@ -22,6 +22,7 @@ class LandingPage extends Component {
         <KindergartenMath/>                                    
         <KindergartenLang/>                                    
       
+        <FooterInfo/>       
 
     </React.Fragment>)
 };

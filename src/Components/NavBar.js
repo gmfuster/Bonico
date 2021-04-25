@@ -65,7 +65,7 @@ function NavBar () {
                     </Nav>
 
                     <Nav>                       
-                        <Nav.Link href="https://twitter.com/GnMFuster" target="_new">
+                        <Nav.Link href="https://twitter.com/GMFuster" target="_new">
                             <img alt="Twitter"
                                 src= {pathPic + "/images/Twitter_Logo_Blue.svg"}
                                 width="50"
@@ -73,8 +73,8 @@ function NavBar () {
                                 className="rounded-circle d-inline-block align-top"
                             /> 
                         </Nav.Link>
-                        <Nav.Link href="https://gnmfuster.medium.com/" target="_new">
-                        <img alt="Twitter"
+                        <Nav.Link href="https://gmfuster.medium.com/" target="_new">
+                        <img alt="Medium"
                                 src= {pathPic + "/images/mediumLogo.png"}
                                 width="50"
                                 height="50"

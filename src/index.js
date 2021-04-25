@@ -43,6 +43,7 @@ import kindergartenLang from "./Components/KindergartenLang";
 import PersonalInterestsSection from "./Components/PersonalInterestsSections";
 import GamesAndPDFs from './Components/GamesAndPDFs';
 
+
 const routing = (
     <React.Fragment>   
         <div className="fragmentContainer"> {/*use for some styling only*/}
@@ -89,7 +90,9 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/RemoveDupPics"} component={RemoveDupPics}/>      
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Chinese"} component={Chinese}/>                  
                     
-                </Switch>              
+                </Switch>    
+
+                  
             </div>
         </Router> 
         

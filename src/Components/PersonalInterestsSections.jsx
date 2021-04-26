@@ -23,12 +23,12 @@ function PersonalInterestsSections () {
                                 </li>
                             </ul>
                         </li>
-                        <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a></li>
-                        <li>Helping translate curriculum and articles into Spanish for freecodecamp (mentioned above). </li>
+                        <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a> and contributing
+                        with translations (Ghost and Crowdin) and (hoping) fixes on GitHub.</li>                        
                         <li>Writing some of my notes on <a href="https://gmfuster.medium.com/" target="_new">https://gmfuster.medium.com/</a> </li>
                         
                     </ul>
-                    I am interested in web development, .NET, and data science, and a few more things.  Scroll down to see.
+                    I am interested in web development, .NET, data science, and a few more things.  Scroll down to see more.
                 </div>
                 <br/>
 

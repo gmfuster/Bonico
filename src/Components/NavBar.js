@@ -13,12 +13,12 @@ function NavBar () {
 
     const reactLinkSt = {
         color:"white",
-        paddingLeft:"6px",
-        paddingRight:"6px",
+        paddingLeft:"5px",
+        paddingRight:"5px",
         textDecoration: "none",
             
         borderRight:"solid 2px var(--main-ButtonTextColor-color)",
-        fontSize:"25px" ,
+        fontSize:"22px" ,
         margin:"2px" ,
         display: "flex", 
         justifyContent: "center", 
@@ -28,7 +28,7 @@ function NavBar () {
         color:"navy",
         padding:"5px",
         textDecoration: "underline",        
-        fontSize:"25px"         
+        fontSize:"22px"         
 
     }
     

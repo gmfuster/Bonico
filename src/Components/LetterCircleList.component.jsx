@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import LetterCircle from "./LetterCircle.component";
+import ModelWindowWithText from "./ModelWindowWithText";
 
 class LetterCircleList extends Component {     
      /*TODO change so we can show message when they have all been found*/   
     constructor(props){     
         super(props);        
-        this.state = {theList:[], newList:[], numberPerLetter:5};
+        this.state = {theList:[], newList:[], numberPerLetter:5, containerForModal : null};
         this.numberOfLettersFound = 0;
                 
         if (this.props.targetLetter === "undefined" || this.props.targetLetter === null || this.props.targetLetter === "")
@@ -57,12 +58,16 @@ class LetterCircleList extends Component {
         return Math.floor(Math.random() * length);      
     }
     
+    removeModal = () => {
+        this.setState( {containerForModal :null});
+    }
+
     checkIfAllHaveBeenFound = () => {
 
         this.numberOfLettersFound++;
       
         if (this.numberOfLettersFound === this.state.numberPerLetter){
-            alert("AWESOME, YOU FOUND THEM ALL!");//change this to a nicer notice
+            this.setState( {containerForModal : <ModelWindowWithText text="Awesome! Great Job!" callbackFunction = {this.removeModal} /> }); 
         }
     }
     render() {        
@@ -72,7 +77,8 @@ class LetterCircleList extends Component {
             <div className="myContentsAreGrid1">                
                 {this.state.newList.map( (circle, index) =>                  
                         <LetterCircle key={circle.id} letter={circle.value} targetLetter={this.props.targetLetter} functionToCallBack = {this.checkIfAllHaveBeenFound}/>                   
-                )}                                                                
+                )}    
+                {this.state.containerForModal}                                                            
             </div>
         </React.Fragment>
         )

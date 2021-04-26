@@ -14,13 +14,18 @@ function ModelWindowWithText (props) {
         left:posLeft+"vw",
         background:"lightblue",
         border:"solid navy 5px",
-        borderRadius:"4%"
+        borderRadius:"4%" ,
+        display:"flex",
+        flexDirection:"column"        
     }
 
+
+    
     return(
         <React.Fragment>
             <div style={modalStyle}>
-                <span>{props.text}</span>
+                <div style={{ position:"absolute", right:"0px"}}><button onClick={ () => { props.callbackFunction();} }>X</button></div>
+                <div style={{ margin:"8%"}}>{props.text}</div>
             </div>
         </React.Fragment>
     )

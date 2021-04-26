@@ -138,11 +138,13 @@ class CanvasTrace extends Component {
     }
     /*LISTENER EVENTS END*/
 
-
+    removeModal = () => {
+        this.setState( {containerForModal :null});
+    }
     printTheText=() =>{                          
 
         if (this.state.textForCanvas.length === 0 ){
-            this.setState( {containerForModal : <ModelWindowWithText text="Enter something in the canvas to print it" /> });           
+            this.setState( {containerForModal : <ModelWindowWithText text="To print, enter something in the canvas." callbackFunction = {this.removeModal} /> });           
             return;
         }          
         try {

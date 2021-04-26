@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="557.21899mm"
+   height="316.14346mm"
+   viewBox="0 0 557.21899 316.14346"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="learning.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="96.761902"
+       y="61.988094"
+       width="217.71429"
+       height="55.184525"
+       id="rect837" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="727.14572"
+     inkscape:cy="569.69183"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(86.557306,93.278583)">
+    <path
+       sodipodi:type="star"
+       style="fill:#1eecdc;fill-opacity:1;stroke:#160407;stroke-width:3"
+       id="path833"
+       sodipodi:sides="9"
+       sodipodi:cx="40.821426"
+       sodipodi:cy="56.696426"
+       sodipodi:r1="98.726334"
+       sodipodi:r2="51.337692"
+       sodipodi:arg1="0.8721365"
+       sodipodi:arg2="1.2212024"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.26"
+       inkscape:randomized="0"
+       d="m 104.32142,132.29166 c -10.641189,8.9386 -32.859365,-32.1229 -45.915996,-27.36286 -13.05663,4.76003 -3.634611,50.48661 -17.531858,50.49395 -13.897247,0.007 -4.523535,-45.72917 -17.585187,-50.47541 -13.06165,-4.74624 -35.23644,36.33871 -45.887066,27.41135 C -33.249314,123.43133 3.3302221,94.420447 -3.624758,82.388747 -10.579738,70.357048 -53.975506,87.576262 -56.395965,73.89142 -58.816424,60.206577 -12.147035,61.495821 -9.7410316,47.808429 -7.3350279,34.121038 -51.646412,19.417459 -44.704145,7.378421 -37.761876,-4.6606181 -2.8397609,26.325505 7.8014309,17.386904 18.442622,8.4483036 -6.0505896,-31.2981 7.0060408,-36.058135 20.062672,-40.81817 26.897068,5.3660808 40.794316,5.3587413 54.691563,5.3514018 61.47717,-40.840043 74.538821,-36.093801 87.600472,-31.347558 63.149259,8.4246956 73.799887,17.352052 84.450513,26.279408 119.33988,-4.7435876 126.29486,7.288112 c 6.95498,12.0317 -37.340851,26.782078 -34.920391,40.466921 2.42046,13.684842 49.088461,12.3463 46.682461,26.033691 -2.40601,13.687392 -45.819941,-3.485973 -52.762209,8.553067 -6.942267,12.039038 29.667889,41.011269 19.026699,49.949869 z"
+       transform="matrix(2.8114611,0,-0.51213518,1.6225588,114.12695,-31.751507)" />
+    <text
+       xml:space="preserve"
+       id="text835"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect837);fill:#0043eb;fill-opacity:1;stroke:none;"
+       transform="matrix(3.8311801,-0.99924005,0,8.8599251,-295.29182,-409.03338)"><tspan
+         x="96.761719"
+         y="70.97949"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting';fill:#0043eb;fill-opacity:1">LEARNING</tspan></tspan></text>
+  </g>
+</svg>

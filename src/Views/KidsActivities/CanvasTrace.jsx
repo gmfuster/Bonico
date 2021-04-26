@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ModelWindowWithText from "../../Components/ModelWindowWithText";
 import TextFieldWithButton from "../../Components/TextFieldWithButton";
 
 class CanvasTrace extends Component {
@@ -11,8 +12,8 @@ class CanvasTrace extends Component {
     constructor()
     {
         super();
-        this.state = {textForCanvas : ""};
-        this.refToCanvas = React.createRef();          
+        this.state = {textForCanvas : "", containerForModal : null};
+        this.refToCanvas = React.createRef();                             
         window.addEventListener('resize', this.handleResize);
     }
     componentDidMount(){
@@ -141,7 +142,7 @@ class CanvasTrace extends Component {
     printTheText=() =>{                          
 
         if (this.state.textForCanvas.length === 0 ){
-            alert("Enter something in the canvas to print it");//make nicer pop up
+            this.setState( {containerForModal : <ModelWindowWithText text="Enter something in the canvas to print it" /> });           
             return;
         }          
         try {
@@ -199,14 +200,16 @@ class CanvasTrace extends Component {
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">            
             Resizing will clear the contents. (Canvas has no scrolling).  Enter your text and click the button to put it on the canvas. <br/> 
-            <img style = {{ height:"15%", width:"15%", position:"absolute", top:"35%", left:"0px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="cRequires touch screen"  /> 
-            <TextFieldWithButton textForInput = "Enter you text" textForButton="To canvas!" functionToCall= {this.updateCanvas}/>
-            <br/><br/>                                    
-            <canvas className ="traceLetterCanvas"  
-                    ref={this.refToCanvas}                     
-                     />                
-            
-            
+            <img style = {{ height:"15%", width:"15%", position:"absolute", top:"35%", left:"0px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="cRequires touch screen"  />             
+                        
+            <TextFieldWithButton   textForInput = "Enter you text" textForButton="To canvas!" functionToCall= {this.updateCanvas}/>                                    
+            <br/>
+            <div style={{position:"relative"}}>
+                <canvas className ="traceLetterCanvas"  ref={this.refToCanvas} />                
+                <button style={{position:"absolute", right:"10%", top:"0px"}} onClick={this.printTheText} className="buttonGeneral">Print</button>
+            </div>
+
+           {this.state.containerForModal}
         </div>
   
       </React.Fragment>)

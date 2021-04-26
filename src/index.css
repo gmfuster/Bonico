@@ -54,21 +54,21 @@
   margin-bottom: 1vh;
 }
 .inputText{
-  margin:2px;
-  padding: 0.5vw; 
+  margin:.5%;
+  padding: 0.5%; 
   border-width: 1px;
   border-radius: 10px;
-  width:55vw;
+  width:66%;
 }
 .buttonInputWithButtons{
   background-color: var(--main-ButtonBKColor-color);
   border-color: var(--main-ButtonColor-color); 
   color: var(--main-ButtonColor-color);      
-  padding: 0.5vw;  
+  padding: 0.5%;  
   border-width: 0px;
   border-radius: 10px;
-  margin:2px;
-  width:15vw;
+  margin:.5%;
+  width:15%;
 }
 .buttonInputWithButtons:focus{
   outline:none;

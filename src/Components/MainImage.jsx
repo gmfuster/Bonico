@@ -10,7 +10,7 @@ function MainImage () {
       var imageStyle = {        
         height: "100%",
         width:"100%",    
-        opacity:"85%"    
+        opacity:"100%"    
       }      
 
       let divStyle ={
@@ -19,15 +19,17 @@ function MainImage () {
         height: "55vh",
       }
 
+      
+
      return(
         
-        <React.Fragment>    
+        <React.Fragment>                
             <div className="imageContainer TopMarginToDealWithNavBarImg" style={divStyle}>
               <img style = {imageStyle} src = {pathPicSrc} alt="boy at beach"/>  
               {/*<div className="bottomImageText">Learning is Fun!</div>*/}
-              <img style = {{position:"absolute", width:"45vw", height:"35vh", top:"10%", left:"0%"}} src = {learningPic} alt="LEARNING"/>  
-              <img style = {{position:"absolute", width:"35vw", height:"25vh", top:"45%", left:"25%"}} src = {isPic} alt="IS"/>  
-              <img style = {{position:"absolute", width:"30vw", height:"20vh", top:"35%", right:"5%"}} src = {funPic} alt="FUN"/>  
+              <img className="mainImageAnimation" style = {{position:"absolute",  width:"45%", height:"45%", top:"20%", left:"0%", opacity:"75%"}} src = {learningPic} alt="LEARNING"/>  
+              <img className="mainImageAnimation" style = {{position:"absolute",  width:"45%", height:"45%",top:"45%", left:"25%",opacity:"90%"}} src = {isPic} alt="IS"/>  
+              <img className="mainImageAnimation" style = {{position:"absolute",  width:"45%", height:"45%", top:"35%", right:"2%",opacity:"75%"}} src = {funPic} alt="FUN"/>  
             </div>        
         </React.Fragment>
       )

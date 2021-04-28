@@ -23,8 +23,8 @@ function PersonalInterestsSections () {
                                 </li>
                             </ul>
                         </li>
-                        <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a> and contributing
-                        with translations (Ghost and Crowdin) and (hoping) fixes on GitHub.</li>                        
+                        <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a> and contributing to it 
+                        with translations on Ghost and Crowdin and fixes on GitHub.</li>                        
                         <li>Writing some of my notes on <a href="https://gmfuster.medium.com/" target="_new">https://gmfuster.medium.com/</a> </li>
                         
                     </ul>

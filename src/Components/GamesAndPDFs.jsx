@@ -17,7 +17,10 @@ function GamesAndPDFs () {
                     text="Games and activity PDFs"/>  
 
                     <LandingPageCardComponent topic = "/SpinStarWarsCars" imageSrc = "/images/MainItemCardImages/SpinStarWarsCars.svg" borderColorClass= "cardDivAll"
-                    text="Spin, wait, get a star wars car, be the first to find it."/>                                         
+                    text="Spin, wait, get a star wars car, be the first to find it."/>    
+
+                     <LandingPageCardComponent topic = "/SpinShapes" imageSrc = "/images/MainItemCardImages/Shapes.svg" borderColorClass= "cardDivAll"
+                    text="Spin, wait, get a shape to find, find it."/>                                         
                     
                                                                                             
                 </div>

@@ -18,7 +18,7 @@ function NavBar () {
         textDecoration: "none",
             
         borderRight:"solid 2px var(--main-ButtonTextColor-color)",
-        fontSize:"22px" ,
+        fontSize:"20px" ,
         margin:"2px" ,
         display: "flex", 
         justifyContent: "center", 
@@ -28,13 +28,14 @@ function NavBar () {
         color:"navy",
         padding:"5px",
         textDecoration: "underline",        
-        fontSize:"22px"         
+        fontSize:"20px"         
 
     }
     
       return(
           
-        <React.Fragment>            
+        <React.Fragment>       
+                
             <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
                 {/*<Navbar.Brand href="/">
                     <img
@@ -68,17 +69,25 @@ function NavBar () {
                         <Nav.Link href="https://twitter.com/GMFuster" target="_new">
                             <img alt="Twitter"
                                 src= {pathPic + "/images/Twitter_Logo_Blue.svg"}
-                                width="50"
-                                height="50"
-                                className="rounded-circle d-inline-block align-top"
+                                width="35px"
+                                height="35px"
+                                className=" align-top"
                             /> 
                         </Nav.Link>
                         <Nav.Link href="https://gmfuster.medium.com/" target="_new">
                         <img alt="Medium"
                                 src= {pathPic + "/images/mediumLogo.png"}
-                                width="50"
-                                height="50"
-                                className="rounded-circle d-inline-block align-top"
+                                width="35px"
+                                height="35px"
+                                className="align-top"
+                            /> 
+                        </Nav.Link>  
+                        <Nav.Link href="https://www.youtube.com/channel/UCRzxDsd0WvJza0BxaIRiQnA" target="_new">
+                            <img alt="YouTube"
+                                src= {pathPic + "/images/youtube_social_icon_red.png"}
+                                width="35px"
+                                height="35px"
+                                className="align-top"
                             /> 
                         </Nav.Link>                        
                     </Nav>

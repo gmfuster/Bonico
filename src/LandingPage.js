@@ -19,7 +19,7 @@ class LandingPage extends Component {
 
         <DescriptionSections/>
             
-        <KindergartenMath/>                                    
+        <KindergartenMath />                                    
         <KindergartenLang/>                                    
       
         <FooterInfo/>       

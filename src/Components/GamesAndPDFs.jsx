@@ -22,7 +22,7 @@ function GamesAndPDFs () {
                      <LandingPageCardComponent topic = "/SpinShapes" imageSrc = "/images/MainItemCardImages/shapes.svg" borderColorClass= "cardDivAll"
                     text="Spin, wait, get a shape to find, find it."/>  
 
-                     <LandingPageCardComponent topic = "/MemoryCards" imageSrc = "/images/MainItemCardImages/MemoryCards.svg" borderColorClass= "cardDivAll"
+                    <LandingPageCardComponent topic = "/MemoryCards" imageSrc = "/images/MainItemCardImages/MemoryCards.svg" borderColorClass= "cardDivAll"
                     text="Can you remember where the cards are? 1 player or 2."/>                                         
                     
                                                                                             

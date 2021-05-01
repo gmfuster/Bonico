@@ -19,10 +19,10 @@ function LandingPageCardComponent (props) {
         flexDirection: "row",        
     }
     return(
-        <div className= {props.borderColorClass}  style={{margin:"1vw", borderLeft:"0px", borderRadius:"0px", }}>
+        <div className= {props.borderColorClass}  style={{margin:"1vw", borderLeft:"0px", borderRadius:"25px", }}>
             <div style={st}>
                 <div className={classN}>
-                    <Link to= {path  + topic } className= "CardTextLink">                                                    
+                    <Link to= {path  + topic } className= "CardTextLink" >                                                    
                         <img src= {pathPic + imgSrc} className="MainSectionItemImage" alt={topic}></img>   
                     </Link>                   
                 </div >

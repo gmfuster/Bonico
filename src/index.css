@@ -369,18 +369,21 @@
   border-radius: 15%;
   border-width: 8px;
   border-style: solid;
+  
 }
 .cardDivAll{
   border-color:deeppink;
   border-radius: 15%;
   border-width: 8px;
   border-style: solid;
+  
 }
 .cardDivMath, .cardDivNavy{
   border-color:var(--main-text-color); 
   border-radius: 15%;
   border-width: 8px;
-  border-style: solid;
+  border-style:solid;
+  
 }
 
 

@@ -30,6 +30,7 @@ import NextNumber from "./Views/KidsActivities/NextNumber";
 
 import SpinStarWarsCars from "./Views/Games/SpinStarWarsCars";
 import SpinShapes from "./Views/Games/SpinShapes";
+import MemoryCards from "./Views/Games/MemoryCards";
 
 
 
@@ -84,6 +85,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinStarWarsCars"} component={SpinStarWarsCars}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinShapes"} component={SpinShapes}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinShapes"} component={MemoryCards}/>  
                     
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  

@@ -344,14 +344,21 @@
 
 .cardDiv{
   color: var(--main-text-color);  
-  width:210px;
-  height: 210px;        
+  width:200px;
+  height: 200px;        
   
+}
+/*No change of color hover*/
+.cardDivNoHover{
+  color: var(--main-text-color);  
+  width:200px;
+  height: 200px;          
 }
 .cardDiv2{
   color: var(--main-text-color);    
-  width:210px;
-  height: 210px;       
+  width:200px;
+  height: 200px;  
+  text-decoration: none;       
 }
 .cardDiv > .CardTextLink{    
   color: var(--main-text-color);     
@@ -366,26 +373,30 @@
 }
 .cardDivLang{
   border-color:red; 
-  border-radius: 15%;
+  border-radius: 0%;
   border-width: 8px;
   border-style: solid;
   
 }
 .cardDivAll{
   border-color:deeppink;
-  border-radius: 15%;
+  border-radius: 0%;
   border-width: 8px;
   border-style: solid;
   
 }
 .cardDivMath, .cardDivNavy{
   border-color:var(--main-text-color); 
-  border-radius: 15%;
+  border-radius: 0%;
   border-width: 8px;
   border-style:solid;
   
 }
 
+.forHoverEffect:hover{  
+  transform: scale(1.1); /* Standard syntax */
+  border-color: blue;
+}
 
 
 .DescriptionSectionText{    

@@ -6,7 +6,7 @@ function DescriptionSections () {
             <React.Fragment>
                 <div className="DescriptionSectionText">                                                         
                    <img style = {{ height:"8%", width:"8%"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requirestouch.svg'}  alt="Requires touch screen"  />    
-                   Look for these on the activities (a phone is too small)
+                   Look for these on the activities (not for phones).  Check out these books on Amazon.
                    <img style = {{ height:"8%", width:"8%"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requiresgrownup.svg'}  alt="Requires grown up"  />    
                 </div>
 

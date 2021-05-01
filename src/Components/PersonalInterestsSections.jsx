@@ -1,5 +1,6 @@
 import React from "react";
-import LandingPageCardComponent from "./LandingPageCardComponent";
+import LandingPageCardComponent , {LandingPageCardComponentForHref} from "./LandingPageCardComponent";
+
 
 function PersonalInterestsSections () {
             
@@ -9,29 +10,16 @@ function PersonalInterestsSections () {
         <React.Fragment>            
 
             <div className="TopMarginToDealWithNavBarAll">
-                <div className="CenterMyBorder">
-                Hello! I am a software dev. but I can't work full time at the moment.  I love programming though so during this time I am: <br/>                                
-                    <ul>
-                        <li>Adding activities to this little site (first web dev I do, never got to do it at work)</li>
-                        <li>Writing children's books.
-                            <ul>
-                                <li>
-                                    <a href="https://www.amazon.com/dp/B08JF5KNK8/ref=cm_sw_em_r_mt_dp_7K52TBWB3SSPMTB418EX" target="_new">Jon and his mom talk about...</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.amazon.com/dp/B092V2CRNF/ref=cm_sw_em_r_mt_dp_5VRHWY06VPRX9RT2QNZ2" target="_new">How did you get me?</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Learning/relearning with <a href="https://www.freecodecamp.org/" target="_new">www.freecodecamp.org/.</a> and contributing to it 
-                        with translations on Ghost and Crowdin and fixes on GitHub.</li>                        
-                        <li>Writing some of my notes on <a href="https://gmfuster.medium.com/" target="_new">https://gmfuster.medium.com/</a> </li>
-                        
-                    </ul>
-                    I am interested in web development, .NET, data science, and a few more things.  Scroll down to see more.
+                <div className="CenterMyBorder" style={{border:"0px"}}>
+                Hello!! I'm Gemma, a software dev. who enjoys coding and learning.  
+                Check out some of the things I have been doing here (besides this site) and some of my interests.<br/>                                                                                                                                           
+                    
+                I am interested in web development, .NET, data science / machine learning, open source.  And learning a bit of this and a bit of that.  
+                I have a curious mind.
                 </div>
                 <br/>
 
+                {/*}
                 <div className="MainSectionContainerPersonalInterests">                            
                     <div className="MainSectionContainer  TopMarginToDealWithNavBar" id="" >        
                     <div className="CenterMe" >
@@ -45,8 +33,23 @@ function PersonalInterestsSections () {
                     </div>                                       
                     </div>
                 </div>
+                */}
+
                 <div className="MainSectionContainerActivities MainSectionContainerPersonalInterests">  
-                    {/*the component already has the cardDiv class, send only the one that sets the color: cardDivAll, cardDivLang}  TODO use better names for the color class*/}
+                    <LandingPageCardComponentForHref href = "https://www.amazon.com/dp/B092V2CRNF/ref=cm_sw_em_r_mt_dp_5VRHWY06VPRX9RT2QNZ2" imageSrc = {process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/howdidyougetme.jpg"}borderColorClass= "cardDivNavy"                  
+                    text="I wrote about an Adoption story - bilingual (Amazon)"/>  
+
+                    <LandingPageCardComponentForHref href = "https://www.amazon.com/dp/B08JF5KNK8/ref=cm_sw_em_r_mt_dp_KJKC4PN7CP3HR4Z33DJR" imageSrc = {process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/jonandhismomtalkabout.jpg"}borderColorClass= "cardDivNavy"                  
+                    text="I wrote about a Kid and mom's talks (Amazon)"/>  
+
+                    <LandingPageCardComponentForHref href = "https://www.freecodecamp.org/" imageSrc = {process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/pencils.jpg"} borderColorClass= "cardDivNavy"                  
+                        text="translation and some fixes for freecodecamp (crowdin, Ghost, GitHub))"/>  
+                    
+                    <LandingPageCardComponentForHref href = "https://gmfuster.medium.com/" imageSrc = {process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/mediumLogo.png"} borderColorClass= "cardDivNavy"                  
+                        text="Check out my Medium articles"/>  
+
+
+
                     <LandingPageCardComponent topic = "/ReadBackwards" imageSrc = "/images/MainItemCardImages/readBackwards.svg" borderColorClass= "cardDivNavy"                  
                     text="Reading backwards is good exercise."/>  
                     <LandingPageCardComponent topic = "/Chinese" imageSrc = "/images/MainItemCardImages/Chinese.svg" borderColorClass= "cardDivNavy"

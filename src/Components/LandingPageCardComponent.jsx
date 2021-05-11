@@ -58,9 +58,7 @@ function LandingPageCardComponent (props) {
 }
 
 function LandingPageCardComponentForHref(props){
-
-    const path = process.env.REACT_APP_FOR_PATH;   
-    const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
+    
     const href = props.href
     const fullPath = props.fullPath;
     

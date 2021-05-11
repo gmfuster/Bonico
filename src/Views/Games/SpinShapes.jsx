@@ -5,10 +5,10 @@ function SpinShapes () {
 
     let shapes = React.createRef();    
 
-    function getNewResults (){        
+    /*function getNewResults (){        
                                       
         shapes.current.roll();                
-    }     
+    } */    
             
     let pathForShapePics = process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images//ShapeImages/";
     let elementsForPics = [pathForShapePics + "circle.svg", pathForShapePics + "cone.svg", 

@@ -85,7 +85,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinStarWarsCars"} component={SpinStarWarsCars}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinShapes"} component={SpinShapes}/>  
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinShapes"} component={MemoryCards}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MemoryCards"} component={MemoryCards}/>  
                     
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  

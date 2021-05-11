@@ -121,7 +121,7 @@ class PLusOrMinus extends Component {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe" style={{ position:"relative"}}>               
-            <img style = {{ height:"45%", width:"45%", position:"absolute", top:"2%", left:"2px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requiresgrownup.svg'}/>       
+            <img alt="Requires grownup" style = {{ height:"45%", width:"45%", position:"absolute", top:"2%", left:"2px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/requiresgrownup.svg'}/>       
            <button className="buttonGeneral" onClick={this.getNextQuestion}>Get Question</button><br/>
 
            <div style={{fontSize:"3vw", background:"lightpink", padding:"5px", border:"2px solid navy"}}>{this.state.text}</div><br/>

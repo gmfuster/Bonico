@@ -74,7 +74,8 @@ function MemoryCards () {
               playerScoresRef.current = [playerScoresRef.current[0] + 1, playerScoresRef.current[1]];              
             }else{              
               playerScoresRef.current = [playerScoresRef.current[0] , playerScoresRef.current[1] + 1 ];    
-            }            
+            }                  
+
             setPlayerScores([...playerScoresRef.current]);
           }else{                                           
             auxArr[openCards.current[0]] = questionPic;
@@ -125,8 +126,7 @@ function MemoryCards () {
     display:"grid",
     width:"100vw",
     height:"85vh",
-    gridTemplateColumns: "80vw 20vw",
-    border:"2px solid deeppink",    
+    gridTemplateColumns: "80vw 20vw"    
   }
 
     return(
@@ -170,10 +170,11 @@ function MemoryCards () {
 
               <div style={{margin:"2px"}}>
                 If 2 players, each player takes 1 turn.<br/>
+                {/*<h1 style={{color:"gold"}}>Current Player: {currentPlayer.current}</h1><br/>*/}
                 <h2 style={{ color:"blue"}}>Player 1:</h2>
-                 <h2 style={{ color:"blue"}}>{playerScores[0]}</h2><br/>
+                 <h2 style={{ color:"blue"}}>{playerScores[0]}</h2>
                 <h2 style={{ color:"deeppink"}}>Player 2:</h2>
-                <h2 style={{ color:"deeppink"}}>{playerScores[1]}</h2><br/>
+                <h2 style={{ color:"deeppink"}}>{playerScores[1]}</h2>
                 <button className="buttonGeneral" onClick = { () => playAgain()}>Again</button>
               </div>
             </div>

@@ -35,6 +35,7 @@ function MemoryCards () {
     function imageClicked(number){
 
       if (shownPics[number] === questionPic){
+
         let auxArr = [...shownPics];
         needToUpdateCountersAndReset.current = true;
         if (openCards.current[0] === -1){       
@@ -47,7 +48,8 @@ function MemoryCards () {
           openCards.current[1] = number;
           auxArr[number] = elementsForPics.current[number];        
           setShownPics([...auxArr]);                
-        }   
+        }  
+
       }               
     }
 
@@ -58,6 +60,7 @@ function MemoryCards () {
         //do not want to do this code again if this triggers the change state
         //not ideal but good for this.
         needToUpdateCountersAndReset.current = false;
+
         let auxArr = [...shownPics];
         if (openCards.current[0] !== -1 && openCards.current[1] !== -1){                                    
 
@@ -66,11 +69,10 @@ function MemoryCards () {
 
             openCards.current[0] = -1;
             openCards.current[1] = -1;
-            if (currentPlayer.current === 1){
-              currentPlayer.current = 2;
+
+            if (currentPlayer.current === 1){              
               playerScoresRef.current = [playerScoresRef.current[0] + 1, playerScoresRef.current[1]];              
-            }else{
-              currentPlayer.current = 1;
+            }else{              
               playerScoresRef.current = [playerScoresRef.current[0] , playerScoresRef.current[1] + 1 ];    
             }            
             setPlayerScores([...playerScoresRef.current]);
@@ -84,6 +86,12 @@ function MemoryCards () {
             }, 1000);
         
           }
+
+          if (currentPlayer.current === 1){  
+            currentPlayer.current = 2;
+          }else {
+            currentPlayer.current = 1;
+            }
       }     
     }
   
@@ -104,18 +112,20 @@ function MemoryCards () {
   }
   var containerStyle = {                         
     display:"grid",           
-    gridTemplateColumns:"auto auto auto auto auto auto",               
-    backgroundColor:"lightblue",
-    width:"100%"  ,
-    margin:"2px"    
+    gridTemplateColumns:"10vw 10vw 10vw 10vw 10vw 10vw",                       
+    marginLeft:"15vw"    
 }
 
   var itemStyle = {
-    border:"2px solid navy"
+    border:"2px solid navy",
+    backgroundColor:"lightblue",    
   }
   var mainContainerSt = {
     display:"grid",
-    gridTemplateColumns: "85vw 15vw"
+    width:"100vw",
+    height:"85vh",
+    gridTemplateColumns: "80% 20%",
+    border:"2px solid deeppink",    
   }
 
     return(
@@ -124,11 +134,9 @@ function MemoryCards () {
       <React.Fragment>
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">       
+          <div style={mainContainerSt} > 
 
-          <div style={mainContainerSt} >
-              
               <div style={containerStyle}>
-
                 <div style={itemStyle}><img alt="car " width="100%" src={shownPics[0] } onClick= { () =>imageClicked(0) } /></div>
                 <div style={itemStyle}><img alt="car " width="100%" src={shownPics[1] } onClick= { () =>imageClicked(1)} /></div>
                 <div style={itemStyle}><img alt="car " width="100%" src={shownPics[2] } onClick= { () =>imageClicked(2) }/></div>  
@@ -159,7 +167,7 @@ function MemoryCards () {
 
               </div> 
 
-              <div style={{margin:"5px"}}>
+              <div style={{margin:"2px"}}>
                 If 2 players, each player takes 1 turn.<br/>
                 <h2 style={{ color:"blue"}}>Player 1:</h2>
                  <h2 style={{ color:"blue"}}>{playerScores[0]}</h2><br/>

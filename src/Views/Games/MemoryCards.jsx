@@ -111,20 +111,21 @@ function MemoryCards () {
     
   }
   var containerStyle = {                         
-    display:"grid",           
-    gridTemplateColumns:"10vw 10vw 10vw 10vw 10vw 10vw",                       
-    marginLeft:"15vw"    
+    display:"grid",        
+    gridTemplateColumns: "repeat(6, 1fr)",    
+    gridTemplateRows: "20vh 20vh 20vh 20vh"
 }
 
   var itemStyle = {
     border:"2px solid navy",
-    backgroundColor:"lightblue",    
+    backgroundColor:"lightblue",   
   }
   var mainContainerSt = {
+    position:"relative",
     display:"grid",
     width:"100vw",
     height:"85vh",
-    gridTemplateColumns: "80% 20%",
+    gridTemplateColumns: "80vw 20vw",
     border:"2px solid deeppink",    
   }
 
@@ -135,37 +136,37 @@ function MemoryCards () {
          
          <div className="TopMarginToDealWithNavBarAll CenterMe">       
           <div style={mainContainerSt} > 
+              
+                <div style={containerStyle}>
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[0] } onClick= { () =>imageClicked(0) } /></div>
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[1] } onClick= { () =>imageClicked(1)} /></div>
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[2] } onClick= { () =>imageClicked(2) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[3] } onClick= { () =>imageClicked(3) }/></div>
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[4] } onClick= { () =>imageClicked(4) }/></div>
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[5] } onClick= { () =>imageClicked(5) }/></div>   
 
-              <div style={containerStyle}>
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[0] } onClick= { () =>imageClicked(0) } /></div>
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[1] } onClick= { () =>imageClicked(1)} /></div>
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[2] } onClick= { () =>imageClicked(2) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[3] } onClick= { () =>imageClicked(3) }/></div>
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[4] } onClick= { () =>imageClicked(4) }/></div>
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[5] } onClick= { () =>imageClicked(5) }/></div>   
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[6] } onClick= { () =>imageClicked(6) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[7] } onClick= { () =>imageClicked(7) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[8] } onClick= { () =>imageClicked(8) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[9] } onClick= { () =>imageClicked(9) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[10] } onClick= { () =>imageClicked(10) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[11] } onClick= { () =>imageClicked(11) }/></div>  
 
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[6] } onClick= { () =>imageClicked(6) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[7] } onClick= { () =>imageClicked(7) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[8] } onClick= { () =>imageClicked(8) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[9] } onClick= { () =>imageClicked(9) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[10] } onClick= { () =>imageClicked(10) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[11] } onClick= { () =>imageClicked(11) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[12] } onClick= { () =>imageClicked(12) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[13] } onClick= { () =>imageClicked(13) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[14] } onClick= { () =>imageClicked(14) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[15] } onClick= { () =>imageClicked(15) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[16] } onClick= { () =>imageClicked(16) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[17] } onClick= { () =>imageClicked(17) }/></div>  
 
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[12] } onClick= { () =>imageClicked(12) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[13] } onClick= { () =>imageClicked(13) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[14] } onClick= { () =>imageClicked(14) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[15] } onClick= { () =>imageClicked(15) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[16] } onClick= { () =>imageClicked(16) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[17] } onClick= { () =>imageClicked(17) }/></div>  
-
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[18] } onClick= { () =>imageClicked(18) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[19] } onClick= { () =>imageClicked(19) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[20] } onClick= { () =>imageClicked(20) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[21] } onClick= { () =>imageClicked(21) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[22] } onClick= { () =>imageClicked(22) }/></div>  
-                <div style={itemStyle}><img alt="car " width="100%" src={shownPics[23] } onClick= { () =>imageClicked(23) }/></div>  
-
-              </div> 
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[18] } onClick= { () =>imageClicked(18) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[19] } onClick= { () =>imageClicked(19) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[20] } onClick= { () =>imageClicked(20) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[21] } onClick= { () =>imageClicked(21) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%" src={shownPics[22] } onClick= { () =>imageClicked(22) }/></div>  
+                  <div style={itemStyle}><img alt="car " width="100%" height="100%"src={shownPics[23] } onClick= { () =>imageClicked(23) }/></div>  
+                
+              </div>
 
               <div style={{margin:"2px"}}>
                 If 2 players, each player takes 1 turn.<br/>

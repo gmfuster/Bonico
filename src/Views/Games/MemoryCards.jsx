@@ -1,11 +1,15 @@
-import React, {useState, useEffect} from "react";
 
+import React, {useState, useEffect} from "react";
+//import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 
 
 function MemoryCards () {           
                    
     window.scroll(0,0);
+    
+    let mainDiv = React.createRef();    
 
     let pathForCarsPics = process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images//CarImages/";
     let questionPic = process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images//clickme.svg";
@@ -55,6 +59,8 @@ function MemoryCards () {
 
     useEffect( () => {
 
+      disableBodyScroll(mainDiv.current);
+
       if (needToUpdateCountersAndReset.current){
       
         //do not want to do this code again if this triggers the change state
@@ -92,9 +98,18 @@ function MemoryCards () {
             currentPlayer.current = 2;
           }else {
             currentPlayer.current = 1;
-            }
-      }     
+          }
+      }  
+      
+    
+    
+    
     }
+
+    //for cleanup (will unmount)
+    return function cleanup () {
+      clearAllBodyScrollLocks();
+    }   
   
   })
   
@@ -108,9 +123,9 @@ function MemoryCards () {
     openCards.current[0] = -1;
     openCards.current[1] = -1;
     needToUpdateCountersAndReset.current = true;
-    playerScoresRef.current = [0,0];
-    
+    playerScoresRef.current = [0,0];    
   }
+
   var containerStyle = {                         
     display:"grid",        
     gridTemplateColumns: "repeat(6, 1fr)",    
@@ -134,7 +149,7 @@ function MemoryCards () {
       
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">       
+         <div className="TopMarginToDealWithNavBarAll CenterMe" ref={mainDiv}>       
           <div style={mainContainerSt} > 
               
                 <div style={containerStyle}>

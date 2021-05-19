@@ -11,7 +11,7 @@ function GamesAndPDFs () {
         <React.Fragment>            
             
             <div className="TopMarginToDealWithNavBarAll">
-                <h1 className="sectionHeaderPink" id="GamesAndPDFs">Games and PDFs with Practice Games</h1><br/>
+                <h1 className="sectionHeaderPink" id="GamesAndPDFs">Games and PDFs</h1><br/>
                 <div className="MainSectionContainerActivities">                                                                                                
                     <LandingPageCardComponent topic = "/MinorPrintables" imageSrc = "/images/MainItemCardImages/MinorPrintables.svg" borderColorClass= "cardDivAll"
                     text="Games and activity PDFs"/>  

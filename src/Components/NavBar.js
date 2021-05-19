@@ -53,18 +53,27 @@ function NavBar () {
                     <Nav className="mr-auto">                    
                         <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
                                                          
-                        <NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>                            
+                        {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>    */}  
+                        <NavDropdown title="Math" id="basic-nav-dropdown" style={reactLinkSt} active>                         
                             {/*<NavDropdown.Item >*/}
-                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Math</ReactLink> 
+                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Kindergarten</ReactLink> 
                             {/*</NavDropdown.Item>       
                                           */}                            
                                 <br/>
-                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Language</ReactLink>                             
-                        </NavDropdown>                                    
+                                                            
+                        </NavDropdown> 
+
+                        <NavDropdown title="Language" id="basic-nav-dropdown" style={reactLinkSt} active>                         
+                            <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Kindergarten</ReactLink>                         
+                        </NavDropdown>  
+
+
                         <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games and PDFs</ReactLink>    
                         <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
                     </Nav>
 
+                            
+                            
                     <Nav>                       
                         <Nav.Link href="https://twitter.com/GMFuster" target="_new">
                             <img alt="Twitter"

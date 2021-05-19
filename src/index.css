@@ -11,11 +11,17 @@
   --main-ButtonBKColor-color:#343a40;
 }
 
+mark {   
+  color: deeppink;
+  text-decoration: deepskyblue underline;
+}
+
 .fragmentContainer{  
   color: var(--main-text-color);
   font-family: 'Arima Madurai', cursive;  
   font-size: 1.6vw;
 }
+
 
 
 .TopMarginToDealWithNavBarAll{

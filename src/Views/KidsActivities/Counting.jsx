@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 class Counting extends Component {
 
@@ -9,6 +10,7 @@ class Counting extends Component {
 
         this.result = null;                         
         this.digit1 = 0; this.digit2 = 0;      
+        this.mainDiv = React.createRef();
     }             
     
     nextDigit = (d, s) => {
@@ -40,6 +42,13 @@ class Counting extends Component {
         this.setState( {result : this.result});
     }
 
+    componentDidMount(){
+        disableBodyScroll(this.mainDiv.current);
+    }
+
+    componentWillUnmount(){       
+        clearAllBodyScrollLocks();       
+    }
     render() {      
 
        var divHorContainer = {
@@ -70,7 +79,7 @@ class Counting extends Component {
       
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">             
+         <div className="TopMarginToDealWithNavBarAll CenterMe" ref={this.mainDiv}>             
            Increase or decrease the number by clicking on the + or - buttons and see what numbers you make.
            <br/><br/>
            

@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 import ShufflePicsAndShowComponent from "./../../Components/ShufflePicsandShow";
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 class SpinStarWarsCars extends Component {
 
     constructor()
     {
         super();                                        
-        this.starwarscars = React.createRef();    
+        this.starwarscars = React.createRef();   
+        this.mainDiv = React.createRef(); 
         //name of pics and path to pics - Full name with full path to pics.          
         let pathForCarsPics = process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images//CarImages/";
         this.elementsForPics = [pathForCarsPics + "darthmaul.svg", pathForCarsPics + "darthvader.svg", pathForCarsPics + "flametrooper.svg", 
@@ -25,7 +27,13 @@ class SpinStarWarsCars extends Component {
         this.starwarscars.current.roll();                
     }    
 
-
+    componentDidMount(){
+        disableBodyScroll(this.mainDiv.current);
+    }
+    componentWillUnmount(){       
+        clearAllBodyScrollLocks();       
+    }
+    
     render() {
 
         var picStyles = {                         
@@ -38,7 +46,7 @@ class SpinStarWarsCars extends Component {
       
       <React.Fragment>
          
-         <div className="TopMarginToDealWithNavBarAll CenterMe">            
+         <div className="TopMarginToDealWithNavBarAll CenterMe" ref={this.mainDiv}>            
             Get a random star wars car drawing.<br/>            
             <br/>
             <div style={picStyles}>                     

@@ -23,7 +23,13 @@ function GamesAndPDFs () {
                     text="Spin, wait, get a shape to find, find it."/>  
 
                     <LandingPageCardComponent topic = "/MemoryCards" imageSrc = "/images/MainItemCardImages/MemoryCards.svg" borderColorClass= "cardDivAll"
-                    text="Can you remember where the cards are? 1 player or 2."/>                                         
+                    text="Can you remember where the cards are? 1 player or 2."/>  
+
+                     <LandingPageCardComponent topic = "/AdditionMaze" imageSrc = "/images/MainItemCardImages/AdditionMaze.svg" borderColorClass= "cardDivAll"
+                    text="Solve the maze by chosing the right additions"/>  
+
+                     <LandingPageCardComponent topic = "/Freeze" imageSrc = "/images/MainItemCardImages/Freeze.svg" borderColorClass= "cardDivAll"
+                    text="Listen and stop when the sound stops, Freeze!"/>                                         
                     
                                                                                             
                 </div>

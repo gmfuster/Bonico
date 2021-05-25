@@ -83,7 +83,7 @@ mark {
   background-color: var(--main-ButtonBKColor-color);
   border-color: var(--main-ButtonColor-color); 
   color: var(--main-ButtonColor-color);      
-  padding: 1vw;  
+  padding: 0.5vw;  
   border-width: 0px;
   border-radius: 10px;
   margin:2px;

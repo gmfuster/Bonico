@@ -31,7 +31,7 @@ import NextNumber from "./Views/KidsActivities/NextNumber";
 import SpinStarWarsCars from "./Views/Games/SpinStarWarsCars";
 import SpinShapes from "./Views/Games/SpinShapes";
 import MemoryCards from "./Views/Games/MemoryCards";
-//import AdditionMaze from "./Views/Games/AdditionMaze";
+import AdditionMaze from "./Views/Games/AdditionMaze";
 //import Freeze from "./Views/Games/Freeze";
 
 
@@ -87,8 +87,8 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinStarWarsCars"} component={SpinStarWarsCars}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinShapes"} component={SpinShapes}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MemoryCards"} component={MemoryCards}/>  
-                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/AdditionMaze"} component={AdditionMaze}/>  
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Freeze"} component={Freeze}/>  */}
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/AdditionMaze"} component={AdditionMaze}/>
+                    {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/Freeze"} component={Freeze}/>  */}
                     
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  

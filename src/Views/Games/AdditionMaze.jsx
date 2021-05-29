@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from "react";
 //import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import { generateRandomNumber } from "../../commonJS";
+import { generatePathForMatrixFromStartToEnd , generateRandomNumber} from "../../commonJS";
 
 
 function AdditionMaze () {           
@@ -10,6 +10,7 @@ function AdditionMaze () {
     window.scroll(0,0);
     
     let mainDiv = React.createRef();    
+    const [theMatrix, setTheMatrix] = useState([]);
 
     //just set something up so it's not undefined.  Always have only 5*5
     let mat = [];
@@ -19,7 +20,6 @@ function AdditionMaze () {
           mat[i][j] = 0;
         }
     }
-
     let valuesMatrix = React.useRef(mat);    
     
     function getTrueResult(){
@@ -30,48 +30,35 @@ function AdditionMaze () {
 
     function getFalseResult(){
         let obj = { first : generateRandomNumber(10), second : generateRandomNumber(10),result: 0 }        ;
-        obj.result = Math.abs(obj.first + obj.second + generateRandomNumber(10) - generateRandomNumber(5));
+        obj.result = Math.abs(obj.first + obj.second + generateRandomNumber(10) );
         return obj;
     }
 
-    function getInitialPositionAndTrueEq(){
-        //get whether we start on column on row
-        let number = generateRandomNumber(2);
-        let obj = getTrueResult();
 
-        if (number === 1){
-            //cell to the right
-            valuesMatrix.current[0,1] = obj;
-            return [0,1]
-        } else{
-            //cell to the bottom
-            valuesMatrix.current[1,0] = obj;
-            return [1,0];
-        }        
-    }
-
-    function createMatrixPath(){
-
-        let initPos = getInitialPositionAndTrueEq();
-
-        //get random numbers for the addition
-        let number1 = generateRandomNumber(10);  
-        let number2 = generateRandomNumber(10);  
-
-
-        console.log(valuesMatrix.current);
-    }
     function fillMatrix(){
-        //once we have the path, just fill the other cells with invalid equations.
-    }
         
+        let path = generatePathForMatrixFromStartToEnd(5);        
+        for(var i=0; i<5; i++) {            
+            for(var j=0; j<5; j++) {                
+                if (path.some( obj => obj.i === i && obj.j === j) ){                                                 
+                    valuesMatrix.current[i][j] = getTrueResult();
+                }else{                                     
+                    valuesMatrix.current[i][j] = getFalseResult();                    
+                }               
+            }
+        }
+        console.log(path);
+        console.log(valuesMatrix);
+    }
+    
+    fillMatrix();
 
-    createMatrixPath();
 
     useEffect( () => {
 
         disableBodyScroll(mainDiv.current);
-        //setPlayerScores([...playerScoresRef.current]);         
+        //setPlayerScores([...playerScoresRef.current]);    
+
         //for cleanup (will unmount)
         return function cleanup () {
             clearAllBodyScrollLocks();
@@ -112,31 +99,25 @@ function AdditionMaze () {
                   <div style={itemStyle}></div>
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>
-                  <div style={itemStyle}></div>
+                  
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div>  
+                  
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div> 
+                  
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div> 
-
-                  <div style={itemStyle}></div>   
-                  <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div>  
-                  <div style={itemStyle}></div>  
-                  <div style={itemStyleFixed}>END</div>          
+                  <div style={itemStyleFixed}>END</div>   
+                                        
                 
               </div>
 

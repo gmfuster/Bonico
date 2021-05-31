@@ -11,10 +11,13 @@ function GamesAndPDFs () {
         <React.Fragment>            
             
             <div className="TopMarginToDealWithNavBarAll">
-                <h1 className="sectionHeaderPink" id="GamesAndPDFs">Games and PDFs</h1><br/>
-                <div className="MainSectionContainerActivities">                                                                                                
+                <h1 className="sectionHeaderPink" id="GamesAndPDFs">Games!!!</h1><br/>
+                <div className="MainSectionContainerActivities">   
+
+                    {/*}                                                                                             
                     <LandingPageCardComponent topic = "/MinorPrintables" imageSrc = "/images/MainItemCardImages/MinorPrintables.svg" borderColorClass= "cardDivAll"
                     text="Games and activity PDFs"/>  
+        */}
 
                     <LandingPageCardComponent topic = "/SpinStarWarsCars" imageSrc = "/images/MainItemCardImages/SpinStarWarsCars.svg" borderColorClass= "cardDivAll"
                     text="Spin, wait, get a star wars car, be the first to find it."/>    

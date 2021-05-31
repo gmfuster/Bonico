@@ -19,7 +19,7 @@ function NavBar () {
             
         borderRight:"solid 2px var(--main-ButtonTextColor-color)",
         fontSize:"20px" ,
-        margin:"2px" ,
+        margin:"3px" ,
         display: "flex", 
         justifyContent: "center", 
         alignItems:"center"
@@ -27,9 +27,8 @@ function NavBar () {
     const reactLinkStDDItem = {
         color:"navy",
         padding:"5px",
-        textDecoration: "underline",        
+        textDecoration: "none",        
         fontSize:"20px"         
-
     }
     
       return(
@@ -68,7 +67,7 @@ function NavBar () {
                         </NavDropdown>  
 
 
-                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games and PDFs</ReactLink>    
+                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
                         <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
                     </Nav>
 

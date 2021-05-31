@@ -1,11 +1,15 @@
 import React from "react";
+import {Link as ReactLink} from 'react-router-dom';
 
 function DescriptionSections () {
     
+    const path = process.env.REACT_APP_FOR_PATH ;
+
         return(
             <React.Fragment>
-                <div className="DescriptionSectionText">                    
-                    <img style = {{ height:"30Vh", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/validdevices.svg'}  alt="valid devices computer tablet"  />     <br/>                                                         
+                <div className="DescriptionSectionText">  
+                    <br/>                  
+                    <img style = {{ height:"30Vh", width:"90vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/validdevices.svg'}  alt="valid devices computer tablet"  />     <br/>                                                         
                     <br/><br/>
                     <img style = {{ height:"30Vh", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/someactivities.svg'}  alt="some activities require grown uptouch screen"  />                                                              
                 </div>
@@ -34,12 +38,21 @@ function DescriptionSections () {
                     <div style = {{position:"absolute", bottom:"0%"}} >
                         <img style = {{ height:"325px", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/wewrote.svg'}  alt="what we wrote"  />                                                              
                     </div>
+                    <br/>
+                    
                 </div>
         
+                <br/><br/><br/><br/><br/>
+                <div>
+                    <ReactLink to= {path + "/MinorPrintables"}>
+                        <img style = {{ height:"250px", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/getPDFs.svg'}  alt="PDFs to print"  />                                                              
+                    </ReactLink>  
+                </div>
+
                 <div className="DescriptionSectionText"> 
-                <br/>
-                <mark>Contact me</mark> on <a href="https://twitter.com/GMFuster" target="_new">Twitter</a> or <a href="https://gmfuster.medium.com/" target="_new">
-                    Medium</a> and let me know what you would like to see added.  Or anything you want to say.
+                <br/><br/>
+                <mark>Contact me on <a href="https://twitter.com/GMFuster" target="_new">Twitter</a> or <a href="https://gmfuster.medium.com/" target="_new">
+                    Medium</a> </mark>
                 </div>
             </React.Fragment>
         )

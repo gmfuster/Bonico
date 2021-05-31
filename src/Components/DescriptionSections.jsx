@@ -5,9 +5,8 @@ function DescriptionSections () {
         return(
             <React.Fragment>
                 <div className="DescriptionSectionText">                    
-
-
-                   
+                    <img style = {{ height:"30Vh", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/validdevices.svg'}  alt="valid devices computer tablet"  />     <br/>                                                         
+                    <br/><br/>
                     <img style = {{ height:"30Vh", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/someactivities.svg'}  alt="some activities require grown uptouch screen"  />                                                              
                 </div>
                 <br/>

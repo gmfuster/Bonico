@@ -90,7 +90,7 @@ function AdditionMaze () {
          
          <div className="TopMarginToDealWithNavBarAll CenterMe" ref={mainDiv}>       
                 <div style={{ width:"90%", marginLeft:"5%", marginRight:"5%"}}>
-                    Follow the correct equations to get to the END (Up Down Left Right only)<button className="buttonGeneral" >Go Again</button>
+                    Follow the correct equations to get to the END (Down and Right only)<button className="buttonGeneral" >Go Again</button>
                 </div>
                
                 <div style={containerStyle}>
@@ -99,23 +99,27 @@ function AdditionMaze () {
                   <div style={itemStyle}></div>
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>
+                  <div style={itemStyle}></div>
                   
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
+                  <div style={itemStyle}></div>
                   
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
+                  <div style={itemStyle}></div>
                   
 
                   <div style={itemStyle}></div>   
                   <div style={itemStyle}></div>  
                   <div style={itemStyle}></div>  
+                  <div style={itemStyle}></div>
                   <div style={itemStyleFixed}>END</div>   
                                         
                 

@@ -113,7 +113,7 @@
        ry="6.9678896e-07" />
     <path
        sodipodi:type="star"
-       style="fill:#00fbff;fill-opacity:1;stroke:#eb0090;stroke-width:5.41784194;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#00fbff;fill-opacity:1;stroke:#eb0090;stroke-width:5.41784;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path9490"
        sodipodi:sides="6"
        sodipodi:cx="30.2381"
@@ -126,24 +126,26 @@
        inkscape:rounded="1"
        inkscape:randomized="0"
        d="M 145.89881,187.3869 C 86.934524,303.04761 166.65114,251.30408 37.003887,258.06987 -92.643362,264.83566 -7.9738495,308.00051 -78.656818,199.10559 -149.33979,90.210673 -144.38689,185.11905 -85.422605,69.458342 -26.458324,-46.202363 -106.17494,5.5411606 23.472313,-1.2246267 153.11956,-7.990414 68.45005,-51.155263 139.13302,57.739654 209.81599,166.63457 204.86309,71.726199 145.89881,187.3869 Z"
-       inkscape:transform-center-x="11.504807"
-       inkscape:transform-center-y="-46.430257"
-       transform="matrix(1.090498,-0.19932315,0.2068758,1.0868565,-30.923219,47.293814)" />
+       inkscape:transform-center-x="19.194628"
+       inkscape:transform-center-y="-44.279311"
+       transform="matrix(1.1139763,-0.35487831,0.38378806,1.045532,-50.862413,59.455453)" />
     <text
        xml:space="preserve"
        id="text9493"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect9495);fill:#eb0090;fill-opacity:1;stroke:none;"
-       transform="matrix(3.8243784,0,0,5.3766963,197.71474,-350.82728)"><tspan
+       transform="matrix(5.2199536,0,0,6.3231762,261.82701,-437.50348)"><tspan
          x="-66.523438"
          y="88.940621"><tspan
            style="fill:#eb0090;fill-opacity:1">Requires
 </tspan></tspan><tspan
          x="-66.523438"
          y="102.16975"><tspan
+           style="fill:#eb0090;fill-opacity:1">  </tspan><tspan
            style="fill:#eb0090;fill-opacity:1">Touch
 </tspan></tspan><tspan
          x="-66.523438"
          y="115.39887"><tspan
+           style="fill:#eb0090;fill-opacity:1"> </tspan><tspan
            style="fill:#eb0090;fill-opacity:1">Screen</tspan></tspan></text>
   </g>
 </svg>

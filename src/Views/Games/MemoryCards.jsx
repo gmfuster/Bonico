@@ -99,10 +99,7 @@ function MemoryCards () {
           }else {
             currentPlayer.current = 1;
           }
-      }  
-      
-    
-    
+      }                
     
     }
 

@@ -2,11 +2,12 @@ import React, {useState, useEffect} from "react";
 
 function MathOperationComponent (props) {     
             
-
-    const [color, setColor] = useState("lightblue");
+    let initColor =  React.useRef("lightblue");
+    const [color, setColor] = useState(initColor);
     let item = React.useRef("");       
-    let size = React.useRef(props.size); 
+    let size = React.useRef(props.size);     
 
+    item.current =  <div  style={{ width:"100%", height:"100%", background:color , fontSize:size.current  }} onClick={() => {checkForColor()}}>{props.number1} {props.operator} {props.number2} = {props.result} </div>;        
     function checkForColor ()  {            
                
         if (props.operator === "+")
@@ -25,13 +26,18 @@ function MathOperationComponent (props) {
             }
         }
         
-    }
-        
-    item.current =  <div  style={{ width:"100%", height:"100%", background:color , fontSize:size.current  }} onClick={() => {checkForColor()}}>{props.number1} {props.operator} {props.number2} = {props.result} </div>;    
+    }            
 
     useEffect( () => {
+        
         item.current =  <div  style={{ width:"100%", height:"100%", background:color , fontSize:size.current  }} onClick={() => {checkForColor()}}>{props.number1} {props.operator} {props.number2} = {props.result} </div>;           
     },[color] )
+
+    useEffect( () => {
+        
+        item.current =  <div  style={{ width:"100%", height:"100%", background:initColor , fontSize:size.current  }} onClick={() => {checkForColor()}}>{props.number1} {props.operator} {props.number2} = {props.result} </div>;           
+    },[props.key] )
+
 
     return(
   

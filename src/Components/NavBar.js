@@ -28,7 +28,7 @@ function NavBar () {
 
     const reactLinkStDDItem = {
         color:"navy",
-        padding:"4px",
+        padding:"px",
         textDecoration: "none",        
         fontSize:"2vh"         
     }
@@ -38,7 +38,8 @@ function NavBar () {
         <React.Fragment>       
                 
             <Navbar  fixed="top" expand="sm" style={{background:"skyblue"}}>
-                <Navbar.Brand href={path + "/"}>
+                {/*}
+                <Navbar.Brand>
                     <img
                         alt="Home"
                         src= {pathPic + "/images/jandmlaughingblue.svg"}
@@ -47,14 +48,22 @@ function NavBar () {
                         className="rounded-circle d-inline-block align-top"
                     />                 
                 </Navbar.Brand>   
-
+                {*/}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">       
 
                         
-                        <ReactLink style={reactLinkSt2} to= {path + "/"}>H</ReactLink>
+                        <ReactLink style={reactLinkSt2} to= {path + "/"}>
+                            <img
+                            alt="Home"
+                            src= {pathPic + "/images/jandmlaughingblue.svg"}
+                            width="50"
+                            height="50"
+                            className="rounded-circle d-inline-block align-top"
+                            />    
+                        </ReactLink>
                         <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
 
                         <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math-K</ReactLink>     

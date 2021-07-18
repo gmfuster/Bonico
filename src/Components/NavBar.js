@@ -13,12 +13,12 @@ function NavBar () {
 
     const reactLinkSt = {
         color:"white",
-        paddingLeft:"5px",
-        paddingRight:"5px",
+        paddingLeft:"4px",
+        paddingRight:"4px",
         textDecoration: "none",
                     
         fontSize:"3vh" ,
-        margin:"3px" ,
+        margin:"2px" ,
         display: "flex", 
         justifyContent: "center", 
         alignItems:"center",
@@ -28,7 +28,7 @@ function NavBar () {
 
     const reactLinkStDDItem = {
         color:"navy",
-        padding:"5px",
+        padding:"4px",
         textDecoration: "none",        
         fontSize:"2vh"         
     }
@@ -53,7 +53,9 @@ function NavBar () {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">       
 
-                        <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
+                        
+                        <ReactLink style={reactLinkSt2} to= {path + "/"}>H</ReactLink>
+                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
 
                         <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math-K</ReactLink>     
 
@@ -74,7 +76,7 @@ function NavBar () {
                         </NavDropdown>  
                                     {*/}
 
-                        <ReactLink style={reactLinkSt2} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
+                       
                                           
                     </Nav>
 

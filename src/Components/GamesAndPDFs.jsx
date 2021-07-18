@@ -13,7 +13,7 @@ function GamesAndPDFs () {
     
         <React.Fragment>            
             
-            <Container fluid className="TopMarginToDealWithNavBarAll">
+            <Container fluid className="TopMarginToDealWithNavBarAll" style={{background:"radial-gradient(cyan, white)" }}>
                 <Row>
                     <Col sm={6}>
                         <LandingPageCardComponent topic = "/SpinStarWarsCars" imageSrc = "/images/MainItemCardImages/SpinStarWarsCars.svg" borderColorClass= "cardDivAll"

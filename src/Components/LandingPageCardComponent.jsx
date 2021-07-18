@@ -57,6 +57,7 @@ function LandingPageCardComponent (props) {
 
 }
 
+//TODO change this to reuse the code
 function LandingPageCardComponentForHref(props){
     
     const href = props.href
@@ -68,7 +69,7 @@ function LandingPageCardComponentForHref(props){
         classN = classN + props.borderColorClass;
     }
     
-    classN += " forHoverEffect";
+    //classN += " forHoverEffect";
 
     var st =  {
         display:"flex",
@@ -83,7 +84,7 @@ function LandingPageCardComponentForHref(props){
                     <div className="cardDivNoHover" >                                                                   
                             <img src= {fullPath} className="MainSectionItemImage" alt={href} ></img>                                      
                     </div >
-                    <div className="cardDiv2" style={{display: "flex", justifyContent: "center", alignItems:"center", margin:"2px", fontSize:"2.5vh"}}>
+                    <div className="cardDiv2" style={{display: "flex", justifyContent: "center", alignItems:"center", margin:"3px", fontSize:"2.5vh"}}>
                         <div >
                             {props.text}
                         </div>

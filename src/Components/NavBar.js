@@ -55,9 +55,9 @@ function NavBar () {
 
                         <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
 
-                        <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math K</ReactLink>     
+                        <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math-K</ReactLink>     
 
-                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Language K</ReactLink>                                                        
+                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Lang-K</ReactLink>                                                        
                         {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>   
                         <NavDropdown title="Math" id="basic-nav-dropdown" style={reactLinkSt} active>                         
                             {/*<NavDropdown.Item >*/}
@@ -107,7 +107,13 @@ function NavBar () {
                                 className="align-top"
                             /> 
                         </Nav.Link>          
-                        <ReactLink style={reactLinkSt2} to= {path + "/PersonalInterestsSection"} >Me</ReactLink>                   
+                        <ReactLink style={reactLinkSt2} to= {path + "/PersonalInterestsSection"} >
+                        <img alt="Medium"
+                                src= {pathPic + "/images/AboutMe.svg"}
+                                width="35px"
+                                height="35px"
+                                className="align-top"
+                            /> </ReactLink>                   
                     </Nav>
                 </Navbar.Collapse>                    
 

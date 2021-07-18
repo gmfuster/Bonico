@@ -1,8 +1,10 @@
 import React from 'react';
+import {Link as ReactLink} from 'react-router-dom';
 
 function FoorterInfo(props) {
 
     const pathPic = process.env.REACT_APP_FOR_PATH_FOR_PICS;
+    const path = process.env.REACT_APP_FOR_PATH ;
 
     return (<div className="CenterMe">
 
@@ -37,6 +39,15 @@ function FoorterInfo(props) {
                                 className="d-inline-block align-top"
                             /> 
                 </a>
+                 &nbsp;
+                <ReactLink to= {path + "/PersonalInterestsSection"} >
+                    <img alt="About Me"
+                                src= {pathPic + "/images/AboutMe.svg"}
+                                width="60px"
+                                height="60px"
+                                margin="5px"
+                                className="d-inline-block align-top"
+                            /> </ReactLink>     
             
             </div>
 

@@ -30,7 +30,7 @@ function AdditionMaze () {
 
     function getFalseResult(){
         let obj = { first : generateRandomNumber(10), second : generateRandomNumber(10),result: 0 }        ;
-        obj.result = Math.abs(obj.first + obj.second + generateRandomNumber(10) );
+        obj.result = Math.abs(obj.first + obj.second + generateRandomNumber(9)+1 );
         return obj;
     }
 

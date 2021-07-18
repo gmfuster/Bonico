@@ -60,8 +60,8 @@ class ShufflePicsAndShow extends Component {
 
     render() {      
           var picStyle = {                                                              
-            width: this.props.myWidth,            
-            height:this.props.myHeight ,
+            width: this.props.myIMageWidth,            
+            height:this.props.myImageHeight ,
             userSelect:"none",
             border:"10px lightblue solid"   ,
             borderRadius: "50%",
@@ -73,7 +73,7 @@ class ShufflePicsAndShow extends Component {
                 <div>
                     <div ref={this.refToContainingDiv}>
                         <img style={picStyle} ref={this.refToImg} src={this.state.imageSrc} onClick={this.roll} alt="Images for rolling"/>                           
-                    </div>    <br/>                            
+                    </div>                           
                     <button className="buttonGeneral" onClick={this.reset}>Start Over</button>                                                                  
                 </div>  
       </React.Fragment>)

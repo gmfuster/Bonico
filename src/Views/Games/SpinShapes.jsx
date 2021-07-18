@@ -44,7 +44,7 @@ function SpinShapes () {
             <br/>
             <div style={picStyles}>                     
                         <ShufflePicsAndShowComponent  ref={shapes}
-                        elementsForPics = {elementsForPics} myPicsPath = {pathForShapePics} myWidth="25vw" myHeight = "25vw" repeatItems = "false"
+                        elementsForPics = {elementsForPics} myPicsPath = {pathForShapePics} myIMageWidth="65vh" myImageHeight = "65vh" repeatItems = "false"
                         />   
                                                                                 
             </div>                               

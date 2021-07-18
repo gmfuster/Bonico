@@ -51,7 +51,7 @@ class SpinStarWarsCars extends Component {
             <br/>
             <div style={picStyles}>                     
                         <ShufflePicsAndShowComponent  ref={this.starwarscars}
-                        elementsForPics = {this.elementsForPics} myPicsPath = {this.parthToPics} myWidth="25vw" myHeight = "25vw" repeatItems = "false"
+                        elementsForPics = {this.elementsForPics} myPicsPath = {this.parthToPics} myIMageWidth="65vh" myImageHeight = "65vh" repeatItems = "false"
                         />   
                                                                                 
             </div>                               

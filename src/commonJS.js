@@ -38,13 +38,14 @@ function generatePathForMatrixFromStartToEnd (whatByWhat) {
     path.push({i:0, j:0});
 
     //get whether we start on column or row
-    let number = generateRandomNumberForXNumberOfValues(2);  //1   
+    let number = generateRandomNumberForXNumberOfValues(2);  
 
     if (number === 1){
         obj ={i:0, j:1};
     } else{
         obj ={i:1, j:0};
-    }        
+    }       
+     
     path.push(obj);
 
     let loops = 0;

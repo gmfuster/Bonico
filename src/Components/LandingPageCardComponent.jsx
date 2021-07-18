@@ -21,7 +21,6 @@ function LandingPageCardComponent (props) {
         flexDirection: "row",           
     }
         
-    console.log(classN);
     return(
         <div className= {classN}  style={{margin:"1vw"}}>
 

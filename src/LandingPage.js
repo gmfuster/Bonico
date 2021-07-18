@@ -18,9 +18,7 @@ class LandingPage extends Component {
 
         <MainImage/>      
 
-        <DescriptionSections/>
-
-        <GamesAndPDFs/>           
+        <DescriptionSections/>           
       
         <FooterInfo/>       
 

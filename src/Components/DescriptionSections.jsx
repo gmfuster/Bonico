@@ -51,8 +51,7 @@ function DescriptionSections () {
 
                 <div className="DescriptionSectionText"> 
                 <br/><br/>
-                <mark>Contact me on <a href="https://twitter.com/GMFuster" target="_new">Twitter</a> or <a href="https://gmfuster.medium.com/" target="_new">
-                    Medium</a> </mark>
+                Go to the top menu to see what you can learn and practice.
                 </div>
             </React.Fragment>
         )

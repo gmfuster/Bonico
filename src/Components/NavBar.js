@@ -16,64 +16,72 @@ function NavBar () {
         paddingLeft:"5px",
         paddingRight:"5px",
         textDecoration: "none",
-            
-        borderRight:"solid 2px var(--main-ButtonTextColor-color)",
-        fontSize:"20px" ,
+                    
+        fontSize:"3vh" ,
         margin:"3px" ,
         display: "flex", 
         justifyContent: "center", 
-        alignItems:"center"
+        alignItems:"center",
+        color:"deeppink"
     }
+    var reactLinkSt2 = Object.assign({}, reactLinkSt, {color:"navy"}); 
+
     const reactLinkStDDItem = {
         color:"navy",
         padding:"5px",
         textDecoration: "none",        
-        fontSize:"20px"         
+        fontSize:"2vh"         
     }
     
       return(
           
         <React.Fragment>       
                 
-            <Navbar bg="dark" variant="dark" fixed="top" expand="sm" >
-                {/*<Navbar.Brand href="/">
+            <Navbar  fixed="top" expand="sm" style={{background:"skyblue"}}>
+                <Navbar.Brand href={path + "/"}>
                     <img
                         alt="Home"
-                        src= {pathPic + "/images/jdrawing.svg"}
+                        src= {pathPic + "/images/jandmlaughingblue.svg"}
                         width="50"
                         height="50"
                         className="rounded-circle d-inline-block align-top"
                     />                 
-                </Navbar.Brand>
-      */}
+                </Navbar.Brand>   
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">                    
+                    <Nav className="mr-auto">       
+
                         <ReactLink style={reactLinkSt} to= {path + "/"}>Home</ReactLink>
-                                                         
-                        {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>    */}  
+
+                        <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math K</ReactLink>     
+
+                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Language K</ReactLink>                                                        
+                        {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>   
                         <NavDropdown title="Math" id="basic-nav-dropdown" style={reactLinkSt} active>                         
                             {/*<NavDropdown.Item >*/}
-                                <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Kindergarten</ReactLink> 
+                                {/*<ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Kindergarten</ReactLink>{*/}
                             {/*</NavDropdown.Item>       
                                           */}                            
-                                <br/>
+                    {/*}            <br/>
                                                             
-                        </NavDropdown> 
-
+                                        </NavDropdown> {*/}
+                    
+{/*}
                         <NavDropdown title="Language" id="basic-nav-dropdown" style={reactLinkSt} active>                         
                             <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Kindergarten</ReactLink>                         
                         </NavDropdown>  
+                                    {*/}
 
-
-                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
-                        <ReactLink style={reactLinkSt} to= {path + "/PersonalInterestsSection"} >About me</ReactLink>                        
+                        <ReactLink style={reactLinkSt2} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
+                                          
                     </Nav>
 
                             
                             
-                    <Nav>                       
+                    <Nav>  
+                        {/*}                     
                         <Nav.Link href="https://twitter.com/GMFuster" target="_new">
                             <img alt="Twitter"
                                 src= {pathPic + "/images/Twitter_Logo_Blue.svg"}
@@ -82,6 +90,7 @@ function NavBar () {
                                 className=" align-top"
                             /> 
                         </Nav.Link>
+                                        {*/}
                         <Nav.Link href="https://gmfuster.medium.com/" target="_new">
                         <img alt="Medium"
                                 src= {pathPic + "/images/mediumLogo.png"}
@@ -97,7 +106,8 @@ function NavBar () {
                                 height="35px"
                                 className="align-top"
                             /> 
-                        </Nav.Link>                        
+                        </Nav.Link>          
+                        <ReactLink style={reactLinkSt2} to= {path + "/PersonalInterestsSection"} >Me</ReactLink>                   
                     </Nav>
                 </Navbar.Collapse>                    
 

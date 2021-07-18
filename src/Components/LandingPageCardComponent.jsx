@@ -14,13 +14,14 @@ function LandingPageCardComponent (props) {
         classN = classN + props.borderColorClass;
     }
     
-    classN += " forHoverEffect";
+    //classN += " forHoverEffect"; do not use this effect anymore
 
     var st =  {
         display:"flex",
         flexDirection: "row",           
     }
         
+    console.log(classN);
     return(
         <div className= {classN}  style={{margin:"1vw"}}>
 

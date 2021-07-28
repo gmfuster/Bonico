@@ -18,7 +18,7 @@ function FoorterInfo(props) {
                                 className="rounded-circle d-inline-block align-top"
                             /> 
                 </a>
- {*/}
+
                 <a href="https://gmfuster.medium.com/" target="_new">
                     <img alt="Medium"
                                 src= {pathPic + "/images/mediumLogo.png"}
@@ -28,7 +28,7 @@ function FoorterInfo(props) {
                                 className="rounded-circle d-inline-block align-top"
                             /> 
                 </a>
-               
+       {*/}         
 
                 <a href="https://www.youtube.com/channel/UCRzxDsd0WvJza0BxaIRiQnA" target="_new">
                             <img alt="YouTube"
@@ -40,6 +40,7 @@ function FoorterInfo(props) {
                             /> 
                 </a>
                  &nbsp;
+                 {/*}
                 <ReactLink to= {path + "/PersonalInterestsSection"} >
                     <img alt="About Me"
                                 src= {pathPic + "/images/AboutMe.svg"}
@@ -48,7 +49,7 @@ function FoorterInfo(props) {
                                 margin="5px"
                                 className="d-inline-block align-top"
                             /> </ReactLink>     
-            
+{*/}
             </div>
 
         </div>);

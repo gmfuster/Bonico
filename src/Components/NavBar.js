@@ -101,7 +101,7 @@ function NavBar () {
                                 className=" align-top"
                             /> 
                         </Nav.Link>
-                                        {*/}
+                                       
                         <Nav.Link href="https://gmfuster.medium.com/" target="_new">
                         <img alt="Medium"
                                 src= {pathPic + "/images/mediumLogo.png"}
@@ -110,6 +110,7 @@ function NavBar () {
                                 className="align-top"
                             /> 
                         </Nav.Link>  
+                         {*/}
                         <Nav.Link href="https://www.youtube.com/channel/UCRzxDsd0WvJza0BxaIRiQnA" target="_new">
                             <img alt="YouTube"
                                 src= {pathPic + "/images/youtube_social_icon_red.png"}
@@ -117,7 +118,8 @@ function NavBar () {
                                 height="35px"
                                 className="align-top"
                             /> 
-                        </Nav.Link>          
+                        </Nav.Link>     
+                        {/*}     
                         <ReactLink style={reactLinkSt2} to= {path + "/PersonalInterestsSection"} >
                         <img alt="Medium"
                                 src= {pathPic + "/images/AboutMe.svg"}
@@ -125,6 +127,7 @@ function NavBar () {
                                 height="35px"
                                 className="align-top"
                             /> </ReactLink>                   
+                             {*/}
                     </Nav>
                 </Navbar.Collapse>                    
 

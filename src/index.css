@@ -520,3 +520,8 @@ mark {
   background:lightsteelblue;
 }
 
+
+table, th, td {
+  border:1px solid deepskyblue;
+  padding:5px;
+}

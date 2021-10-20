@@ -26,6 +26,7 @@ import Counting from "./Views/KidsActivities/Counting";
 import MinorPrintables from "./Views/KidsActivities/minorPrintables";
 import ModelingTens from "./Views/KidsActivities/ModelingTens";
 import NextNumber from "./Views/KidsActivities/NextNumber";
+import CompareNumbers from "./Views/KidsActivities/CompareNumbers";
 
 
 import SpinStarWarsCars from "./Views/Games/SpinStarWarsCars";
@@ -44,6 +45,7 @@ import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 import Chinese from "./Views/PersonalInterests/Chinese";
 
 import kindergartenMath from "./Components/KindergartenMath";
+import FirstMath from "./Components/FirstMath";
 import kindergartenLang from "./Components/KindergartenLang";
 import PersonalInterestsSection from "./Components/PersonalInterestsSections";
 import GamesAndPDFs from './Components/GamesAndPDFs';
@@ -62,6 +64,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/"} component={LandingPage}/>
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenMath"} component={kindergartenMath}/>
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/FirstMath"} component={FirstMath}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/kindergartenLang"} component={kindergartenLang}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/PersonalInterestsSection"} component={PersonalInterestsSection}/>
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/GamesAndPDFs"} component={GamesAndPDFs}/>  
@@ -82,6 +85,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ModelingTens"} component={ModelingTens}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/Prefixsuffix"} component={Prefixsuffix}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/NextNumber"} component={NextNumber}/>  
+                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CompareNumbers"} component={CompareNumbers}/>  
 
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MinorPrintables"} component={MinorPrintables}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/SpinStarWarsCars"} component={SpinStarWarsCars}/>  

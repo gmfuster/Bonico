@@ -68,7 +68,9 @@ function NavBar () {
 
                         <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math-K</ReactLink>     
 
-                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Lang-K</ReactLink>                                                        
+                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Lang-K</ReactLink>     
+
+                         <ReactLink style={reactLinkSt2} to= {path + "/FirstMath"} >Math-1st</ReactLink>                                                        
                         {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>   
                         <NavDropdown title="Math" id="basic-nav-dropdown" style={reactLinkSt} active>                         
                             {/*<NavDropdown.Item >*/}

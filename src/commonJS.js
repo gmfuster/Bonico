@@ -73,4 +73,4 @@ function generatePathForMatrixFromStartToEnd (whatByWhat) {
     path.push({i:whatByWhat-1, j:whatByWhat-1});    
     return path;
 }
-export {generateRandomNumber, generatePathForMatrixFromStartToEnd};
+export {generateRandomNumber, generatePathForMatrixFromStartToEnd, generateRandomNumberForXNumberOfValues};

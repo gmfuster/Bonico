@@ -14,7 +14,7 @@ class ModelingTens extends Component {
     }      
 
     generateRandomNumber = () => {
-        return Math.floor(Math.random() * 19);      
+        return Math.floor(Math.random() * 120);      
     }
     
     /*addToArrayAndNumber = (img, n) => {       

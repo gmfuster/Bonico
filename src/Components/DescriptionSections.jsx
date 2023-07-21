@@ -20,13 +20,18 @@ function DescriptionSections () {
                     <div style={{background:"teal", margin:"5vw", padding:"4vh", border:"5px double salmon", height:"400px" }}>    
                         <div style={{ display:"flex", flexDirection:"row", justifyContent:"flex-end"}} >
                             <a href="https://www.amazon.com/dp/B092V2CRNF/ref=cm_sw_em_r_mt_dp_5VRHWY06VPRX9RT2QNZ2" target="_new" >
-                                <img  style={{border:"3px solid navy", margin:"3px"}}  width="175px" heigth="175px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/howdidyougetme.jpg"} alt="Jon and his mom talk about - Amazon"/>
+                                <img  style={{border:"3px solid navy", margin:"3px"}}  width="175px" heigth="175px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/howdidyougetme.jpg"} alt="How did you get me? - Amazon"/>
                                 <br/>
                                 <img style = {{ height:"50px", width:"50px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/clickme.svg'}  alt="some activities require grown uptouch screen"  />                                                              
                             </a>
                             
                             <a  margin="10px" href="https://www.amazon.com/dp/B08JF5KNK8/ref=cm_sw_em_r_mt_dp_KJKC4PN7CP3HR4Z33DJR" target="_new">
                                 <img style={{border:"3px solid navy", margin:"3px"}} width="175px" heigth="175px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/jonandhismomtalkabout.jpg"} alt="Jon and his mom talk about - Amazon"/>
+                                <br/>
+                                <img style = {{ height:"50px", width:"50px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/clickme.svg'}  alt="some activities require grown uptouch screen"  />                                                              
+                            </a>
+                            <a  margin="10px" href="https://www.amazon.com/dp/B09MZXWQH8/ref=cm_sw_em_r_mt_dp_6RXHBN5RMYVHNW0J3WHD" target="_new">
+                                <img style={{border:"3px solid navy", margin:"3px"}} width="175px" heigth="175px" src={process.env.REACT_APP_FOR_PATH_FOR_PICS + "/images/gettingthere.jpg"} alt="I'm not enlightened but I'm getting there- Amazon"/>
                                 <br/>
                                 <img style = {{ height:"50px", width:"50px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/clickme.svg'}  alt="some activities require grown uptouch screen"  />                                                              
                             </a>

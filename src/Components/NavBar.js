@@ -17,7 +17,7 @@ function NavBar () {
         paddingRight:"4px",
         textDecoration: "none",
                     
-        fontSize:"3vh" ,
+        fontSize:"2.5vh" ,
         margin:"2px" ,
         display: "flex", 
         justifyContent: "center", 
@@ -53,8 +53,7 @@ function NavBar () {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">       
-
-                        
+                       
                         <ReactLink style={reactLinkSt2} to= {path + "/"}>
                             <img
                             alt="Home"
@@ -63,56 +62,36 @@ function NavBar () {
                             height="50"
                             className="rounded-circle d-inline-block align-top"
                             />    
-                        </ReactLink>
-                        <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Games</ReactLink>    
+                        </ReactLink>                                                            
 
-                        <ReactLink style={reactLinkSt2} to= {path + "/kindergartenMath"} >Math-K</ReactLink>     
+                          
 
-                         <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Lang-K</ReactLink>     
+                        <NavDropdown title="GAMES" id="basic-nav-dropdown" > 
+                            <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Kids</ReactLink> 
+                            <NavDropdown.Divider />                                  
+                          
+                        </NavDropdown>    
 
-                         <ReactLink style={reactLinkSt2} to= {path + "/FirstMath"} >Math-1st</ReactLink>                                                        
-                        {/*<NavDropdown title="Kindergarten" id="basic-nav-dropdown" style={reactLinkSt} active>   
-                        <NavDropdown title="Math" id="basic-nav-dropdown" style={reactLinkSt} active>                         
-                            {/*<NavDropdown.Item >*/}
-                                {/*<ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenMath"} >Kindergarten</ReactLink>{*/}
-                            {/*</NavDropdown.Item>       
-                                          */}                            
-                    {/*}            <br/>
-                                                            
-                                        </NavDropdown> {*/}
-                    
-{/*}
-                        <NavDropdown title="Language" id="basic-nav-dropdown" style={reactLinkSt} active>                         
-                            <ReactLink style={reactLinkStDDItem} to= {path + "/kindergartenLang"} >Kindergarten</ReactLink>                         
-                        </NavDropdown>  
-                                    {*/}
+                        <NavDropdown title="MATH" id="basic-nav-dropdown" > 
+                            <ReactLink style={reactLinkSt} to= {path + "/kindergartenMath"} >Kinder</ReactLink>  
+                            <NavDropdown.Divider />      
+                            <ReactLink style={reactLinkSt2} to= {path + "/FirstMath"} >1st</ReactLink>                     
+                          
+                        </NavDropdown>    
 
-                       
-                                          
+                        <NavDropdown title="LANGUAGE" id="basic-nav-dropdown" > 
+                            <ReactLink style={reactLinkSt} to= {path + "/kindergartenLang"} >Kinder</ReactLink>                                                            
+                        </NavDropdown>    
+
+                        
+
+                              
+                                                                                                                                                     
                     </Nav>
 
                             
                             
-                    <Nav>  
-                        {/*}                     
-                        <Nav.Link href="https://twitter.com/GMFuster" target="_new">
-                            <img alt="Twitter"
-                                src= {pathPic + "/images/Twitter_Logo_Blue.svg"}
-                                width="35px"
-                                height="35px"
-                                className=" align-top"
-                            /> 
-                        </Nav.Link>
-                                       
-                        <Nav.Link href="https://gmfuster.medium.com/" target="_new">
-                        <img alt="Medium"
-                                src= {pathPic + "/images/mediumLogo.png"}
-                                width="35px"
-                                height="35px"
-                                className="align-top"
-                            /> 
-                        </Nav.Link>  
-                         {*/}
+                    <Nav>                         
                         <Nav.Link href="https://www.youtube.com/channel/UCRzxDsd0WvJza0BxaIRiQnA" target="_new">
                             <img alt="YouTube"
                                 src= {pathPic + "/images/youtube_social_icon_red.png"}
@@ -120,16 +99,7 @@ function NavBar () {
                                 height="35px"
                                 className="align-top"
                             /> 
-                        </Nav.Link>     
-                        {/*}     
-                        <ReactLink style={reactLinkSt2} to= {path + "/PersonalInterestsSection"} >
-                        <img alt="Medium"
-                                src= {pathPic + "/images/AboutMe.svg"}
-                                width="35px"
-                                height="35px"
-                                className="align-top"
-                            /> </ReactLink>                   
-                             {*/}
+                        </Nav.Link>                            
                     </Nav>
                 </Navbar.Collapse>                    
 

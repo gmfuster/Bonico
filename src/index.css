@@ -294,6 +294,13 @@ mark {
   margin-top:5vh;
 }
 
+.seenAllTheTime:hover  .showOnHover{
+  display: block;
+}
+.showOnHover{
+  display:none;
+}
+
 .mainImageAnimation {
   animation-duration: 2s;
   animation-name: mainImageAnimation;  

@@ -35,11 +35,6 @@ import MemoryCards from "./Views/Games/MemoryCards";
 import AdditionMaze from "./Views/Games/AdditionMaze";
 //import Freeze from "./Views/Games/Freeze";
 
-
-import CSSAnimations from "./Views/SoftwareNotes/cssanimations";
-import CSSPositioning from "./Views/SoftwareNotes/csspositioning";
-import ReactNotes1 from "./Views/SoftwareNotes/reactnotes1";
-
 import ReadBackwards from "./Views/PersonalInterests/ReadBackwards";
 import RemoveDupPics from "./Views/PersonalInterests/RemoveDupPics";
 import Chinese from "./Views/PersonalInterests/Chinese";
@@ -93,11 +88,7 @@ const routing = (
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/MemoryCards"} component={MemoryCards}/>  
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/AdditionMaze"} component={AdditionMaze}/>
                     {/*<Route exact path = {process.env.REACT_APP_FOR_PATH + "/Freeze"} component={Freeze}/>  */}
-                    
-
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSAnimations"} component={CSSAnimations}/>  
-                    <Route exact path = {process.env.REACT_APP_FOR_PATH + "/CSSPositioning"} component={CSSPositioning}/>  
-                    <Route exact path ={process.env.REACT_APP_FOR_PATH + "/ReactNotes1"} component={ReactNotes1}/>  
+                                      
                     
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/ReadBackwards"} component={ReadBackwards}/>                      
                     <Route exact path = {process.env.REACT_APP_FOR_PATH + "/RemoveDupPics"} component={RemoveDupPics}/>      

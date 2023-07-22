@@ -65,12 +65,13 @@ function NavBar () {
                         </ReactLink>                                                            
 
                           
-
+                        {/*
                         <NavDropdown title="GAMES" id="basic-nav-dropdown" > 
                             <ReactLink style={reactLinkSt} to= {path + "/GamesAndPDFs"} >Kids</ReactLink> 
                             <NavDropdown.Divider />                                  
                           
                         </NavDropdown>    
+                        </Navbar.Collapse>*/}
 
                         <NavDropdown title="MATH" id="basic-nav-dropdown" > 
                             <ReactLink style={reactLinkSt} to= {path + "/kindergartenMath"} >Kinder</ReactLink>  

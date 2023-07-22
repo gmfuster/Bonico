@@ -12,7 +12,7 @@ function DescriptionSections () {
                     <img style = {{ height:"30Vh", width:"90vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/validdevices.svg'}  alt="valid devices computer tablet"  />     <br/>                                                         
                     <br/><br/>
                     <img style = {{ height:"30Vh", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/someactivities.svg'}  alt="some activities require grown uptouch screen"  />                                                              
-                </div>
+                
                 <br/>
                 
                 <div style={{position:"relative"}}>
@@ -43,20 +43,34 @@ function DescriptionSections () {
                     <div style = {{position:"absolute", bottom:"0%"}} >
                         <img style = {{ height:"325px", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/wewrote.svg'}  alt="what we wrote"  />                                                              
                     </div>
-                    <br/>
-                    
+                    <br/>                    
                 </div>
         
-                <br/><br/><br/><br/><br/>
+                <br/><br/>
                 <div>
                     <ReactLink to= {path + "/MinorPrintables"}>
                         <img style = {{ height:"250px", width:"85vw"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/getPDFs.svg'}  alt="PDFs to print"  />                                                              
                     </ReactLink>  
                 </div>
+                <br/><br/>
+                <div class="markClassCardWholeBlue" style={{marginLeft:"5vw", marginRight:"5vw"}}>Just for Fun</div>
+                <div style={{marginLeft:"5vw", marginRight:"5vw", background:"teal",  border:"5px double salmon", height:"400px" }}>    
+                    <br/>
+                        <div style={{ display:"flex", flexDirection:"row", justifyContent:"center"}} >                            
+                            <ReactLink to= {path + "/MemoryCards"} className="selectOnHover">
+                                <img style = {{ height:"300px", width:"300px", border:"lightyellow solid 4px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/readbackwards.svg'}  alt="read backwardst"  />                                                              
+                            </ReactLink>                                                                                      
+                            <ReactLink to= {path + "/MinorPrintables"} className="selectOnHover">
+                                <img style = {{ height:"300px", width:"300px", border:"lightyellow solid 4px"}} src={process.env.REACT_APP_FOR_PATH_FOR_PICS + '/images/memorycardgame.svg'}  alt="memry card game"  />                                                              
+                            </ReactLink>                              
+                        </div>                                                                                        
+                    </div>
+
 
                 <div className="DescriptionSectionText"> 
                 <br/><br/>
                 Go to the top menu to see what you can learn and practice.
+                </div>
                 </div>
             </React.Fragment>
         )
